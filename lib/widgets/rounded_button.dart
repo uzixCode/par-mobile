@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class RoundedButton extends StatelessWidget {
-  RoundedButton({Key? key, required this.child, this.alignment, this.color})
+  RoundedButton(
+      {Key? key, required this.child, this.alignment, this.onTap, this.color})
       : super(key: key);
   Widget child;
   Color? color;
