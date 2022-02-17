@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
 import 'package:par_mobile/controllers/beranda/beranda_page_controller.dart';
+import 'package:par_mobile/widgets/basecard.dart';
 
 class BerandaPage extends StatelessWidget {
   BerandaPage({Key? key}) : super(key: key);
@@ -31,7 +32,7 @@ class BerandaPage extends StatelessWidget {
               color: allColor.primary,
               child: Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 25, vertical: 8),
+                    const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -43,7 +44,12 @@ class BerandaPage extends StatelessWidget {
                           width: Get.width * 0.17,
                           height: Get.width * 0.17,
                           decoration: BoxDecoration(
-                              color: allColor.green, shape: BoxShape.circle),
+                              image: DecorationImage(
+                                  fit: BoxFit.cover,
+                                  image: AssetImage(
+                                      "assets/images/background.png")),
+                              color: allColor.green,
+                              shape: BoxShape.circle),
                         ),
                         SizedBox(
                           width: Get.width * 0.05,
@@ -87,9 +93,11 @@ class BerandaPage extends StatelessWidget {
                 child: ListView.builder(
               itemCount: 10,
               itemBuilder: (context, index) {
-                return Card(
-                  child: ListTile(
-                    title: Text(index.toString()),
+                return BaseCard(
+                  label: "card number : " + index.toString(),
+                  trailing: Icon(
+                    Icons.chevron_right,
+                    color: Colors.white,
                   ),
                 );
               },
