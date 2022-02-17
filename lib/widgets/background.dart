@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:par_mobile/constants/all_color.dart';
 
 class Background extends StatelessWidget {
   Background({Key? key, required this.child}) : super(key: key);
@@ -22,7 +23,7 @@ class Background extends StatelessWidget {
               gradient: LinearGradient(
                   colors: [
                     Colors.white.withOpacity(0.5),
-                    const Color(0xFF427DDB).withOpacity(0.9),
+                    allColor.primary.withOpacity(0.9),
                   ],
                   begin: const FractionalOffset(0.0, 0.0),
                   end: const FractionalOffset(0.0, 1.0),

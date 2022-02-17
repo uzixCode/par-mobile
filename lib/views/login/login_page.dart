@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:par_mobile/constants/all_color.dart';
 import 'package:par_mobile/controllers/login/login_page_controller.dart';
 import 'package:par_mobile/widgets/background.dart';
 import 'package:par_mobile/widgets/rounded_button.dart';
@@ -46,7 +47,7 @@ class LoginPage extends StatelessWidget {
                 SizedBox(
                   width: Get.width * 0.85,
                   child: RoundedButton(
-                    color: Color(0xFF00497E),
+                    color: allColor.primary,
                     alignment: Alignment.center,
                     child: Text(
                       "Login",
