@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
@@ -48,7 +49,7 @@ class LoginPage extends StatelessWidget {
                 SizedBox(
                   width: Get.width * 0.85,
                   child: RoundedButton(
-                    onTap: () => Get.to(() => BerandaPage()),
+                    onTap: () {},
                     color: allColor.primary,
                     alignment: Alignment.center,
                     child: Text(
@@ -59,7 +60,35 @@ class LoginPage extends StatelessWidget {
                           fontWeight: FontWeight.bold),
                     ),
                   ),
-                )
+                ),
+                !kDebugMode
+                    ? Container()
+                    : SizedBox(
+                        height: 20,
+                      ),
+                !kDebugMode
+                    ? Container()
+                    : Expanded(
+                        child: SizedBox(
+                          width: Get.width * 0.85,
+                          child: ListView.builder(
+                            scrollDirection: Axis.vertical,
+                            itemCount: loginPageController.pages.length,
+                            itemBuilder: (context, index) => InkWell(
+                              onTap: () =>
+                                  loginPageController.toPage(context, index),
+                              child: Card(
+                                elevation: 5,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(loginPageController.pages[index]
+                                      .toString()),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      )
               ],
             ),
           )),
