@@ -17,7 +17,7 @@ class Body extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Berikan Keputusan Untuk Assessment Pre Trip Check Dengan Rincian Berikut",
+              "Berikan Keputusan Untuk Hasil Daily Check Up Dengan Rincian Sebagai Berikut",
               textAlign: TextAlign.center,
               style: TextStyle(color: allColor.primary, fontWeight: FontWeight.bold),
             ),
@@ -33,54 +33,35 @@ class Body extends StatelessWidget {
                   children: [
                     tableRowContent(title: 'Pengemudi', valueContent: 'Bambang Wijaya', isCustomContent: false),
                     tableRowContent(title: 'Unit Kerja', valueContent: 'BD - BD', isCustomContent: false),
+                    tableRowContent(title: 'Plat Nomor', valueContent: 'B 1234 JK', isCustomContent: false),
                     tableRowContent(
-                        title: 'Detail PTC', valueContent: 'Keausan/Kondisi - Retak/Robek', isCustomContent: false),
-                    tableRowContent(title: 'Bagian PTC', valueContent: 'Ban', isCustomContent: false),
-                    tableRowContent(
-                        title: 'Level',
+                        title: 'Temperature',
                         valueContent: '',
                         isCustomContent: true,
-                        widgetCustom: Row(
-                          children: [
-                            const Text(
-                              ": ",
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            Container(
-                              padding: const EdgeInsets.all(5),
-                              decoration: BoxDecoration(
-                                color: allColor.light_red,
-                                borderRadius: BorderRadius.circular(3),
-                              ),
-                              child: Row(
-                                children: const [
-                                  Icon(
-                                    Icons.warning,
-                                    color: Colors.white,
-                                    size: 12,
-                                  ),
-                                  SizedBox(
-                                    width: 5,
-                                  ),
-                                  Text("HIGH", style: TextStyle(color: Colors.white))
-                                ],
-                              ),
-                            ),
-                          ],
+                        widgetCustom: RichText(
+                          text: const TextSpan(
+                            text: ': 39 C ',
+                            style: TextStyle(color: Colors.white),
+                            children: <TextSpan>[
+                              TextSpan(
+                                  text: '(HIGH)', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+                            ],
+                          ),
                         )),
-                    tableRowContent(title: "No Telepon", valueContent: '08123456789', isCustomContent: false),
                     tableRowContent(
-                      title: 'Foto Kerusakan',
-                      valueContent: '',
-                      isCustomContent: true,
-                      widgetCustom: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(": ", style: TextStyle(color: Colors.white)),
-                          Expanded(child: Image.asset('assets/images/ban_sample.png')),
-                        ],
-                      ),
-                    ),
+                        title: 'Tekanan Darah',
+                        valueContent: '',
+                        isCustomContent: true,
+                        widgetCustom: RichText(
+                          text: const TextSpan(
+                            text: ': 120/90 ',
+                            style: TextStyle(color: Colors.white),
+                            children: <TextSpan>[
+                              TextSpan(
+                                  text: '(HIGH)', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+                            ],
+                          ),
+                        )),
                   ],
                 ),
               ),
@@ -93,13 +74,12 @@ class Body extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 SizedBox(
-                  width: Get.width * 0.35,
                   child: RectangleButton(
                     onTap: () {},
                     color: allColor.primary,
                     alignment: Alignment.center,
                     child: Text(
-                      "Perbaikan",
+                      "Approve Sementara",
                       style: TextStyle(fontSize: Get.width * 0.04, color: Colors.white, fontWeight: FontWeight.bold),
                     ),
                   ),
@@ -108,10 +88,10 @@ class Body extends StatelessWidget {
                   width: Get.width * 0.35,
                   child: RectangleButton(
                     onTap: () {},
-                    color: allColor.orange,
+                    color: allColor.green,
                     alignment: Alignment.center,
                     child: Text(
-                      "Perlengkapan",
+                      "Cari Pengganti",
                       style: TextStyle(fontSize: Get.width * 0.04, color: Colors.white, fontWeight: FontWeight.bold),
                     ),
                   ),
