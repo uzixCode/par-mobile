@@ -50,19 +50,21 @@ class HeaderSection extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Selamat Pagi,\n",
+                      "Selamat Pagi,",
                       style: TextStyle(color: Colors.white),
                     ),
+                    SizedBox(
+                      height: 5,
+                    ),
                     Text(
-                      "Uzix Code",
+                      "DIAN SANJAYA",
                       style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: Get.width * 0.04),
                     ),
-                    Text(
-                      "\nDCU      : No Data",
-                      style: TextStyle(color: Colors.white),
+                    SizedBox(
+                      height: 5,
                     ),
                     Text(
-                      "Clock In : No Data",
+                      "SUO/KORLAP",
                       style: TextStyle(color: Colors.white),
                     ),
                   ],
@@ -71,6 +73,7 @@ class HeaderSection extends StatelessWidget {
             ),
             Text(
               controller.dateFormat.format(controller.dateTimeNow),
+              textAlign: TextAlign.end,
               style: TextStyle(color: Colors.white),
             )
           ],
