@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
+import 'package:par_mobile/views/approval_ptc_detail/approval_ptc_detail_page.dart';
 import 'package:par_mobile/widgets/basecard.dart';
 import 'package:par_mobile/widgets/rectangle_button.dart';
 import 'package:par_mobile/widgets/rounded_button.dart';
@@ -32,7 +33,9 @@ class PTCSummarySection extends StatelessWidget {
                     SizedBox(
                       width: Get.width * 0.27,
                       child: RectangleButton(
-                        onTap: () {},
+                        onTap: () {
+                          Get.to(const ApprovalPTCDetailPage());
+                        },
                         color: allColor.primary,
                         alignment: Alignment.center,
                         child: Text(

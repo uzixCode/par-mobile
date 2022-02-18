@@ -7,6 +7,8 @@ class AllColor {
   final red = Color(0xFFB64646);
   final light_red = Color(0xFFCF214C);
   final green = Color(0xFF91C14F);
+  final orange = Color(0xFFFC6241);
+
 }
 
 final allColor = AllColor();
