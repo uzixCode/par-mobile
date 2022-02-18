@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
-import 'package:par_mobile/views/approval_ptc_detail/approval_ptc_detail_page.dart';
+import 'package:par_mobile/views/suo/approval_dcu_detail/approval_dcu_detail_page.dart';
 import 'package:par_mobile/widgets/basecard.dart';
 import 'package:par_mobile/widgets/rectangle_button.dart';
-import 'package:par_mobile/widgets/rounded_button.dart';
 
-class PTCSummarySection extends StatelessWidget {
-  const PTCSummarySection({Key? key}) : super(key: key);
+class DCUSummarySection extends StatelessWidget {
+  const DCUSummarySection({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return BaseCard(
-      label: "RANGKUMAN PTC BERMASALAH",
+      label: "RANGKUMAN DCU BERMASALAH",
       trailing: const Icon(
         Icons.chevron_right,
         color: Colors.white,
@@ -29,18 +28,19 @@ class PTCSummarySection extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text("AVANZA - B 6789 KIL", style: TextStyle(fontWeight: FontWeight.bold)),
+                    const Text("Ahmad Hasani", style: TextStyle(fontWeight: FontWeight.bold)),
                     SizedBox(
                       width: Get.width * 0.27,
                       child: RectangleButton(
                         onTap: () {
-                          Get.to(const ApprovalPTCDetailPage());
+                          Get.to(ApprovalDCUDetailPage());
                         },
                         color: allColor.primary,
                         alignment: Alignment.center,
                         child: Text(
                           "Lihat",
-                          style: TextStyle(fontSize: Get.width * 0.04, color: Colors.white, fontWeight: FontWeight.bold),
+                          style:
+                              TextStyle(fontSize: Get.width * 0.04, color: Colors.white, fontWeight: FontWeight.bold),
                         ),
                       ),
                     ),

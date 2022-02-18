@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
-import 'package:par_mobile/views/approval_dcu_detail/components/body.dart';
+import 'package:par_mobile/views/suo/approval_ptc_detail/components/body.dart';
 
-class ApprovalDCUDetailPage extends StatelessWidget {
-  const ApprovalDCUDetailPage({ Key? key }) : super(key: key);
+class ApprovalPTCDetailPage extends StatelessWidget {
+  const ApprovalPTCDetailPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: const Text(
-          "Assessment DCU Bermasalah",
+          "Assessment Pre Trip Check",
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.black),
         ),
         leading: IconButton(
