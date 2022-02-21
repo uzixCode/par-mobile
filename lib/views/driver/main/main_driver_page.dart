@@ -11,45 +11,57 @@ class MainDriverPage extends StatelessWidget {
       Get.put(MainDriverPageController());
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<MainDriverPageController>(
-      init: Get.find<MainDriverPageController>(),
-      builder: (con) => Scaffold(
-        body: PageView(
-          controller: mainDriverPageController.pageController,
-          children: mainDriverPageController.pages,
-          onPageChanged: (index) {
-            mainDriverPageController.changePage(index);
-          },
+    return Column(
+      children: [
+        SizedBox(
+          height: Get.mediaQuery.viewPadding.top,
         ),
-        bottomNavigationBar: BottomNavigationBar(
-            currentIndex: con.index,
-            onTap: (index) {
-              mainDriverPageController.changePage(index, isAnimateTo: true);
-            },
-            selectedItemColor: allColor.primary,
-            items: [
-              bottomBarItem.bottomBarItem(
+        Expanded(
+          child: GetBuilder<MainDriverPageController>(
+            init: Get.find<MainDriverPageController>(),
+            builder: (con) => Scaffold(
+              body: PageView(
+                controller: mainDriverPageController.pageController,
+                children: mainDriverPageController.pages,
+                onPageChanged: (index) {
+                  mainDriverPageController.changePage(index);
+                },
+              ),
+              bottomNavigationBar: BottomNavigationBar(
+                  unselectedLabelStyle: TextStyle(color: allColor.grey),
+                  showUnselectedLabels: true,
                   currentIndex: con.index,
-                  compareIndex: 0,
-                  iconPath: "assets/images/riwayat.png",
-                  label: "Riwayat"),
-              bottomBarItem.bottomBarItem(
-                  currentIndex: con.index,
-                  compareIndex: 1,
-                  iconPath: "assets/images/check.png",
-                  label: "Check"),
-              bottomBarItem.bottomBarItem(
-                  currentIndex: con.index,
-                  compareIndex: 2,
-                  iconPath: "assets/images/izin.png",
-                  label: "Izin"),
-              bottomBarItem.bottomBarItem(
-                  currentIndex: con.index,
-                  compareIndex: 3,
-                  iconPath: "assets/images/Profile.png",
-                  label: "Profile"),
-            ]),
-      ),
+                  onTap: (index) {
+                    mainDriverPageController.changePage(index,
+                        isAnimateTo: true);
+                  },
+                  selectedItemColor: allColor.primary,
+                  items: [
+                    bottomBarItem.bottomBarItem(
+                        currentIndex: con.index,
+                        compareIndex: 0,
+                        iconPath: "assets/images/riwayat.png",
+                        label: "Riwayat"),
+                    bottomBarItem.bottomBarItem(
+                        currentIndex: con.index,
+                        compareIndex: 1,
+                        iconPath: "assets/images/check.png",
+                        label: "Check"),
+                    bottomBarItem.bottomBarItem(
+                        currentIndex: con.index,
+                        compareIndex: 2,
+                        iconPath: "assets/images/izin.png",
+                        label: "Izin"),
+                    bottomBarItem.bottomBarItem(
+                        currentIndex: con.index,
+                        compareIndex: 3,
+                        iconPath: "assets/images/Profile.png",
+                        label: "Profile"),
+                  ]),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

@@ -68,22 +68,18 @@ class LoginPage extends StatelessWidget {
                       ),
                 !kDebugMode
                     ? Container()
-                    : Expanded(
-                        child: SizedBox(
-                          width: Get.width * 0.85,
-                          child: ListView.builder(
-                            scrollDirection: Axis.vertical,
-                            itemCount: loginPageController.pages.length,
-                            itemBuilder: (context, index) => InkWell(
-                              onTap: () =>
-                                  loginPageController.toPage(context, index),
-                              child: Card(
-                                elevation: 5,
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text(loginPageController.pages[index]
-                                      .toString()),
-                                ),
+                    : Column(
+                        children: List<Widget>.generate(
+                          loginPageController.pages.length,
+                          (index) => InkWell(
+                            onTap: () =>
+                                loginPageController.toPage(context, index),
+                            child: Card(
+                              elevation: 5,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(loginPageController.pages[index]
+                                    .toString()),
                               ),
                             ),
                           ),
