@@ -18,18 +18,12 @@ class Body extends StatelessWidget {
     BerandaSUOPageController controller = Get.put(BerandaSUOPageController());
 
     return SafeArea(
-      child: Column(
+      child: ListView(
         children: [
-          const HeaderSection(),
-          Expanded(
-              child: ListView(
-            children: [
-              PTCSummarySection(),
-              DCUSummarySection(),
-              StatusWOSection(),
-              NotifDocSection(),
-            ],
-          ))
+          PTCSummarySection(),
+          DCUSummarySection(),
+          StatusWOSection(),
+          NotifDocSection(),
         ],
       ),
     );

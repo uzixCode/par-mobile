@@ -45,7 +45,7 @@ AppBarTheme appBarTheme = AppBarTheme(
   elevation: 1,
   backgroundColor: Colors.white,
   systemOverlayStyle: SystemUiOverlayStyle(
-    statusBarColor: allColor.secondary,
+    statusBarColor: allColor.primary,
     statusBarIconBrightness: Brightness.dark,
     statusBarBrightness: Brightness.light,
   ),

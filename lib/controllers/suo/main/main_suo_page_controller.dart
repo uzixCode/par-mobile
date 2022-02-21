@@ -1,10 +1,13 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:intl/intl.dart';
 import 'package:par_mobile/views/suo/beranda/beranda_suo_page.dart';
+import 'package:get/get.dart';
 
 class MainSUOPageController extends GetxController {
-  final dateTimeNow = DateTime.now();
+  var dateTimeNow = DateTime.now().obs;
   final dateFormat = DateFormat("dd MMMM yyyy\nHH:mm");
   int index = 0;
   List<Widget> pages = [
@@ -23,9 +26,15 @@ class MainSUOPageController extends GetxController {
     update();
   }
 
+  getDateTimeNow() {
+    dateTimeNow.value = DateTime.now();
+  } 
+
   @override
   void onInit() {
     print("Init Main Driver Page Controller");
+    Timer.periodic(Duration(seconds: 1), (Timer t) => getDateTimeNow());
+
     super.onInit();
   }
 }
