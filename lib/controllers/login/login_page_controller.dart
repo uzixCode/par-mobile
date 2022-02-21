@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:par_mobile/views/beranda/beranda_page.dart';
 import 'package:par_mobile/views/driver/main/main_driver_page.dart';
 import 'package:par_mobile/views/suo/main/main_suo_page.dart';
 
