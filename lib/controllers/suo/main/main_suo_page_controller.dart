@@ -12,6 +12,7 @@ class MainSUOPageController extends GetxController {
     const BerandaSUOPage(),
     const BerandaSUOPage(),
     const BerandaSUOPage(),
+    const BerandaSUOPage(),
   ];
   PageController pageController = PageController(initialPage: 0, keepPage: false);
   void changePage(int indexi, {bool? isAnimateTo}) {

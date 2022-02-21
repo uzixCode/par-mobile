@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
-import 'package:par_mobile/controllers/beranda/beranda_suo_page_controller.dart';
+import 'package:par_mobile/controllers/suo/beranda/beranda_suo_page_controller.dart';
 
 class HeaderSection extends StatelessWidget {
   const HeaderSection({Key? key}) : super(key: key);

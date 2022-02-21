@@ -26,14 +26,16 @@ class MainSUOPage extends StatelessWidget {
             },
             selectedItemColor: allColor.primary,
             items: [
+               bottomBarItem.bottomBarItem(
+                  currentIndex: con.index, compareIndex: 0, iconPath: "assets/images/beranda.png", label: "Beranda"),
               bottomBarItem.bottomBarItem(
-                  currentIndex: con.index, compareIndex: 0, iconPath: "assets/images/riwayat.png", label: "Riwayat"),
+                  currentIndex: con.index, compareIndex: 1, iconPath: "assets/images/riwayat.png", label: "Riwayat"),
               bottomBarItem.bottomBarItem(
-                  currentIndex: con.index, compareIndex: 1, iconPath: "assets/images/check.png", label: "Check"),
+                  currentIndex: con.index, compareIndex: 2, iconPath: "assets/images/check.png", label: "Approval"),
               bottomBarItem.bottomBarItem(
-                  currentIndex: con.index, compareIndex: 2, iconPath: "assets/images/izin.png", label: "Izin"),
+                  currentIndex: con.index, compareIndex: 3, iconPath: "assets/images/izin.png", label: "Monitoring"),
               bottomBarItem.bottomBarItem(
-                  currentIndex: con.index, compareIndex: 3, iconPath: "assets/images/Profile.png", label: "Profile"),
+                  currentIndex: con.index, compareIndex: 4  , iconPath: "assets/images/Profile.png", label: "Profile"),
             ]),
       ),
     );
