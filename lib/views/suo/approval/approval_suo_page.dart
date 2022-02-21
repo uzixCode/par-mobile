@@ -16,6 +16,6 @@ class ApprovalSUOPage extends StatelessWidget {
             child: Image.asset("assets/images/cs.png"),
           ),
         ),
-        body: const Body());
+        body: Body());
   }
 }

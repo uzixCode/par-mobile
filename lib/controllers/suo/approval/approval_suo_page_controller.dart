@@ -4,9 +4,10 @@ import 'package:par_mobile/views/suo/approval/components/clock_in_out_section.da
 import 'package:par_mobile/views/suo/approval/components/dcu_section.dart';
 import 'package:par_mobile/views/suo/approval/components/document_section.dart';
 import 'package:par_mobile/views/suo/approval/components/ptc_section.dart';
+import 'package:get/get.dart';
 
 class ApprovalSUOPageController extends GetxController {
-  int index = 0;
+  var index = 0.obs;
   List<Widget> tab = [
     const PTCSection(),
     const DCUSection(),
@@ -14,10 +15,10 @@ class ApprovalSUOPageController extends GetxController {
     const DocumentSection(),
   ];
   PageController tabController = PageController(initialPage: 0, keepPage: false);
-  void changePage(int indexi, {bool? isAnimateTo}) {
-    index = indexi;
+  void changeTab(int indexi, {bool? isAnimateTo}) {
+    index.value = indexi;
     if (isAnimateTo ?? false) {
-      tabController.animateToPage(index, duration: const Duration(milliseconds: 400), curve: Curves.linear);
+      tabController.animateToPage(index.value, duration: const Duration(milliseconds: 400), curve: Curves.linear);
     }
     update();
   }
