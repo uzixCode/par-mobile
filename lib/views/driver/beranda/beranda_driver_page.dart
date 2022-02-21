@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
 import 'package:par_mobile/controllers/driver/beranda/beranda_driver_page_controller.dart';
 import 'package:par_mobile/widgets/basecard.dart';
+import 'package:par_mobile/widgets/costumTable.dart';
 
 class BerandaDriverPage extends StatelessWidget {
   BerandaDriverPage({Key? key}) : super(key: key);
@@ -58,24 +59,49 @@ class BerandaDriverPage extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Selamat Pagi,\n",
+                              "Selamat Pagi,",
                               style: TextStyle(color: Colors.white),
                             ),
-                            Text(
-                              "Uzix Code",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: Get.width * 0.04),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 3),
+                              child: Text(
+                                "Uzix Code",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: Get.width * 0.04),
+                              ),
                             ),
-                            Text(
-                              "\nDCU      : No Data",
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            Text(
-                              "Clock In : No Data",
-                              style: TextStyle(color: Colors.white),
-                            ),
+                            CostumTable(row: [
+                              [
+                                Text(
+                                  "DCU",
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                                Text(
+                                  "   :   ",
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                                Text(
+                                  "No Data",
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ],
+                              [
+                                Text(
+                                  "Clock In",
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                                Text(
+                                  "   :   ",
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                                Text(
+                                  "No Data",
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ],
+                            ]),
                           ],
                         ),
                       ],
@@ -90,17 +116,55 @@ class BerandaDriverPage extends StatelessWidget {
               ),
             ),
             Expanded(
-                child: ListView.builder(
-              itemCount: 10,
-              itemBuilder: (context, index) {
-                return BaseCard(
-                  label: "card number : " + index.toString(),
+                child: ListView(
+              children: [
+                BaseCard(
+                  label: "INFO CLIENT",
                   trailing: Icon(
                     Icons.chevron_right,
                     color: Colors.white,
                   ),
-                );
-              },
+                  child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text("Uzix Code"),
+                              Row(
+                                children: [
+                                  Image.asset("assets/images/phone.png",
+                                          width: Get.width * 0.06)
+                                      .paddingOnly(right: 9),
+                                  Text("081 2345 6789")
+                                ],
+                              )
+                            ],
+                          ),
+                          CostumTable(
+                            row: [
+                              [
+                                Text("Jabatan"),
+                                Text("   :   "),
+                                Text("Driver"),
+                              ],
+                              [
+                                Text("Perusahaan"),
+                                Text("   :   "),
+                                Text("PT. Prima Armada Raya"),
+                              ],
+                              [
+                                Text("Unit Kerja"),
+                                Text("   :   "),
+                                Text("GO - Head Office PAR"),
+                              ],
+                            ],
+                          ),
+                        ],
+                      )),
+                )
+              ],
             ))
           ],
         ));
