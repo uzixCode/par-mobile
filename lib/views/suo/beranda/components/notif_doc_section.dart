@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
+import 'package:par_mobile/views/suo/approval_update_document/approval_update_document_page.dart';
 import 'package:par_mobile/widgets/basecard.dart';
 import 'package:par_mobile/widgets/rectangle_button.dart';
 
@@ -31,7 +32,9 @@ class NotifDocSection extends StatelessWidget {
                     SizedBox(
                       width: Get.width * 0.27,
                       child: RectangleButton(
-                        onTap: () {},
+                        onTap: () {
+                          Get.to(ApprovalUpdateDocumentPage());
+                        },
                         color: allColor.primary,
                         alignment: Alignment.center,
                         child: Text(

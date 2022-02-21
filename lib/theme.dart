@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:par_mobile/constants/all_color.dart';
 
 ThemeData themeData(BuildContext context) {
@@ -8,7 +7,7 @@ ThemeData themeData(BuildContext context) {
     primaryColor: allColor.primary,
     scaffoldBackgroundColor: Colors.white,
     appBarTheme: appBarTheme,
-    textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme).apply(bodyColor: Colors.black),
+    // textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme).apply(bodyColor: Colors.black),
     colorScheme: ColorScheme.light(
       primary: allColor.primary,
       secondary: allColor.secondary,
@@ -46,7 +45,7 @@ AppBarTheme appBarTheme = AppBarTheme(
   elevation: 1,
   backgroundColor: Colors.white,
   systemOverlayStyle: SystemUiOverlayStyle(
-    statusBarColor: allColor.secondary,
+    statusBarColor: allColor.primary,
     statusBarIconBrightness: Brightness.dark,
     statusBarBrightness: Brightness.light,
   ),

@@ -1,25 +1,19 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
-import 'package:par_mobile/controllers/beranda/beranda_suo_page_controller.dart';
+import 'package:par_mobile/controllers/suo/beranda/beranda_suo_page_controller.dart';
+import 'package:par_mobile/controllers/suo/main/main_suo_page_controller.dart';
 
 class HeaderSection extends StatelessWidget {
   const HeaderSection({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    BerandaSUOPageController controller = Get.put(BerandaSUOPageController());
-
+    MainSUOPageController controller = Get.put(MainSUOPageController());
     return Container(
       decoration: BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.7),
-            spreadRadius: 5,
-            blurRadius: 7,
-            offset: const Offset(0, 3), // changes position of shadow
-          ),
-        ],
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(Get.width * 0.05),
           bottomRight: Radius.circular(Get.width * 0.05),
@@ -71,10 +65,12 @@ class HeaderSection extends StatelessWidget {
                 ),
               ],
             ),
-            Text(
-              controller.dateFormat.format(controller.dateTimeNow),
-              textAlign: TextAlign.end,
-              style: TextStyle(color: Colors.white),
+            Obx(
+              () => Text(
+                controller.dateFormat.format(controller.dateTimeNow.value),
+                textAlign: TextAlign.end,
+                style: TextStyle(color: Colors.white),
+              ),
             )
           ],
         ),
