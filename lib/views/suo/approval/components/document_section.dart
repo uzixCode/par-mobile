@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
+import 'package:par_mobile/views/suo/approval_update_document/approval_update_document_page.dart';
 import 'package:par_mobile/widgets/basecard.dart';
 
 class DocumentSection extends StatelessWidget {
@@ -16,7 +18,9 @@ class DocumentSection extends StatelessWidget {
               itemCount: 5,
               itemBuilder: (context, index) {
                 return InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(ApprovalUpdateDocumentPage());
+                  },
                   child: Column(
                     children: [
                       Container(
