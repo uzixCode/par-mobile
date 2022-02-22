@@ -25,6 +25,7 @@ class BerandaDriverPage extends StatelessWidget {
           children: [
             Card(
               elevation: 10,
+              margin: EdgeInsets.zero,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(Get.width * 0.05),
@@ -73,7 +74,7 @@ class BerandaDriverPage extends StatelessWidget {
                                     fontSize: Get.width * 0.04),
                               ),
                             ),
-                            CostumTable(row: [
+                            CostumTable(row: const [
                               [
                                 Text(
                                   "DCU",
@@ -99,7 +100,7 @@ class BerandaDriverPage extends StatelessWidget {
                                 ),
                                 Text(
                                   "No Data",
-                                  style: const TextStyle(color: Colors.white),
+                                  style: TextStyle(color: Colors.white),
                                 ),
                               ],
                             ]),
@@ -149,7 +150,7 @@ class BerandaDriverPage extends StatelessWidget {
                             ],
                           ).paddingOnly(bottom: 8),
                           CostumTable(
-                            row: [
+                            row: const [
                               [
                                 Text("Jabatan"),
                                 Text("   :   "),
@@ -193,36 +194,38 @@ class BerandaDriverPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Expanded(
-                                child: Container(
-                                  child: CostumTable(
-                                    row: [
-                                      [
-                                        Text("Model"),
-                                        Text("   :   "),
-                                        Text("BMW"),
-                                      ],
-                                      [
-                                        Text("Tahun"),
-                                        Text("   :   "),
-                                        Text("2020"),
-                                      ],
-                                      [
-                                        Text("Masa Asuransi"),
-                                        Text("   :   "),
-                                        Text("01 Jan 2020"),
-                                      ],
-                                      [
-                                        Text("Masa KEUR"),
-                                        Text("   :   "),
-                                        Text("01 Jan 2020"),
-                                      ],
-                                      [
-                                        Text("Uji Emisi"),
-                                        Text("   :   "),
-                                        Text("-"),
-                                      ],
+                                child: CostumTable(
+                                  row: const [
+                                    [
+                                      Text("Model"),
+                                      Text("   :   "),
+                                      Text("BMW"),
                                     ],
-                                  ),
+                                    [
+                                      Text("Tahun"),
+                                      Text("   :   "),
+                                      Text("2020"),
+                                    ],
+                                    [
+                                      Text(
+                                        "Masa Asuransi",
+                                      ),
+                                      Text("   :   "),
+                                      Text(
+                                        "01 Jan 2020000000000000000000000000",
+                                      ),
+                                    ],
+                                    [
+                                      Text("Masa KEUR"),
+                                      Text("   :   "),
+                                      Text("01 Jan 2020"),
+                                    ],
+                                    [
+                                      Text("Uji Emisi"),
+                                      Text("   :   "),
+                                      Text("-"),
+                                    ],
+                                  ],
                                 ),
                               ),
                               Padding(
@@ -248,6 +251,10 @@ class BerandaDriverPage extends StatelessWidget {
                           ),
                         ],
                       )),
+                ),
+                BaseCard(
+                  label: "DASHBOARD",
+                  child: Text("data", maxLines: 1),
                 )
               ],
             ))

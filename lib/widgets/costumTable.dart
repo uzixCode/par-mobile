@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 class CostumTable extends StatefulWidget {
   CostumTable(
       {Key? key,
-      this.horizontalTableAlignment = MainAxisAlignment.start,
+      this.horizontalTableAlignment = Alignment.centerLeft,
       this.verticalTableAlignment = MainAxisAlignment.start,
       this.defaultRowAlignment = CrossAxisAlignment.start,
       this.row = const []})
       : super(key: key);
-  MainAxisAlignment? horizontalTableAlignment;
+  AlignmentGeometry? horizontalTableAlignment;
   MainAxisAlignment? verticalTableAlignment;
   CrossAxisAlignment? defaultRowAlignment;
   List<List<Widget>> row;
@@ -39,9 +39,15 @@ class _CostumTableState extends State<CostumTable> {
   @override
   Widget build(BuildContext context) {
     initData();
-    return Row(
-      mainAxisAlignment: widget.horizontalTableAlignment!,
-      children: column,
+    return Align(
+      alignment: widget.horizontalTableAlignment!,
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: column,
+        ),
+      ),
     );
   }
 }
