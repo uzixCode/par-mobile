@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
 
 class TabBarItem extends StatelessWidget {
@@ -15,13 +16,17 @@ class TabBarItem extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
+        height: Get.height * 0.05,
+        alignment: Alignment.center,
         decoration: BoxDecoration(
             color: currentIndex == compareIndex ? allColor.primary : allColor.grey,
-            borderRadius: BorderRadius.circular(3)),
+            borderRadius: BorderRadius.circular(5)),
         padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
         child: Text(
           label,
-          style: TextStyle(color: Colors.white),
+          maxLines: 2,
+          textAlign: TextAlign.center,
+          style: TextStyle(color: Colors.white, fontSize: 12),
         ),
       ),
     );
