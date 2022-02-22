@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:intl/intl.dart';
+import 'package:par_mobile/views/suo/approval/approval_suo_page.dart';
 import 'package:par_mobile/views/suo/beranda/beranda_suo_page.dart';
 import 'package:get/get.dart';
 
@@ -13,7 +14,7 @@ class MainSUOPageController extends GetxController {
   List<Widget> pages = [
     const BerandaSUOPage(),
     const BerandaSUOPage(),
-    const BerandaSUOPage(),
+    const ApprovalSUOPage(),
     const BerandaSUOPage(),
     const BerandaSUOPage(),
   ];
