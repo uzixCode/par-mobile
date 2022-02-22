@@ -14,7 +14,7 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: EdgeInsets.all(kDefaultPadding),
+        padding: EdgeInsets.all(15),
         child: Column(
           children: [
             Obx(

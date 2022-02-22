@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
 import 'package:par_mobile/controllers/suo/main/main_suo_page_controller.dart';
-import 'package:par_mobile/views/suo/beranda/components/header_section.dart';
+import 'package:par_mobile/views/suo/main/components/header_section.dart';
 import 'package:par_mobile/widgets/bottombaritem.dart';
 
 class MainSUOPage extends StatelessWidget {
