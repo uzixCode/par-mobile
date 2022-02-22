@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
 import 'package:par_mobile/controllers/driver/beranda/beranda_driver_page_controller.dart';
+import 'package:par_mobile/views/driver/beranda/components/stattile.dart';
 import 'package:par_mobile/widgets/basecard.dart';
 import 'package:par_mobile/widgets/costumFlatButton.dart';
 import 'package:par_mobile/widgets/costumTable.dart';
+import 'package:par_mobile/widgets/costumstatbar.dart';
 
 class BerandaDriverPage extends StatelessWidget {
   BerandaDriverPage({Key? key}) : super(key: key);
@@ -254,7 +256,26 @@ class BerandaDriverPage extends StatelessWidget {
                 ),
                 BaseCard(
                   label: "DASHBOARD",
-                  child: Text("data", maxLines: 1),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 10),
+                    child: Column(
+                      children: [
+                        StatTile(
+                            label: "BATAS LEMBUR",
+                            data: "0 Jam / 40 Jam (0%)",
+                            persentage: 15),
+                        StatTile(
+                            label: "BATAS LEMBUR",
+                            data: "0 Jam / 40 Jam (0%)",
+                            persentage: 50),
+                        StatTile(
+                            label: "BATAS LEMBUR",
+                            data: "0 Jam / 40 Jam (0%)",
+                            persentage: 90)
+                      ],
+                    ),
+                  ),
                 )
               ],
             ))
