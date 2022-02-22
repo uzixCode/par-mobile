@@ -40,21 +40,26 @@ class MainDriverPage extends StatelessWidget {
                     bottomBarItem.bottomBarItem(
                         currentIndex: con.index,
                         compareIndex: 0,
-                        iconPath: "assets/images/riwayat.png",
+                        iconPath: "assets/images/beranda.png",
                         label: "Riwayat"),
                     bottomBarItem.bottomBarItem(
                         currentIndex: con.index,
                         compareIndex: 1,
+                        iconPath: "assets/images/riwayat.png",
+                        label: "Riwayat"),
+                    bottomBarItem.bottomBarItem(
+                        currentIndex: con.index,
+                        compareIndex: 2,
                         iconPath: "assets/images/check.png",
                         label: "Check"),
                     bottomBarItem.bottomBarItem(
                         currentIndex: con.index,
-                        compareIndex: 2,
+                        compareIndex: 3,
                         iconPath: "assets/images/izin.png",
                         label: "Izin"),
                     bottomBarItem.bottomBarItem(
                         currentIndex: con.index,
-                        compareIndex: 3,
+                        compareIndex: 4,
                         iconPath: "assets/images/Profile.png",
                         label: "Profile"),
                   ]),
