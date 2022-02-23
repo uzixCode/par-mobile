@@ -5,14 +5,9 @@ import 'package:par_mobile/constants/all_color.dart';
 import 'package:par_mobile/widgets/basecard.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
-class SummaryFitDCUSection extends StatefulWidget {
+class SummaryFitDCUSection extends StatelessWidget {
   const SummaryFitDCUSection({Key? key}) : super(key: key);
 
-  @override
-  State<SummaryFitDCUSection> createState() => _SummaryFitDCUSectionState();
-}
-
-class _SummaryFitDCUSectionState extends State<SummaryFitDCUSection> {
   @override
   Widget build(BuildContext context) {
     return BaseCard(
@@ -23,14 +18,12 @@ class _SummaryFitDCUSectionState extends State<SummaryFitDCUSection> {
           child: Column(
             children: [
               TextFormField(
-                onTap: () {
-                  setState(() async {
-                    await showDatePicker(
-                        context: context,
-                        initialDate: DateTime.now(),
-                        firstDate: DateTime(2000),
-                        lastDate: DateTime(2050));
-                  });
+                onTap: () async {
+                  await showDatePicker(
+                      context: context,
+                      initialDate: DateTime.now(),
+                      firstDate: DateTime(2000),
+                      lastDate: DateTime(2050));
                 },
                 decoration: InputDecoration(
                   isDense: true,
