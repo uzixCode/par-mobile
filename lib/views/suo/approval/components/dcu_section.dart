@@ -81,15 +81,12 @@ class DCUSection extends StatelessWidget {
                                           children: const [
                                             Text("High Temperature",
                                                 style: TextStyle(color: Colors.white, fontSize: 11)),
-                                            SizedBox(
-                                              width: 5,
-                                            ),
                                             Text("39 C", style: TextStyle(color: Colors.white, fontSize: 16))
                                           ],
                                         ),
                                       ),
-                                      const SizedBox(
-                                        width: 5,
+                                      SizedBox(
+                                        width: Get.width * 0.01,
                                       ),
                                       Container(
                                         padding: const EdgeInsets.all(5),
@@ -102,9 +99,6 @@ class DCUSection extends StatelessWidget {
                                           children: const [
                                             Text("High Blood Pressure",
                                                 maxLines: 2, style: TextStyle(color: Colors.white, fontSize: 11)),
-                                            SizedBox(
-                                              width: 5,
-                                            ),
                                             Text("120/90", style: TextStyle(color: Colors.white, fontSize: 16))
                                           ],
                                         ),

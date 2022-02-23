@@ -6,6 +6,7 @@ import 'package:intl/intl.dart';
 import 'package:par_mobile/views/suo/approval/approval_suo_page.dart';
 import 'package:par_mobile/views/suo/beranda/beranda_suo_page.dart';
 import 'package:get/get.dart';
+import 'package:par_mobile/views/suo/monitoring/monitoring_suo_page.dart';
 
 class MainSUOPageController extends GetxController {
   var dateTimeNow = DateTime.now().obs;
@@ -15,7 +16,7 @@ class MainSUOPageController extends GetxController {
     const BerandaSUOPage(),
     const BerandaSUOPage(),
     const ApprovalSUOPage(),
-    const BerandaSUOPage(),
+    const MonitoringSUOPage(),
     const BerandaSUOPage(),
   ];
   PageController pageController = PageController(initialPage: 0, keepPage: false);
