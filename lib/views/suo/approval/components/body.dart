@@ -73,15 +73,4 @@ class Body extends StatelessWidget {
       ),
     );
   }
-
-  Container buttonSectionApproval(String title) {
-    return Container(
-      decoration: BoxDecoration(color: allColor.primary, borderRadius: BorderRadius.circular(3)),
-      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-      child: Text(
-        title,
-        style: TextStyle(color: Colors.white),
-      ),
-    );
-  }
 }
