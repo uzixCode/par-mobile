@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:par_mobile/views/driver/beranda/beranda_driver_page.dart';
+import 'package:par_mobile/views/driver/riwayat/riwayat_driver_page.dart';
 
 class MainDriverPageController extends GetxController {
   final dateTimeNow = DateTime.now();
@@ -9,7 +10,7 @@ class MainDriverPageController extends GetxController {
   int index = 0;
   List<Widget> pages = [
     BerandaDriverPage(),
-    BerandaDriverPage(),
+    RiwayatDriverPage(),
     BerandaDriverPage(),
     BerandaDriverPage(),
   ];
