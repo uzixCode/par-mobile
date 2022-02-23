@@ -266,12 +266,12 @@ class BerandaDriverPage extends StatelessWidget {
                             data: "0 Jam / 40 Jam (0%)",
                             persentage: 15),
                         StatTile(
-                            label: "BATAS LEMBUR",
-                            data: "0 Jam / 40 Jam (0%)",
+                            label: "SERVICE",
+                            data: "1000 Km / 10000 Km (50%)",
                             persentage: 50),
                         StatTile(
-                            label: "BATAS LEMBUR",
-                            data: "0 Jam / 40 Jam (0%)",
+                            label: "BATAS PERDIN",
+                            data: "4 Kali / 5 Kali (90%)",
                             persentage: 90)
                       ],
                     ),
