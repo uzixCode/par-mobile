@@ -16,7 +16,7 @@ class MainSUOPage extends StatelessWidget {
         body: SafeArea(
           child: Column(
             children: [
-              const HeaderSection(),
+              (con.index == 4) ? Container() : HeaderSection(),
               Expanded(
                 child: PageView(
                   controller: controller.pageController,
