@@ -7,6 +7,7 @@ import 'package:par_mobile/views/suo/approval/approval_suo_page.dart';
 import 'package:par_mobile/views/suo/beranda/beranda_suo_page.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/views/suo/monitoring/monitoring_suo_page.dart';
+import 'package:par_mobile/views/suo/profile/profile_suo_page.dart';
 
 class MainSUOPageController extends GetxController {
   var dateTimeNow = DateTime.now().obs;
@@ -17,7 +18,7 @@ class MainSUOPageController extends GetxController {
     const BerandaSUOPage(),
     const ApprovalSUOPage(),
     const MonitoringSUOPage(),
-    const BerandaSUOPage(),
+    ProfileSUOPage(),
   ];
   PageController pageController = PageController(initialPage: 0, keepPage: false);
   void changePage(int indexi, {bool? isAnimateTo}) {
@@ -30,11 +31,12 @@ class MainSUOPageController extends GetxController {
 
   getDateTimeNow() {
     dateTimeNow.value = DateTime.now();
-  } 
+  }
 
   @override
   void onInit() {
     print("Init Main Driver Page Controller");
+    pageController = PageController(initialPage: 0, keepPage: false);
     Timer.periodic(Duration(seconds: 1), (Timer t) => getDateTimeNow());
 
     super.onInit();
