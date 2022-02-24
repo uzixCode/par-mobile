@@ -3,6 +3,7 @@ import 'package:par_mobile/constants/all_color.dart';
 import 'package:par_mobile/models/widgets/monthmodel.dart';
 import 'package:par_mobile/widgets/costumFlatButton.dart';
 import 'package:par_mobile/widgets/monthpicker.dart';
+import 'package:par_mobile/widgets/yearpicker.dart';
 
 class AbsensiDriverPage extends StatelessWidget {
   AbsensiDriverPage({Key? key}) : super(key: key);
@@ -37,10 +38,18 @@ class AbsensiDriverPage extends StatelessWidget {
             const SizedBox(
               width: 5,
             ),
-            const Expanded(
+            Expanded(
                 flex: 2,
                 child: TextField(
+                  controller: tahun,
                   readOnly: true,
+                  onTap: () async {
+                    int? picked = await pickYear();
+                    if (picked != null) {
+                      print(picked);
+                      tahun.text = picked.toString();
+                    }
+                  },
                   decoration: InputDecoration(
                     suffixIconConstraints:
                         BoxConstraints(minWidth: 23, maxHeight: 20),
