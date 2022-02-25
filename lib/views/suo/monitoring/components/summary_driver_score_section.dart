@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
+import 'package:par_mobile/views/suo/driver_score_detail/driver_score_detail_page.dart';
 import 'package:par_mobile/widgets/basecard.dart';
 
 class SummaryDriverScoreSection extends StatelessWidget {
@@ -32,7 +33,9 @@ class SummaryDriverScoreSection extends StatelessWidget {
                     itemCount: 5,
                     itemBuilder: (context, index) {
                       return InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Get.to(DriverScoreDetailPage());
+                        },
                         child: Column(
                           children: [
                             Container(

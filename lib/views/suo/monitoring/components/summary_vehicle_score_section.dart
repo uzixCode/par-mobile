@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
+import 'package:par_mobile/views/suo/vehicle_score_detail/vehicle_score_detail_page.dart';
 import 'package:par_mobile/widgets/basecard.dart';
 
 class SummaryVehicleScoreSection extends StatelessWidget {
@@ -32,7 +33,9 @@ class SummaryVehicleScoreSection extends StatelessWidget {
                     itemCount: 5,
                     itemBuilder: (context, index) {
                       return InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Get.to(VehicleScoreDetailPage());
+                        },
                         child: Column(
                           children: [
                             Container(
@@ -90,7 +93,10 @@ class SummaryVehicleScoreSection extends StatelessWidget {
                                             ),
                                           ],
                                         ),
-                                        Text("3.0", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),)
+                                        Text(
+                                          "3.0",
+                                          style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                                        )
                                       ],
                                     ),
                                   ),
