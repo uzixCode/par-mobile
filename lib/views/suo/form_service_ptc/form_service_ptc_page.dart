@@ -47,7 +47,7 @@ class FormServicePTCPage extends StatelessWidget {
           width: double.infinity,
           height: Get.height * 0.07,
           alignment: Alignment.center,
-          padding: EdgeInsets.symmetric(vertical: 5),
+          padding:const  EdgeInsets.symmetric(vertical: 5),
           child: RectangleButton(
             onTap: () {
               
