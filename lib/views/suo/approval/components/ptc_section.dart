@@ -43,7 +43,7 @@ class PTCSection extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return InkWell(
                         onTap: () {
-                          Get.to(ApprovalPTCDetailPage());
+                          Get.to(const ApprovalPTCDetailPage());
                         },
                         child: Column(
                           children: [
