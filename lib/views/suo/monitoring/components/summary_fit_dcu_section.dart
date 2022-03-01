@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:par_mobile/constants/all_color.dart';
+import 'package:par_mobile/views/suo/monitoring_dcu_detail/monitoring_dcu_detail_page.dart';
 import 'package:par_mobile/widgets/basecard.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
@@ -11,7 +12,7 @@ class SummaryFitDCUSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BaseCard(
-      label: "RANGKUMAT FIT UNFIT",
+      label: "RANGKUMAN FIT UNFIT",
       child: Expanded(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
@@ -43,7 +44,9 @@ class SummaryFitDCUSection extends StatelessWidget {
                     itemCount: 5,
                     itemBuilder: (context, index) {
                       return InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Get.to(MonitoringDCUDetailSection());
+                        },
                         child: Column(
                           children: [
                             Container(
