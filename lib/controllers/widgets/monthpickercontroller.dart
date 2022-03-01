@@ -76,7 +76,7 @@ class MonthPickerController extends GetxController {
         ),
       );
     }
-    await Future.delayed(Duration(milliseconds: 100));
+    //await Future.delayed(Duration(milliseconds: 100));
     isLoading = false;
     update();
   }
