@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
+import 'package:par_mobile/views/suo/form_item_request/form_item_request_page.dart';
 import 'package:par_mobile/views/suo/form_service_ptc/form_service_ptc_page.dart';
+import 'package:par_mobile/views/suo/form_wo_ptc/form_wo_page.dart';
 import 'package:par_mobile/widgets/rectangle_button.dart';
 import 'package:par_mobile/widgets/tablerow_content.dart';
 
@@ -173,7 +175,9 @@ class Body extends StatelessWidget {
                 SizedBox(
                   width: Get.width * 0.35,
                   child: RectangleButton(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(FormItemRequestPage());
+                    },
                     color: allColor.orange,
                     alignment: Alignment.center,
                     child: Text(
