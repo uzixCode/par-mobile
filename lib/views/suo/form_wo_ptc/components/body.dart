@@ -27,6 +27,7 @@ class Body extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Table(
+                      defaultVerticalAlignment: TableCellVerticalAlignment.top,
                       columnWidths: const {1: FractionColumnWidth(0.65)},
                       children: [
                         _tableRowContent("Nomor", "72367"),
