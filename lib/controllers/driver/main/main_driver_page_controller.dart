@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:par_mobile/views/driver/beranda/beranda_driver_page.dart';
 import 'package:par_mobile/views/driver/check/check_driver_page.dart';
+import 'package:par_mobile/views/driver/izin/izin_driver_page.dart';
 import 'package:par_mobile/views/driver/riwayat/riwayat_driver_page.dart';
 
 class MainDriverPageController extends GetxController {
@@ -13,7 +14,7 @@ class MainDriverPageController extends GetxController {
     BerandaDriverPage(),
     RiwayatDriverPage(),
     CheckDriverPage(),
-    BerandaDriverPage(),
+    IzinDriverPage(),
     BerandaDriverPage(),
   ];
   PageController pageController =
