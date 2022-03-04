@@ -8,10 +8,10 @@ import 'package:par_mobile/views/suo/monitoring/components/user_feedback_section
 class MonitoringSUOPageController extends GetxController {
   var index = 0.obs;
   List<Widget> tab = [
-    SummaryFitDCUSection(),
-    SummaryVehicleScoreSection(),
-    SummaryDriverScoreSection(),
-    UserFeedbackSection(),
+    const SummaryFitDCUSection(),
+    const SummaryVehicleScoreSection(),
+    const SummaryDriverScoreSection(),
+    const UserFeedbackSection(),
   ];
   PageController tabController = PageController(initialPage: 0, keepPage: false);
   void changeTab(int indexi, {bool? isAnimateTo}) {
@@ -21,6 +21,8 @@ class MonitoringSUOPageController extends GetxController {
     }
     update();
   }
+
+  var isDetailMenuDCU = false.obs;
 
   @override
   void onInit() {

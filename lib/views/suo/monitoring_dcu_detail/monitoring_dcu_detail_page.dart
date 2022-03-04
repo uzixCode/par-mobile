@@ -7,7 +7,7 @@ class MonitoringDCUDetailSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BaseCard(
-      label: "DETAIL MONITORING (01 Des 2021)",
+      label: "DETAIL MONITORING (01 DES 2021)",
       child: Expanded(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
