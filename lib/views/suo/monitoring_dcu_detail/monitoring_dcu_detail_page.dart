@@ -1,13 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:par_mobile/constants/all_color.dart';
+import 'package:par_mobile/controllers/suo/monitoring/monitoring_suo_page_controller.dart';
 import 'package:par_mobile/widgets/basecard.dart';
+import 'package:par_mobile/widgets/rectangle_button.dart';
 
 class MonitoringDCUDetailSection extends StatelessWidget {
   const MonitoringDCUDetailSection({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    MonitoringSUOPageController controller =
+        Get.put(MonitoringSUOPageController());
     return BaseCard(
-      label: "DETAIL MONITORING (01 Des 2021)",
+      label: "DETAIL MONITORING (01 DES 2021)",
+      trailing: RectangleButton(
+          color: Colors.white,
+          onTap: () {
+            controller.isDetailMenuDCU.value = false;
+          },
+          child: Text(
+            "Kembali",
+            style: TextStyle(color: allColor.primary),
+          )),
       child: Expanded(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
@@ -23,9 +38,10 @@ class MonitoringDCUDetailSection extends StatelessWidget {
                 },
                 decoration: InputDecoration(
                   isDense: true,
-                  hintText: "Cari Driver",
+                  contentPadding:
+                      EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+                  hintText: "Cari Tanggal Monitoring",
                   hintStyle: TextStyle(fontSize: 12),
-                 
                 ),
               ),
               SizedBox(
@@ -35,20 +51,147 @@ class MonitoringDCUDetailSection extends StatelessWidget {
                 child: ListView.builder(
                     itemCount: 5,
                     itemBuilder: (context, index) {
-                      return InkWell(
-                        onTap: () {},
-                        child: Column(
-                          children: [
-                            
-                            Container(
-                              width: double.infinity,
-                              height: 5,
-                              decoration: BoxDecoration(
-                                color: Colors.grey,
-                              ),
+                      return Column(
+                        children: [
+                          Container(
+                            margin: const EdgeInsets.only(bottom: 15, top: 15),
+                            child: Row(
+                              children: [
+                                Container(
+                                  width: Get.width * 0.17,
+                                  height: Get.width * 0.17,
+                                  decoration: BoxDecoration(
+                                      image: const DecorationImage(
+                                          fit: BoxFit.cover,
+                                          image: AssetImage(
+                                              "assets/images/background.png")),
+                                      color: allColor.green,
+                                      shape: BoxShape.circle),
+                                ),
+                                SizedBox(
+                                  width: Get.width * 0.03,
+                                ),
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: const [
+                                          Text(
+                                            "Bambang Wijaya",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 14),
+                                          ),
+                                          Expanded(
+                                            child: Text(
+                                              "4 Des 2021 07:55 WIB",
+                                              maxLines: 2,
+                                              textAlign: TextAlign.end,
+                                              style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 12),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                      const SizedBox(
+                                        height: 5,
+                                      ),
+                                      Row(
+                                        children: [
+                                          Icon(
+                                            Icons.location_on,
+                                            color: allColor.primary,
+                                          ),
+                                          const SizedBox(
+                                            width: 5,
+                                          ),
+                                          Text(
+                                            "BD - DB",
+                                            style: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.bold,
+                                                color: allColor.primary),
+                                          ),
+                                        ],
+                                      ),
+                                      const SizedBox(
+                                        height: 5,
+                                      ),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.end,
+                                        children: [
+                                          Container(
+                                            padding: const EdgeInsets.all(5),
+                                            decoration: BoxDecoration(
+                                              color: allColor.light_red,
+                                              borderRadius:
+                                                  BorderRadius.circular(3),
+                                            ),
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.center,
+                                              children: const [
+                                                Text("High Temperature",
+                                                    style: TextStyle(
+                                                        color: Colors.white,
+                                                        fontSize: 11)),
+                                                Text("39 C",
+                                                    style: TextStyle(
+                                                        color: Colors.white,
+                                                        fontSize: 16))
+                                              ],
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            width: Get.width * 0.01,
+                                          ),
+                                          Container(
+                                            padding: const EdgeInsets.all(5),
+                                            decoration: BoxDecoration(
+                                              color: allColor.light_red,
+                                              borderRadius:
+                                                  BorderRadius.circular(3),
+                                            ),
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.center,
+                                              children: const [
+                                                Text("High Blood Pressure",
+                                                    maxLines: 2,
+                                                    style: TextStyle(
+                                                        color: Colors.white,
+                                                        fontSize: 11)),
+                                                Text("120/90",
+                                                    style: TextStyle(
+                                                        color: Colors.white,
+                                                        fontSize: 16))
+                                              ],
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
+                          ),
+                          Container(
+                            width: double.infinity,
+                            height: 5,
+                            decoration: BoxDecoration(
+                              color: Colors.grey,
+                            ),
+                          ),
+                        ],
                       );
                     }),
               ),
