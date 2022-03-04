@@ -16,7 +16,7 @@ class TabBarItem extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        height: Get.height * 0.05,
+        height: Get.height * 0.06,
         alignment: Alignment.center,
         decoration: BoxDecoration(
             color: currentIndex == compareIndex ? allColor.primary : allColor.grey,
