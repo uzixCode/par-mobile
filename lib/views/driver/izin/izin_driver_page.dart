@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
+import 'package:par_mobile/views/driver/pengajuan_izin/pengajuan_izin_driver_page.dart';
 import 'package:par_mobile/widgets/izinhistorycard.dart';
 import 'package:par_mobile/widgets/izinkuotacard.dart';
 
@@ -33,7 +34,7 @@ class IzinDriverPage extends StatelessWidget {
                         child: IzinKuotaCard(
                       color: allColor.primary,
                       kuota: "13",
-                      label: "Kuota Cuti",
+                      label: "Terpakai",
                     )),
                     SizedBox(
                       width: 15,
@@ -41,8 +42,8 @@ class IzinDriverPage extends StatelessWidget {
                     Expanded(
                         child: IzinKuotaCard(
                       color: allColor.grey,
-                      kuota: "13",
-                      label: "Kuota Cuti",
+                      kuota: "1",
+                      label: "Izin",
                     )),
                     SizedBox(
                       width: 15,
@@ -50,8 +51,8 @@ class IzinDriverPage extends StatelessWidget {
                     Expanded(
                         child: IzinKuotaCard(
                       color: allColor.red,
-                      kuota: "13",
-                      label: "Kuota Cuti",
+                      kuota: "0",
+                      label: "Sakit",
                     )),
                   ],
                 ),
@@ -70,20 +71,24 @@ class IzinDriverPage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: 20),
                 child: SizedBox(
                   width: Get.width * 0.80,
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(Get.width * 0.02)),
-                    color: allColor.primary,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 8.0, vertical: 10),
-                      child: Center(
-                        child: Text(
-                          "Pengajuan Izin",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: Get.width * 0.04),
+                  child: InkWell(
+                    onTap: () => Get.to(() => PengajuanIzinDriverPage()),
+                    child: Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius:
+                              BorderRadius.circular(Get.width * 0.02)),
+                      color: allColor.primary,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 8.0, vertical: 10),
+                        child: Center(
+                          child: Text(
+                            "Pengajuan Izin",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: Get.width * 0.04),
+                          ),
                         ),
                       ),
                     ),
