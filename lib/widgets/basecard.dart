@@ -3,10 +3,12 @@ import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
 
 class BaseCard extends StatelessWidget {
-  BaseCard({Key? key, required this.label, this.child, this.trailing})
+  BaseCard(
+      {Key? key, required this.label, this.child, this.trailing, this.leading})
       : super(key: key);
   final String label;
   final Widget? child;
+  final Widget? leading;
   final Widget? trailing;
   @override
   Widget build(BuildContext context) {
@@ -31,11 +33,12 @@ class BaseCard extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
+                        if (leading != null) leading!,
                         Text(
                           label,
                           style: const TextStyle(color: Colors.white),
                         ),
-                        trailing ?? Container()
+                        if (trailing != null) trailing!,
                       ],
                     ),
                   ),

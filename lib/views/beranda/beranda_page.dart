@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
 import 'package:par_mobile/controllers/beranda/beranda_page_controller.dart';
 import 'package:par_mobile/widgets/basecard.dart';
+import 'package:par_mobile/widgets/callcenterfloatingbutton.dart';
 
 class BerandaPage extends StatelessWidget {
   BerandaPage({Key? key}) : super(key: key);
@@ -11,14 +12,7 @@ class BerandaPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          backgroundColor: allColor.primary,
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Image.asset("assets/images/cs.png"),
-          ),
-        ),
+        floatingActionButton: CallCenterFloatingButton(),
         body: Column(
           children: [
             Card(
