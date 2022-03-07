@@ -5,7 +5,8 @@ import 'package:par_mobile/constants/all_color.dart';
 import 'package:par_mobile/controllers/suo/monitoring/monitoring_suo_page_controller.dart';
 import 'package:par_mobile/views/suo/monitoring_dcu_detail/monitoring_dcu_detail_page.dart';
 import 'package:par_mobile/widgets/basecard.dart';
-import 'package:percent_indicator/linear_percent_indicator.dart';
+
+import '../../../../widgets/costumstatbar.dart';
 
 class SummaryFitDCUSection extends StatelessWidget {
   const SummaryFitDCUSection({
@@ -92,16 +93,11 @@ class SummaryFitDCUSection extends StatelessWidget {
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
                                               Expanded(
-                                                child: LinearPercentIndicator(
-                                                  lineHeight: 10.0,
-                                                  linearStrokeCap:
-                                                      LinearStrokeCap.roundAll,
-                                                  percent: 0.13,
-                                                  barRadius:
-                                                      Radius.circular(15),
-                                                  animationDuration: 2000,
-                                                  animation: true,
-                                                  progressColor: allColor.green,
+                                                child: CostumStatBar(
+                                                  height: 10,
+                                                  persentage: 13,
+                                                  width: double.infinity,
+                                                  barColor: Colors.grey.withOpacity(0.5),
                                                 ),
                                               ),
                                               SizedBox(
