@@ -19,13 +19,16 @@ class Body extends StatelessWidget {
             Text(
               "Lakukan Update Dokumen Dengan Rincian Sebagai Berikut",
               textAlign: TextAlign.center,
-              style: TextStyle(color: allColor.primary, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  color: allColor.primary, fontWeight: FontWeight.bold),
             ),
             const SizedBox(
               height: 15,
             ),
             Container(
-              decoration: BoxDecoration(color: allColor.secondary, borderRadius: BorderRadius.circular(5)),
+              decoration: BoxDecoration(
+                  color: allColor.secondary,
+                  borderRadius: BorderRadius.circular(5)),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
@@ -34,20 +37,36 @@ class Body extends StatelessWidget {
                     Table(
                       columnWidths: const {1: FractionColumnWidth(0.7)},
                       children: [
-                        tableRowContent(title: 'Pengemudi', valueContent: 'Bambang Wijaya', isCustomContent: false),
-                        tableRowContent(title: 'Unit Kerja', valueContent: 'BD - BD', isCustomContent: false),
-                        tableRowContent(title: 'Plat Nomor', valueContent: 'B123BD', isCustomContent: false),
-                        tableRowContent(title: 'Nama Dokumen', valueContent: 'KEUR Driver', isCustomContent: false),
-                        tableRowContent(title: 'Tanggal Exp', valueContent: '22 Oktober 2021', isCustomContent: false),
+                        tableRowContent(
+                          title: 'Pengemudi',
+                          valueContent: 'Bambang Wijaya',
+                        ),
+                        tableRowContent(
+                          title: 'Unit Kerja',
+                          valueContent: 'BD - BD',
+                        ),
+                        tableRowContent(
+                          title: 'Plat Nomor',
+                          valueContent: 'B123BD',
+                        ),
+                        tableRowContent(
+                          title: 'Nama Dokumen',
+                          valueContent: 'KEUR Driver',
+                        ),
+                        tableRowContent(
+                          title: 'Tanggal Exp',
+                          valueContent: '22 Oktober 2021',
+                        ),
                       ],
                     ),
-                    SizedBox(height: 10),
-                    Text("Upload Dokumen Terbaru", style: TextStyle(color: Colors.white)),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
+                    const Text("Upload Dokumen Terbaru",
+                        style: TextStyle(color: Colors.white)),
+                    const SizedBox(height: 10),
                     Center(
                       child: IconButton(
                           onPressed: () {},
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.file_upload_outlined,
                             size: 45,
                             color: Colors.white,
@@ -68,7 +87,10 @@ class Body extends StatelessWidget {
                 alignment: Alignment.center,
                 child: Text(
                   "Submit",
-                  style: TextStyle(fontSize: Get.width * 0.04, color: Colors.white, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontSize: Get.width * 0.04,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold),
                 ),
               ),
             ),

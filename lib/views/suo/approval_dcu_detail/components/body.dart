@@ -19,46 +19,60 @@ class Body extends StatelessWidget {
             Text(
               "Berikan Keputusan Untuk Hasil Daily Check Up Dengan Rincian Sebagai Berikut",
               textAlign: TextAlign.center,
-              style: TextStyle(color: allColor.primary, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  color: allColor.primary, fontWeight: FontWeight.bold),
             ),
             const SizedBox(
               height: 15,
             ),
             Container(
-              decoration: BoxDecoration(color: allColor.secondary, borderRadius: BorderRadius.circular(5)),
+              decoration: BoxDecoration(
+                  color: allColor.secondary,
+                  borderRadius: BorderRadius.circular(5)),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Table(
                   columnWidths: const {1: FractionColumnWidth(0.7)},
                   children: [
-                    tableRowContent(title: 'Pengemudi', valueContent: 'Bambang Wijaya', isCustomContent: false),
-                    tableRowContent(title: 'Unit Kerja', valueContent: 'BD - BD', isCustomContent: false),
-                    tableRowContent(title: 'Plat Nomor', valueContent: 'B 1234 JK', isCustomContent: false),
+                    tableRowContent(
+                        title: 'Pengemudi', valueContent: 'Bambang Wijaya'),
+                    tableRowContent(
+                      title: 'Unit Kerja',
+                      valueContent: 'BD - BD',
+                    ),
+                    tableRowContent(
+                      title: 'Plat Nomor',
+                      valueContent: 'B 1234 JK',
+                    ),
                     tableRowContent(
                         title: 'Temperature',
                         valueContent: '',
-                        isCustomContent: true,
                         widgetCustom: RichText(
                           text: const TextSpan(
                             text: ': 39 C ',
                             style: TextStyle(color: Colors.white),
                             children: <TextSpan>[
                               TextSpan(
-                                  text: '(HIGH)', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+                                  text: '(HIGH)',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white)),
                             ],
                           ),
                         )),
                     tableRowContent(
                         title: 'Tekanan Darah',
                         valueContent: '',
-                        isCustomContent: true,
                         widgetCustom: RichText(
                           text: const TextSpan(
                             text: ': 120/90 ',
                             style: TextStyle(color: Colors.white),
                             children: <TextSpan>[
                               TextSpan(
-                                  text: '(HIGH)', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+                                  text: '(HIGH)',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white)),
                             ],
                           ),
                         )),
@@ -80,7 +94,10 @@ class Body extends StatelessWidget {
                     alignment: Alignment.center,
                     child: Text(
                       "Approve Sementara",
-                      style: TextStyle(fontSize: Get.width * 0.04, color: Colors.white, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontSize: Get.width * 0.04,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
                 ),
@@ -92,7 +109,10 @@ class Body extends StatelessWidget {
                     alignment: Alignment.center,
                     child: Text(
                       "Cari Pengganti",
-                      style: TextStyle(fontSize: Get.width * 0.04, color: Colors.white, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontSize: Get.width * 0.04,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
                 ),

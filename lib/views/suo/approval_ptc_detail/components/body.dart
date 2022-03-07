@@ -38,25 +38,24 @@ class Body extends StatelessWidget {
                   columnWidths: const {1: FractionColumnWidth(0.7)},
                   children: [
                     tableRowContent(
-                        title: 'Pengemudi',
-                        valueContent: 'Bambang Wijaya',
-                        isCustomContent: false),
+                      title: 'Pengemudi',
+                      valueContent: 'Bambang Wijaya',
+                    ),
                     tableRowContent(
-                        title: 'Unit Kerja',
-                        valueContent: 'BD - BD',
-                        isCustomContent: false),
+                      title: 'Unit Kerja',
+                      valueContent: 'BD - BD',
+                    ),
                     tableRowContent(
-                        title: 'Detail PTC',
-                        valueContent: 'Keausan/Kondisi - Retak/Robek',
-                        isCustomContent: false),
+                      title: 'Detail PTC',
+                      valueContent: 'Keausan/Kondisi - Retak/Robek',
+                    ),
                     tableRowContent(
-                        title: 'Bagian PTC',
-                        valueContent: 'Ban',
-                        isCustomContent: false),
+                      title: 'Bagian PTC',
+                      valueContent: 'Ban',
+                    ),
                     tableRowContent(
                         title: 'Level',
                         valueContent: '',
-                        isCustomContent: true,
                         widgetCustom: Row(
                           children: [
                             const Text(
@@ -87,13 +86,12 @@ class Body extends StatelessWidget {
                           ],
                         )),
                     tableRowContent(
-                        title: "No Telepon",
-                        valueContent: '08123456789',
-                        isCustomContent: false),
+                      title: "No Telepon",
+                      valueContent: '08123456789',
+                    ),
                     tableRowContent(
                       title: 'Foto Kerusakan',
                       valueContent: '',
-                      isCustomContent: true,
                       widgetCustom: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
