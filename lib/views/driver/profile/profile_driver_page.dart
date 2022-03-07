@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
 import 'package:par_mobile/views/driver/profile/components/datatilecard.dart';
-import 'package:par_mobile/views/suo/profile/components/avatar_name_section.dart';
+
 import 'package:par_mobile/widgets/basecard.dart';
 import 'package:par_mobile/widgets/callcenterfloatingbutton.dart';
 import 'package:par_mobile/widgets/costumFlatButton.dart';
