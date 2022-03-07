@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
+import 'package:par_mobile/controllers/suo/approval/approval_update_doc_page_controller.dart';
 import 'package:par_mobile/widgets/rectangle_button.dart';
 import 'package:par_mobile/widgets/tablerow_content.dart';
 
@@ -9,6 +10,8 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ApprovalUpdateDocPageController controller =
+        Get.put(ApprovalUpdateDocPageController());
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.all(20),
@@ -31,48 +34,74 @@ class Body extends StatelessWidget {
                   borderRadius: BorderRadius.circular(5)),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Table(
-                      columnWidths: const {1: FractionColumnWidth(0.7)},
-                      children: [
-                        tableRowContent(
-                          title: 'Pengemudi',
-                          valueContent: 'Bambang Wijaya',
+                child: Obx(
+                  () => Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Table(
+                        columnWidths: const {1: FractionColumnWidth(0.7)},
+                        children: [
+                          tableRowContent(
+                            title: 'Pengemudi',
+                            valueContent: 'Bambang Wijaya',
+                          ),
+                          tableRowContent(
+                            title: 'Unit Kerja',
+                            valueContent: 'BD - BD',
+                          ),
+                          tableRowContent(
+                            title: 'Plat Nomor',
+                            valueContent: 'B123BD',
+                          ),
+                          tableRowContent(
+                            title: 'Nama Dokumen',
+                            valueContent: 'KEUR Driver',
+                          ),
+                          tableRowContent(
+                            title: 'Tanggal Exp',
+                            valueContent: '22 Oktober 2021',
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 10),
+                      const Text("Upload Dokumen Terbaru",
+                          style: TextStyle(color: Colors.white)),
+                      const SizedBox(height: 10),
+                      if (controller.fileDocument.value.path.isNotEmpty)
+                        Row(
+                          children: [
+                            Text(
+                                controller.fileDocument.value.path
+                                    .split('/')
+                                    .last,
+                                style: const TextStyle(color: Colors.white)),
+                            const SizedBox(
+                              width: 20,
+                            ),
+                            InkWell(
+                              onTap: () {
+                                controller.deleteFile();
+                              },
+                              child: const Icon(
+                                Icons.delete,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
                         ),
-                        tableRowContent(
-                          title: 'Unit Kerja',
-                          valueContent: 'BD - BD',
-                        ),
-                        tableRowContent(
-                          title: 'Plat Nomor',
-                          valueContent: 'B123BD',
-                        ),
-                        tableRowContent(
-                          title: 'Nama Dokumen',
-                          valueContent: 'KEUR Driver',
-                        ),
-                        tableRowContent(
-                          title: 'Tanggal Exp',
-                          valueContent: '22 Oktober 2021',
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 10),
-                    const Text("Upload Dokumen Terbaru",
-                        style: TextStyle(color: Colors.white)),
-                    const SizedBox(height: 10),
-                    Center(
-                      child: IconButton(
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.file_upload_outlined,
-                            size: 45,
-                            color: Colors.white,
-                          )),
-                    )
-                  ],
+                      Center(
+                        child: IconButton(
+                            onPressed: () {
+                              controller.pickFile();
+                            },
+                            icon: const Icon(
+                              Icons.file_upload_outlined,
+                              size: 45,
+                              color: Colors.white,
+                            )),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
