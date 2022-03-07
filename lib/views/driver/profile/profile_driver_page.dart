@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
+import 'package:par_mobile/views/driver/profile/components/datatilecard.dart';
 import 'package:par_mobile/views/suo/profile/components/avatar_name_section.dart';
 import 'package:par_mobile/widgets/basecard.dart';
 import 'package:par_mobile/widgets/callcenterfloatingbutton.dart';
 import 'package:par_mobile/widgets/costumFlatButton.dart';
+import 'package:par_mobile/widgets/roundedtextfield.dart';
 import 'package:par_mobile/widgets/tabbar_item.dart';
 
 class ProfileDriverPage extends StatelessWidget {
@@ -136,6 +138,46 @@ class ProfileDriverPage extends StatelessWidget {
                                     // fontSize: Get.width * 0.04,
                                   ),
                                 )),
+                            child: Expanded(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: ListView(
+                                  children: [
+                                    DataTileCard(
+                                      label: "Username",
+                                      elevetion: 0,
+                                      background:
+                                          allColor.light_grey.withOpacity(0.3),
+                                      controller: TextEditingController(
+                                          text: "20010021"),
+                                      readonly: true,
+                                    ),
+                                    DataTileCard(
+                                      label: "Email",
+                                      elevetion: 10,
+                                      controller: TextEditingController(
+                                          text: "20010021"),
+                                      readonly: true,
+                                    ),
+                                    DataTileCard(
+                                      label: "Alamat",
+                                      controller: TextEditingController(
+                                          text: "20010021"),
+                                      readonly: true,
+                                    ),
+                                    DataTileCard(
+                                      label: "Nomor Handphone",
+                                      controller: TextEditingController(
+                                          text: "20010021"),
+                                      readonly: true,
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
                           ),
                           Column(
                             children: [
