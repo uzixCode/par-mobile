@@ -13,7 +13,8 @@ class RoundedTextField extends StatelessWidget {
       this.keyboardType,
       this.borderRadius,
       this.prefixIcon,
-      this.maxLines = 1})
+      this.maxLines = 1,
+      this.borderSide = const BorderSide()})
       : super(key: key);
   TextEditingController? controller;
   void Function()? onTap;
@@ -25,6 +26,7 @@ class RoundedTextField extends StatelessWidget {
   TextInputType? keyboardType;
   double? borderRadius;
   int? maxLines;
+  BorderSide borderSide;
   @override
   Widget build(BuildContext context) {
     return TextField(
@@ -35,6 +37,7 @@ class RoundedTextField extends StatelessWidget {
       keyboardType: keyboardType ?? TextInputType.text,
       decoration: InputDecoration(
           border: OutlineInputBorder(
+              borderSide: borderSide,
               borderRadius: BorderRadius.circular(borderRadius ?? 4.0)),
           suffixIconConstraints:
               const BoxConstraints(minWidth: 23, maxHeight: 20),

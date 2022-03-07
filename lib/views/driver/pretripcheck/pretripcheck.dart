@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
 import 'package:par_mobile/widgets/costumFlatButton.dart';
 
@@ -8,11 +9,14 @@ class PreTripCheck extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+          title: Text(
+            "Pre Trip Check",
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          elevation: 5),
       body: Column(
         children: [
-          SizedBox(
-            height: MediaQuery.of(context).padding.top,
-          ),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -22,21 +26,23 @@ class PreTripCheck extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(vertical: 20),
                     child: Text(
                       "Kendaraan dalam keadaan 100% prima!",
-                      style: TextStyle(color: allColor.secondary),
+                      style: TextStyle(
+                          color: allColor.secondary,
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
                   Expanded(
                     child: GridView.builder(
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 3,
-                        crossAxisSpacing: 20.0,
-                        mainAxisSpacing: 20.0,
+                        crossAxisSpacing: 15.0,
+                        mainAxisSpacing: 15.0,
                       ),
                       itemCount: 12,
                       itemBuilder: (context, index) {
                         return LayoutBuilder(
                           builder: (context, card) => Card(
-                            elevation: 10,
+                            elevation: 5,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
@@ -62,11 +68,14 @@ class PreTripCheck extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(vertical: 20.0),
                     child: CostumFlatButton(
                         padding:
-                            EdgeInsets.symmetric(vertical: 8, horizontal: 20),
+                            EdgeInsets.symmetric(vertical: 5, horizontal: 30),
                         color: allColor.green,
                         child: Text(
                           "Submit",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: Get.width * 0.04,
+                              fontWeight: FontWeight.bold),
                         )),
                   )
                 ],
