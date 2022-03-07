@@ -22,6 +22,8 @@ class SummaryFitDCUSection extends StatelessWidget {
       () => (controller.isDetailMenuDCU.value)
           ? MonitoringDCUDetailSection()
           : BaseCard(
+              trailing: Container(),
+              leading: Container(),
               label: "RANGKUMAN FIT UNFIT",
               child: Expanded(
                 child: Padding(

@@ -14,15 +14,16 @@ class MonitoringDCUDetailSection extends StatelessWidget {
         Get.put(MonitoringSUOPageController());
     return BaseCard(
       label: "DETAIL MONITORING (01 DES 2021)",
-      trailing: RectangleButton(
+      leading: InkWell(
+        child: const Icon(
+          Icons.chevron_left,
           color: Colors.white,
-          onTap: () {
-            controller.isDetailMenuDCU.value = false;
-          },
-          child: Text(
-            "Kembali",
-            style: TextStyle(color: allColor.primary),
-          )),
+        ),
+        onTap: () {
+          controller.isDetailMenuDCU.value = false;
+        },
+      ),
+      trailing: Container(),
       child: Expanded(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),

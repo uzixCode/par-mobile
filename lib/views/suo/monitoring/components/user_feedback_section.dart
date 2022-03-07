@@ -9,6 +9,8 @@ class UserFeedbackSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return BaseCard(
       label: "KELUHAN/SARAN PELANGGAN",
+      trailing: Container(),
+      leading: Container(),
       child: Expanded(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
@@ -34,11 +36,13 @@ class UserFeedbackSection extends StatelessWidget {
                         child: Column(
                           children: [
                             Container(
-                              margin: const EdgeInsets.only(bottom: 15, top: 15),
+                              margin:
+                                  const EdgeInsets.only(bottom: 15, top: 15),
                               child: Column(
                                 children: [
                                   Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text("Dani Bramantyo"),
                                       Text("04 Des 2021"),
@@ -49,15 +53,21 @@ class UserFeedbackSection extends StatelessWidget {
                                   ),
                                   Container(
                                     width: double.infinity,
-                                    padding: EdgeInsets.symmetric(vertical: 5, horizontal: 15),
-                                    decoration:
-                                        BoxDecoration(color: allColor.primary, borderRadius: BorderRadius.circular(15)),
+                                    padding: EdgeInsets.symmetric(
+                                        vertical: 5, horizontal: 15),
+                                    decoration: BoxDecoration(
+                                        color: allColor.primary,
+                                        borderRadius:
+                                            BorderRadius.circular(15)),
                                     child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
                                         Text("Keluhan Driver",
                                             style: TextStyle(
-                                                color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14)),
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 14)),
                                         SizedBox(
                                           height: 10,
                                         ),
@@ -65,7 +75,9 @@ class UserFeedbackSection extends StatelessWidget {
                                           "Driver kurang disiplin datang terlambat",
                                           maxLines: 10,
                                           overflow: TextOverflow.ellipsis,
-                                          style: TextStyle(color: Colors.white, fontSize: 12),
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 12),
                                         ),
                                         SizedBox(
                                           height: 5,
@@ -73,12 +85,17 @@ class UserFeedbackSection extends StatelessWidget {
                                         RichText(
                                           text: const TextSpan(
                                             text: 'Kategori: ',
-                                            style: TextStyle(color: Colors.white, fontSize: 12),
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 12),
                                             children: <TextSpan>[
                                               TextSpan(
                                                   text: 'Kedisiplinan',
                                                   style: TextStyle(
-                                                      fontWeight: FontWeight.bold, color: Colors.white, fontSize: 12)),
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                      color: Colors.white,
+                                                      fontSize: 12)),
                                             ],
                                           ),
                                         )

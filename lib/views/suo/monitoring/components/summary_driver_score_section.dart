@@ -12,6 +12,8 @@ class SummaryDriverScoreSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return BaseCard(
       label: "RANGKUMAN PENILAIAN DRIVER",
+      trailing: Container(),
+      leading: Container(),
       child: Expanded(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
