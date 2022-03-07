@@ -12,7 +12,8 @@ class RoundedTextField extends StatelessWidget {
       this.padding,
       this.keyboardType,
       this.borderRadius,
-      this.prefixIcon})
+      this.prefixIcon,
+      this.maxLines = 1})
       : super(key: key);
   TextEditingController? controller;
   void Function()? onTap;
@@ -23,12 +24,14 @@ class RoundedTextField extends StatelessWidget {
   EdgeInsetsGeometry? padding;
   TextInputType? keyboardType;
   double? borderRadius;
+  int? maxLines;
   @override
   Widget build(BuildContext context) {
     return TextField(
       controller: controller,
       readOnly: readOnly ?? false,
       onTap: onTap,
+      maxLines: maxLines,
       keyboardType: keyboardType ?? TextInputType.text,
       decoration: InputDecoration(
           border: OutlineInputBorder(
