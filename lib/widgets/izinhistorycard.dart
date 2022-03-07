@@ -8,7 +8,7 @@ class IzinHistoryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 10,
+      elevation: 5,
       child: ListTile(
         leading: Icon(
           status == 1 ? Icons.alarm_outlined : Icons.check,
