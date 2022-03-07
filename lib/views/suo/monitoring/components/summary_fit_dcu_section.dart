@@ -97,7 +97,8 @@ class SummaryFitDCUSection extends StatelessWidget {
                                                   height: 10,
                                                   persentage: 13,
                                                   width: double.infinity,
-                                                  barColor: Colors.grey.withOpacity(0.5),
+                                                  barColor: Colors.grey
+                                                      .withOpacity(0.5),
                                                 ),
                                               ),
                                               SizedBox(
