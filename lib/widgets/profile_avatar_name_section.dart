@@ -2,14 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
 
-class AvatarNameSection extends StatelessWidget {
-  const AvatarNameSection({Key? key}) : super(key: key);
+class ProfileAvatarNameSection extends StatelessWidget {
+  final String imageUrl;
+  final String fullname;
+  final String position;
+  final Function() onTapEditProfile;
+  const ProfileAvatarNameSection(
+      {Key? key,
+      required this.imageUrl,
+      required this.fullname,
+      required this.position,
+      required this.onTapEditProfile})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
-      height: Get.height * 0.19,
+      height: Get.height * 0.22,
       child: Stack(
         alignment: Alignment.topCenter,
         children: [
@@ -46,8 +56,8 @@ class AvatarNameSection extends StatelessWidget {
                       width: Get.width * 0.20,
                       height: Get.width * 0.20,
                       decoration: BoxDecoration(
-                          image: const DecorationImage(
-                              fit: BoxFit.cover, image: AssetImage("assets/images/background.png")),
+                          image: DecorationImage(
+                              fit: BoxFit.cover, image: AssetImage(imageUrl)),
                           color: allColor.green,
                           shape: BoxShape.circle),
                     ),
@@ -55,11 +65,13 @@ class AvatarNameSection extends StatelessWidget {
                       top: 0,
                       right: 10,
                       child: Container(
-                          padding: EdgeInsets.all(3),
-                          decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(3)),
+                          padding: const EdgeInsets.all(3),
+                          decoration: BoxDecoration(
+                              color: Colors.black,
+                              borderRadius: BorderRadius.circular(3)),
                           child: InkWell(
-                            onTap: () {},
-                            child: Icon(
+                            onTap: onTapEditProfile,
+                            child: const Icon(
                               Icons.edit,
                               color: Colors.white,
                               size: 18,
@@ -69,23 +81,23 @@ class AvatarNameSection extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Text(
-                "Bambang Wijaya",
-                style: TextStyle(
+                fullname,
+                style: const TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Text(
-                "MOR III - Kramat Jaya",
-                style: TextStyle(
+                position,
+                style: const TextStyle(
                   fontSize: 12,
                   color: Colors.white,
                 ),
