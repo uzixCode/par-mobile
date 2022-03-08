@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
+import 'package:par_mobile/views/driver/pretripcheckdetail/pretripcheckdetail_driver_page.dart';
 import 'package:par_mobile/widgets/costumFlatButton.dart';
 
 class PreTripCheck extends StatelessWidget {
@@ -41,23 +42,28 @@ class PreTripCheck extends StatelessWidget {
                       itemCount: 12,
                       itemBuilder: (context, index) {
                         return LayoutBuilder(
-                          builder: (context, card) => Card(
-                            elevation: 5,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Icon(
-                                  Icons.bolt,
-                                  color: allColor.secondary,
-                                  size: card.maxWidth * 0.35,
-                                ),
-                                Text(
-                                  "Electric",
-                                  style: TextStyle(
-                                      color: allColor.secondary,
-                                      fontSize: card.maxWidth * 0.12),
-                                )
-                              ],
+                          builder: (context, card) => InkWell(
+                            onTap: () =>
+                                Get.to(() => PreTripCheckDetailDriverPage()),
+                            child: Card(
+                              elevation: 5,
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Icon(
+                                    Icons.bolt,
+                                    color: allColor.secondary,
+                                    size: card.maxWidth * 0.35,
+                                  ),
+                                  Text(
+                                    "Electric",
+                                    style: TextStyle(
+                                        color: allColor.secondary,
+                                        fontSize: card.maxWidth * 0.12),
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                         );
