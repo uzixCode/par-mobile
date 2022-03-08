@@ -26,7 +26,9 @@ class PreTripCheckDetailDriverPage extends StatelessWidget {
                   Center(
                     child: Text(
                       "ELEKTRIKAL",
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: Get.width * 0.04),
                     ).paddingOnly(bottom: 20),
                   ),
                   Expanded(
