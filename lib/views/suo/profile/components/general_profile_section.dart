@@ -80,9 +80,10 @@ class GeneralProfileSection extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
+                Text(
                   "Username",
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: Get.width * 0.035),
                 ),
                 const SizedBox(
                   height: 5,
@@ -98,9 +99,10 @@ class GeneralProfileSection extends StatelessWidget {
                 const SizedBox(
                   height: 15,
                 ),
-                const Text(
+                Text(
                   "Email",
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: Get.width * 0.035),
                 ),
                 const SizedBox(
                   height: 5,
@@ -115,9 +117,10 @@ class GeneralProfileSection extends StatelessWidget {
                 const SizedBox(
                   height: 15,
                 ),
-                const Text(
+                Text(
                   "Alamat",
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: Get.width * 0.035),
                 ),
                 const SizedBox(
                   height: 5,
@@ -132,9 +135,10 @@ class GeneralProfileSection extends StatelessWidget {
                 const SizedBox(
                   height: 15,
                 ),
-                const Text(
+                Text(
                   "Nomor Handphone",
-                  style: const TextStyle(fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: Get.width * 0.035),
                 ),
                 const SizedBox(
                   height: 5,
@@ -148,20 +152,6 @@ class GeneralProfileSection extends StatelessWidget {
                 ),
                 const SizedBox(
                   height: 15,
-                ),
-                const Text(
-                  "Nomor Handphone",
-                  style: const TextStyle(fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                TextFormField(
-                  initialValue: "08123456789",
-                  enabled: false,
-                  decoration: const InputDecoration(
-                    isDense: true,
-                  ),
                 ),
               ],
             ),

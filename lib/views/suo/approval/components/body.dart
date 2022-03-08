@@ -13,62 +13,63 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Padding(
-        padding: EdgeInsets.all(15),
-        child: Column(
-          children: [
-            Obx(
-              () => Row(
+      child: GetBuilder<ApprovalSUOPageController>(
+        init: Get.find<ApprovalSUOPageController>(),
+        builder: (con) => Padding(
+          padding: const EdgeInsets.all(15),
+          child: Column(
+            children: [
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   TabBarItem(
                     label: "PTC",
-                    currentIndex: controller.index.value,
+                    currentIndex: con.index.value,
                     compareIndex: 0,
                     onTap: () {
-                      controller.changeTab(0, isAnimateTo: true);
+                      con.changeTab(0, isAnimateTo: true);
                     },
                   ),
                   TabBarItem(
                     label: "DCU",
-                    currentIndex: controller.index.value,
+                    currentIndex: con.index.value,
                     compareIndex: 1,
                     onTap: () {
-                      controller.changeTab(1, isAnimateTo: true);
+                      con.changeTab(1, isAnimateTo: true);
                     },
                   ),
                   TabBarItem(
                     label: "CLOCK IN/OUT",
-                    currentIndex: controller.index.value,
+                    currentIndex: con.index.value,
                     compareIndex: 2,
                     onTap: () {
-                      controller.changeTab(2, isAnimateTo: true);
+                      con.changeTab(2, isAnimateTo: true);
                     },
                   ),
                   TabBarItem(
                     label: "DOC",
-                    currentIndex: controller.index.value,
+                    currentIndex: con.index.value,
                     compareIndex: 3,
                     onTap: () {
-                      controller.changeTab(3, isAnimateTo: true);
+                      con.changeTab(3, isAnimateTo: true);
                     },
                   ),
                 ],
               ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Expanded(
-              child: PageView(
-                controller: controller.tabController,
-                children: controller.tab,
-                onPageChanged: (index) {
-                  controller.changeTab(index);
-                },
+              const SizedBox(
+                height: 10,
               ),
-            ),
-          ],
+              Expanded(
+                child: PageView(
+                  controller: con.tabController,
+                  children: con.tab,
+                  onPageChanged: (index) {
+                    con.changeTab(index);
+                  },
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

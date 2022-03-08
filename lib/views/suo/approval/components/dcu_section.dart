@@ -32,7 +32,9 @@ class DCUSection extends StatelessWidget {
                               height: Get.width * 0.17,
                               decoration: BoxDecoration(
                                   image: const DecorationImage(
-                                      fit: BoxFit.cover, image: AssetImage("assets/images/background.png")),
+                                      fit: BoxFit.cover,
+                                      image: AssetImage(
+                                          "assets/images/background.png")),
                                   color: allColor.green,
                                   shape: BoxShape.circle),
                             ),
@@ -44,25 +46,30 @@ class DCUSection extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
                                       const Text(
                                         "Bambang Wijaya",
-                                        style: const TextStyle(fontWeight: FontWeight.bold),
+                                        style: const TextStyle(
+                                            fontWeight: FontWeight.bold),
                                       ),
                                       Text(
                                         "B 1234 BD",
-                                        style: TextStyle(color: allColor.primary, fontWeight: FontWeight.bold),
+                                        style: TextStyle(
+                                            color: allColor.primary,
+                                            fontWeight: FontWeight.bold),
                                       )
                                     ],
                                   ),
                                   const SizedBox(
                                     height: 5,
                                   ),
-                                  const Text(
+                                  Text(
                                     "Kondisi driver tidak memungkinkan untuk melakukan perjalanan",
                                     maxLines: 4,
-                                    style: TextStyle(fontSize: 12),
+                                    style:
+                                        TextStyle(fontSize: Get.width * 0.03),
                                   ),
                                   const SizedBox(
                                     height: 5,
@@ -74,14 +81,22 @@ class DCUSection extends StatelessWidget {
                                         padding: const EdgeInsets.all(5),
                                         decoration: BoxDecoration(
                                           color: allColor.light_red,
-                                          borderRadius: BorderRadius.circular(3),
+                                          borderRadius:
+                                              BorderRadius.circular(3),
                                         ),
                                         child: Column(
-                                          crossAxisAlignment: CrossAxisAlignment.center,
-                                          children: const [
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
                                             Text("High Temperature",
-                                                style: TextStyle(color: Colors.white, fontSize: 11)),
-                                            Text("39 C", style: TextStyle(color: Colors.white, fontSize: 16))
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize:
+                                                        Get.width * 0.025)),
+                                            Text("39 C",
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: Get.width * 0.04))
                                           ],
                                         ),
                                       ),
@@ -92,14 +107,23 @@ class DCUSection extends StatelessWidget {
                                         padding: const EdgeInsets.all(5),
                                         decoration: BoxDecoration(
                                           color: allColor.light_red,
-                                          borderRadius: BorderRadius.circular(3),
+                                          borderRadius:
+                                              BorderRadius.circular(3),
                                         ),
                                         child: Column(
-                                          crossAxisAlignment: CrossAxisAlignment.center,
-                                          children: const [
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
                                             Text("High Blood Pressure",
-                                                maxLines: 2, style: TextStyle(color: Colors.white, fontSize: 11)),
-                                            Text("120/90", style: TextStyle(color: Colors.white, fontSize: 16))
+                                                maxLines: 2,
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize:
+                                                        Get.width * 0.025)),
+                                            Text("120/90",
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: Get.width * 0.04))
                                           ],
                                         ),
                                       ),

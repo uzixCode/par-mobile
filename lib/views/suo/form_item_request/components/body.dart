@@ -11,6 +11,7 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     FormItemRequestController con = FormItemRequestController();
+    TextStyle defaultTitle = TextStyle(fontSize: Get.width * 0.035);
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.all(20),
@@ -45,9 +46,11 @@ class Body extends StatelessWidget {
                             )),
                         _tableRowContent("Nomor Rangka", "",
                             isCustomWidget: true,
-                            widgetCustom: Obx(() => Container(
-                              width: Get.width * 0.25,
-                                decoration: BoxDecoration(border: Border.all(color: Colors.grey)),
+                            widgetCustom: Obx(
+                              () => Container(
+                                width: Get.width * 0.25,
+                                decoration: BoxDecoration(
+                                    border: Border.all(color: Colors.grey)),
                                 child: Padding(
                                   padding: const EdgeInsets.all(3.0),
                                   child: Row(
@@ -57,7 +60,8 @@ class Body extends StatelessWidget {
                                       Container(
                                         decoration: BoxDecoration(
                                             color: Colors.grey,
-                                            borderRadius: BorderRadius.circular(2)),
+                                            borderRadius:
+                                                BorderRadius.circular(2)),
                                         padding: const EdgeInsets.all(3),
                                         child: InkWell(
                                           onTap: () => con.subtractItem(),
@@ -72,7 +76,8 @@ class Body extends StatelessWidget {
                                       Container(
                                         decoration: BoxDecoration(
                                             color: Colors.grey,
-                                            borderRadius: BorderRadius.circular(2)),
+                                            borderRadius:
+                                                BorderRadius.circular(2)),
                                         padding: const EdgeInsets.all(3),
                                         child: InkWell(
                                           onTap: () => con.sumItem(),
@@ -93,7 +98,10 @@ class Body extends StatelessWidget {
                     const SizedBox(
                       height: 10,
                     ),
-                    const Text("Keterangan"),
+                    Text(
+                      "Keterangan",
+                      style: defaultTitle,
+                    ),
                     const SizedBox(
                       height: 5,
                     ),
@@ -139,7 +147,7 @@ class Body extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 5),
           child: Text(
             label,
-            style: const TextStyle(color: Colors.black),
+            style: TextStyle(color: Colors.black, fontSize: Get.width * 0.035),
           ),
         ),
         Padding(
@@ -148,16 +156,18 @@ class Body extends StatelessWidget {
               ? Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const Text(
+                    Text(
                       ": ",
-                      style: TextStyle(color: Colors.black),
+                      style: TextStyle(
+                          color: Colors.black, fontSize: Get.width * 0.035),
                     ),
                     Flexible(child: widgetCustom!),
                   ],
                 )
               : Text(
                   ": $value",
-                  style: const TextStyle(color: Colors.black),
+                  style: TextStyle(
+                      color: Colors.black, fontSize: Get.width * 0.035),
                 ),
         ),
       ],

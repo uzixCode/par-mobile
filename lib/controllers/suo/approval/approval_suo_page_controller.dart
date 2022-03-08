@@ -14,7 +14,7 @@ class ApprovalSUOPageController extends GetxController {
     const ClockInOutSection(),
     const DocumentSection(),
   ];
-  PageController tabController = PageController(initialPage: 0, keepPage: false);
+  PageController tabController = PageController(initialPage: 0, keepPage: true);
   void changeTab(int indexi, {bool? isAnimateTo}) {
     index.value = indexi;
     if (isAnimateTo ?? false) {
@@ -25,7 +25,8 @@ class ApprovalSUOPageController extends GetxController {
 
   @override
   void onInit() {
-    // TODO: implement onInit
+    index.value = 0;
+    tabController.initialPage;
     super.onInit();
   }
 }

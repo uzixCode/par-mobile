@@ -33,12 +33,16 @@ class ClockInOutSection extends StatelessWidget {
                               children: [
                                 Text(
                                   "Bambang Wijaya",
-                                  style: const TextStyle(fontWeight: FontWeight.bold),
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: Get.width * 0.035),
                                 ),
                                 Text(
                                   "Out Of Area",
-                                  style:
-                                      TextStyle(color: allColor.light_red, fontWeight: FontWeight.bold, fontSize: 12),
+                                  style: TextStyle(
+                                      color: allColor.light_red,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: Get.width * 0.03),
                                 )
                               ],
                             ),
@@ -53,15 +57,18 @@ class ClockInOutSection extends StatelessWidget {
                                   children: [
                                     Text(
                                       "Clock In",
-                                      style:
-                                          TextStyle(color: allColor.primary, fontWeight: FontWeight.bold, fontSize: 12),
+                                      style: TextStyle(
+                                          color: allColor.primary,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: Get.width * 0.03),
                                     ),
                                     const SizedBox(
                                       height: 5,
                                     ),
-                                    const Text(
+                                    Text(
                                       "21 April 2021 07:32",
-                                      style: TextStyle(fontSize: 12),
+                                      style:
+                                          TextStyle(fontSize: Get.width * 0.03),
                                     )
                                   ],
                                 ),
@@ -70,14 +77,17 @@ class ClockInOutSection extends StatelessWidget {
                                   children: [
                                     Text(
                                       "Clock Out",
-                                      style: TextStyle(color: allColor.primary, fontWeight: FontWeight.bold, fontSize: 12),
+                                      style: TextStyle(
+                                          color: allColor.primary,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: Get.width * 0.03),
                                     ),
                                     const SizedBox(
                                       height: 5,
                                     ),
-                                    const Text(
+                                    Text(
                                       "21 April 2021 07:32",
-                                      style: TextStyle(fontSize: 12),
+                                      style: TextStyle(fontSize: Get.width * 0.03),
                                     )
                                   ],
                                 ),

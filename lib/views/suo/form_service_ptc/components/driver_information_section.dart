@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class DriverInformationSection extends StatelessWidget {
   const DriverInformationSection({Key? key}) : super(key: key);
@@ -29,14 +30,14 @@ class DriverInformationSection extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 5),
           child: Text(
             label,
-            style: const TextStyle(color: Colors.black),
+            style: TextStyle(color: Colors.black, fontSize: Get.width * 0.035),
           ),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 5),
           child: Text(
             ": $value",
-            style: const TextStyle(color: Colors.black),
+            style: TextStyle(color: Colors.black, fontSize: Get.width * 0.035),
           ),
         ),
       ],

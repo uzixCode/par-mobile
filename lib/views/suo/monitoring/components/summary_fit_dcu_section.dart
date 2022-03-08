@@ -41,7 +41,7 @@ class SummaryFitDCUSection extends StatelessWidget {
                         decoration: InputDecoration(
                           isDense: true,
                           hintText: "Cari Tanggal Monitoring",
-                          hintStyle: TextStyle(fontSize: 12),
+                          hintStyle: TextStyle(fontSize: Get.width * 0.035),
                           suffixIcon: Icon(
                             Icons.calendar_today,
                             color: allColor.primary,
@@ -72,18 +72,20 @@ class SummaryFitDCUSection extends StatelessWidget {
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
-                                              const Text(
+                                              Text(
                                                 "01 Des 2021",
-                                                style: const TextStyle(
-                                                    fontWeight:
-                                                        FontWeight.bold),
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize:
+                                                        Get.width * 0.035),
                                               ),
                                               Text(
                                                 "1/8",
                                                 style: TextStyle(
                                                     color: allColor.primary,
-                                                    fontWeight:
-                                                        FontWeight.bold),
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize:
+                                                        Get.width * 0.035),
                                               )
                                             ],
                                           ),
@@ -106,11 +108,11 @@ class SummaryFitDCUSection extends StatelessWidget {
                                               SizedBox(
                                                 width: Get.width * 0.05,
                                               ),
-                                              const Text(
+                                              Text(
                                                 "13%",
                                                 maxLines: 4,
                                                 style: TextStyle(
-                                                    fontSize: 18,
+                                                    fontSize: Get.width * 0.05,
                                                     fontWeight:
                                                         FontWeight.bold),
                                               ),
@@ -119,9 +121,10 @@ class SummaryFitDCUSection extends StatelessWidget {
                                           const SizedBox(
                                             height: 5,
                                           ),
-                                          const Text(
+                                          Text(
                                             "FIT : 1 | UNFIT : 0",
-                                            style: TextStyle(fontSize: 12),
+                                            style: TextStyle(
+                                                fontSize: Get.width * 0.03),
                                           )
                                         ],
                                       ),

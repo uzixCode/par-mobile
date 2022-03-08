@@ -40,12 +40,12 @@ class MonitoringDCUDetailSection extends StatelessWidget {
                 decoration: InputDecoration(
                   isDense: true,
                   contentPadding:
-                      EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+                      const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
                   hintText: "Cari Tanggal Monitoring",
-                  hintStyle: TextStyle(fontSize: 12),
+                  hintStyle: TextStyle(fontSize: Get.width * 0.03),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Expanded(
@@ -82,12 +82,15 @@ class MonitoringDCUDetailSection extends StatelessWidget {
                                             MainAxisAlignment.spaceBetween,
                                         crossAxisAlignment:
                                             CrossAxisAlignment.center,
-                                        children: const [
-                                          Text(
-                                            "Bambang Wijaya",
-                                            style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 14),
+                                        children: [
+                                          Expanded(
+                                            child: Text(
+                                              "Bambang Wijaya",
+                                              maxLines: 2,
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: Get.width * 0.035),
+                                            ),
                                           ),
                                           Expanded(
                                             child: Text(
@@ -96,7 +99,7 @@ class MonitoringDCUDetailSection extends StatelessWidget {
                                               textAlign: TextAlign.end,
                                               style: TextStyle(
                                                   color: Colors.black,
-                                                  fontSize: 12),
+                                                  fontSize: Get.width * 0.03),
                                             ),
                                           )
                                         ],
@@ -116,7 +119,7 @@ class MonitoringDCUDetailSection extends StatelessWidget {
                                           Text(
                                             "BD - DB",
                                             style: TextStyle(
-                                                fontSize: 14,
+                                                fontSize: Get.width * 0.035,
                                                 fontWeight: FontWeight.bold,
                                                 color: allColor.primary),
                                           ),
@@ -139,15 +142,17 @@ class MonitoringDCUDetailSection extends StatelessWidget {
                                             child: Column(
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.center,
-                                              children: const [
+                                              children: [
                                                 Text("High Temperature",
                                                     style: TextStyle(
                                                         color: Colors.white,
-                                                        fontSize: 11)),
+                                                        fontSize:
+                                                            Get.width * 0.025)),
                                                 Text("39 C",
                                                     style: TextStyle(
                                                         color: Colors.white,
-                                                        fontSize: 16))
+                                                        fontSize:
+                                                            Get.width * 0.04))
                                               ],
                                             ),
                                           ),
@@ -164,16 +169,18 @@ class MonitoringDCUDetailSection extends StatelessWidget {
                                             child: Column(
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.center,
-                                              children: const [
+                                              children: [
                                                 Text("High Blood Pressure",
                                                     maxLines: 2,
                                                     style: TextStyle(
                                                         color: Colors.white,
-                                                        fontSize: 11)),
+                                                        fontSize:
+                                                            Get.width * 0.025)),
                                                 Text("120/90",
                                                     style: TextStyle(
                                                         color: Colors.white,
-                                                        fontSize: 16))
+                                                        fontSize:
+                                                            Get.width * 0.04))
                                               ],
                                             ),
                                           ),

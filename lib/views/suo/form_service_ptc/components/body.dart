@@ -12,7 +12,9 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextStyle titleStyle = TextStyle(
-        color: allColor.primary, fontSize: 16, fontWeight: FontWeight.bold);
+        color: allColor.primary,
+        fontSize: Get.width * 0.04,
+        fontWeight: FontWeight.bold);
     return GetBuilder<FormServicePTCController>(
       init: Get.find<FormServicePTCController>(),
       builder: (con) => SafeArea(
@@ -29,9 +31,9 @@ class Body extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                const Text(
+                Text(
                   "Jenis Service",
-                  style: TextStyle(fontSize: 14),
+                  style: TextStyle(fontSize: Get.width * 0.035),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -44,9 +46,9 @@ class Body extends StatelessWidget {
                         con.setRadioServiceType(val);
                       },
                     ),
-                    const Text(
+                    Text(
                       'Rutin',
-                      style: TextStyle(fontSize: 17.0),
+                      style: TextStyle(fontSize: Get.width * 0.04),
                     ),
                     Radio<int>(
                       value: 2,
@@ -56,17 +58,17 @@ class Body extends StatelessWidget {
                         con.setRadioServiceType(val);
                       },
                     ),
-                    const Text(
+                    Text(
                       'Adhoc',
                       style: TextStyle(
-                        fontSize: 17.0,
+                        fontSize: Get.width * 0.04,
                       ),
                     ),
                   ],
                 ),
-                const Text(
+                Text(
                   "Nama Bengkel Tujuan",
-                  style: TextStyle(fontSize: 14),
+                  style: TextStyle(fontSize: Get.width * 0.035),
                 ),
                 const SizedBox(
                   height: 5,
@@ -75,16 +77,16 @@ class Body extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                const Text(
+                Text(
                   "Kelengkapan",
-                  style: TextStyle(fontSize: 14),
+                  style: TextStyle(fontSize: Get.width * 0.035),
                 ),
                 const SizedBox(
                   height: 5,
                 ),
-                const Text(
+                Text(
                   "Buku Service",
-                  style: TextStyle(fontSize: 12),
+                  style: TextStyle(fontSize: Get.width * 0.03),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -97,9 +99,9 @@ class Body extends StatelessWidget {
                         con.setRadioServiceBook(val);
                       },
                     ),
-                    const Text(
+                    Text(
                       'Ada',
-                      style: TextStyle(fontSize: 17.0),
+                      style: TextStyle(fontSize: Get.width * 0.04),
                     ),
                     Radio<int>(
                       value: 2,
@@ -109,10 +111,10 @@ class Body extends StatelessWidget {
                         con.setRadioServiceBook(val);
                       },
                     ),
-                    const Text(
+                    Text(
                       'Tidak Ada',
                       style: TextStyle(
-                        fontSize: 17.0,
+                        fontSize: Get.width * 0.04,
                       ),
                     ),
                   ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
 import 'package:par_mobile/widgets/basecard.dart';
 
@@ -18,10 +19,10 @@ class UserFeedbackSection extends StatelessWidget {
             children: [
               TextFormField(
                 onTap: () {},
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   isDense: true,
                   hintText: "Cari Driver",
-                  hintStyle: const TextStyle(fontSize: 12),
+                  hintStyle: TextStyle(fontSize: Get.width * 0.03),
                 ),
               ),
               const SizedBox(
@@ -44,8 +45,16 @@ class UserFeedbackSection extends StatelessWidget {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Text("Dani Bramantyo"),
-                                      Text("04 Des 2021"),
+                                      Text(
+                                        "Dani Bramantyo",
+                                        style: TextStyle(
+                                            fontSize: Get.width * 0.035),
+                                      ),
+                                      Text(
+                                        "04 Des 2021",
+                                        style: TextStyle(
+                                            fontSize: Get.width * 0.035),
+                                      ),
                                     ],
                                   ),
                                   SizedBox(
@@ -67,7 +76,7 @@ class UserFeedbackSection extends StatelessWidget {
                                             style: TextStyle(
                                                 color: Colors.white,
                                                 fontWeight: FontWeight.bold,
-                                                fontSize: 14)),
+                                                fontSize: Get.width * 0.035)),
                                         SizedBox(
                                           height: 10,
                                         ),
@@ -77,17 +86,17 @@ class UserFeedbackSection extends StatelessWidget {
                                           overflow: TextOverflow.ellipsis,
                                           style: TextStyle(
                                               color: Colors.white,
-                                              fontSize: 12),
+                                              fontSize: Get.width * 0.03),
                                         ),
                                         SizedBox(
                                           height: 5,
                                         ),
                                         RichText(
-                                          text: const TextSpan(
+                                          text: TextSpan(
                                             text: 'Kategori: ',
                                             style: TextStyle(
                                                 color: Colors.white,
-                                                fontSize: 12),
+                                                fontSize: Get.width * 0.03),
                                             children: <TextSpan>[
                                               TextSpan(
                                                   text: 'Kedisiplinan',
@@ -95,7 +104,7 @@ class UserFeedbackSection extends StatelessWidget {
                                                       fontWeight:
                                                           FontWeight.bold,
                                                       color: Colors.white,
-                                                      fontSize: 12)),
+                                                      fontSize: Get.width * 0.03)),
                                             ],
                                           ),
                                         )

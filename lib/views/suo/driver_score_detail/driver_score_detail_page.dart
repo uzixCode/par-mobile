@@ -11,9 +11,12 @@ class DriverScoreDetailPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: const Text(
+        title: Text(
           "Rincian Penilaian",
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.black),
+          style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: Get.width * 0.04,
+              color: Colors.black),
         ),
         leading: IconButton(
             onPressed: () {

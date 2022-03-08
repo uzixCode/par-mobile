@@ -11,9 +11,12 @@ class ApprovalCicoDetailPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: const Text(
+        title: Text(
           "Approve Clock In Clock Out",
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.black),
+          style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: Get.width * 0.04,
+              color: Colors.black),
         ),
         leading: IconButton(
             onPressed: () {

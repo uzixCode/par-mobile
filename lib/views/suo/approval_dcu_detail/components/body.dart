@@ -48,15 +48,18 @@ class Body extends StatelessWidget {
                         title: 'Temperature',
                         valueContent: '',
                         widgetCustom: RichText(
-                          text: const TextSpan(
+                          text: TextSpan(
                             text: ': 39 C ',
-                            style: TextStyle(color: Colors.white),
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: Get.width * 0.035),
                             children: <TextSpan>[
                               TextSpan(
                                   text: '(HIGH)',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      color: Colors.white)),
+                                      color: Colors.white,
+                                      fontSize: Get.width * 0.035)),
                             ],
                           ),
                         )),
@@ -64,14 +67,17 @@ class Body extends StatelessWidget {
                         title: 'Tekanan Darah',
                         valueContent: '',
                         widgetCustom: RichText(
-                          text: const TextSpan(
+                          text: TextSpan(
                             text: ': 120/90 ',
-                            style: TextStyle(color: Colors.white),
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: Get.width * 0.035),
                             children: <TextSpan>[
                               TextSpan(
                                   text: '(HIGH)',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
+                                      fontSize: Get.width * 0.035,
                                       color: Colors.white)),
                             ],
                           ),

@@ -7,7 +7,7 @@ class TabBarItem extends StatelessWidget {
   final Function() onTap;
   final int currentIndex;
   final int compareIndex;
-  TabBarItem(
+  const TabBarItem(
       {Key? key, required this.label, required this.currentIndex, required this.compareIndex, required this.onTap})
       : super(key: key);
 
@@ -21,12 +21,12 @@ class TabBarItem extends StatelessWidget {
         decoration: BoxDecoration(
             color: currentIndex == compareIndex ? allColor.primary : allColor.grey,
             borderRadius: BorderRadius.circular(5)),
-        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
         child: Text(
           label,
           maxLines: 2,
           textAlign: TextAlign.center,
-          style: TextStyle(color: Colors.white, fontSize: 12),
+          style: TextStyle(color: Colors.white, fontSize: Get.width * 0.03),
         ),
       ),
     );

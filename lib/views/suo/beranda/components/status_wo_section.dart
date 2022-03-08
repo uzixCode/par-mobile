@@ -36,13 +36,14 @@ class StatusWOSection extends StatelessWidget {
                   height: Get.height * 0.01,
                 ),
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                   decoration: BoxDecoration(
                       color: allColor.green.withOpacity(0.2),
                       borderRadius: BorderRadius.circular(10)),
                   child: Text(
                     "D 1234 BD",
-                    style: TextStyle(fontSize: 12, color: allColor.green),
+                    style: TextStyle(fontSize: Get.width * 0.03, color: allColor.green),
                   ),
                 ),
               ],
@@ -59,12 +60,12 @@ class StatusWOSection extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Expanded(
+                         Expanded(
                             child: Text(
                           "Darminto",
                           maxLines: 3,
                           style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.bold),
+                              fontSize: Get.width * 0.035, fontWeight: FontWeight.bold),
                         )),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
@@ -81,7 +82,7 @@ class StatusWOSection extends StatelessWidget {
                                   "HIGH",
                                   style: TextStyle(
                                       color: allColor.red,
-                                      fontSize: 12,
+                                      fontSize: Get.width * 0.03,
                                       fontWeight: FontWeight.bold),
                                 ),
                                 padding: const EdgeInsets.symmetric(
@@ -101,7 +102,7 @@ class StatusWOSection extends StatelessWidget {
                                   "1 HARI",
                                   style: TextStyle(
                                       color: allColor.red,
-                                      fontSize: 12,
+                                      fontSize: Get.width * 0.03,
                                       fontWeight: FontWeight.bold),
                                 ),
                                 padding: const EdgeInsets.symmetric(
@@ -112,11 +113,13 @@ class StatusWOSection extends StatelessWidget {
                   SizedBox(
                     height: Get.height * 0.01,
                   ),
-                  const Text(
+                  Text(
                     "Tutup Oli & Dip Stick - Tidak berfungsi / Seal Bocor",
                     maxLines: 3,
                     overflow: TextOverflow.ellipsis,
-                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        fontSize: Get.width * 0.03,
+                        fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
                     height: Get.height * 0.01,
@@ -136,18 +139,18 @@ class StatusWOSection extends StatelessWidget {
                             "24 NOV 19",
                             style: TextStyle(
                                 color: allColor.primary,
-                                fontSize: 12,
+                                fontSize: Get.width * 0.03,
                                 fontWeight: FontWeight.bold),
                           ),
-                          padding:
-                              const EdgeInsets.symmetric(horizontal: 5, vertical: 3)),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 5, vertical: 3)),
                       Expanded(
                           child: Text(
                         "Approved By Manager",
                         textAlign: TextAlign.end,
                         maxLines: 3,
                         style: TextStyle(
-                            fontSize: 12,
+                            fontSize: Get.width * 0.03,
                             color: allColor.primary,
                             fontWeight: FontWeight.bold),
                       ))
