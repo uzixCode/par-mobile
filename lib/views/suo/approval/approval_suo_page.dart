@@ -7,15 +7,6 @@ class ApprovalSUOPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          backgroundColor: allColor.primary,
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Image.asset("assets/images/cs.png"),
-          ),
-        ),
-        body: Body());
+    return Scaffold(body: Body());
   }
 }
