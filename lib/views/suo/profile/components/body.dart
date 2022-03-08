@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
+import 'package:par_mobile/views/suo/profile/components/driver_profile_section.dart';
 import 'package:par_mobile/widgets/profile_avatar_name_section.dart';
 import 'package:par_mobile/views/suo/profile/components/general_profile_section.dart';
 
@@ -72,7 +73,7 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
                         // first tab bar view widget
                         GeneralProfileSection(),
                         // second tab bar view widget
-                        GeneralProfileSection(),
+                        DriverProfileSection(),
                       ],
                     ),
                   ),
