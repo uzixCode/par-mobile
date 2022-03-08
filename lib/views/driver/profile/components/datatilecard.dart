@@ -21,7 +21,7 @@ class DataTileCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       SizedBox(
-        height: 10,
+        height: 15,
       ),
       Text(
         label,
