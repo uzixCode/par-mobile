@@ -14,6 +14,7 @@ class AllColor {
   final faded_blue = Color(0xFFF0F1FE);
   final light_blue = Color(0xFF7D86E4);
   final another_blue = Color(0xFF2665AE);
+  final bright_blue = Color(0xFF11CDEF);
   final dcu_sehat = Color(0xFF91C14F);
   final dcu_waspada = Color(0xFFF96341);
   final dcu_sedang = Color(0xFFFFDD43);

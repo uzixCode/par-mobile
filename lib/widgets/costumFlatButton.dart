@@ -9,7 +9,9 @@ class CostumFlatButton extends StatelessWidget {
       this.padding,
       this.border,
       this.onTap,
-      this.borderRadius})
+      this.borderRadius,
+      this.height,
+      this.width})
       : super(key: key);
   Widget child;
   Color? color;
@@ -17,11 +19,15 @@ class CostumFlatButton extends StatelessWidget {
   BoxBorder? border;
   double? borderRadius;
   void Function()? onTap;
+  double? width;
+  double? height;
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
       child: Container(
+        height: height,
+        width: width,
         decoration: BoxDecoration(
           border: border,
           color: color,

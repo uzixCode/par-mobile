@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
+import 'package:par_mobile/views/driver/konfirmasirangkumanptc/konfirmasirangkumanptc_driver_page.dart';
 import 'package:par_mobile/views/driver/pretripcheckdetail/pretripcheckdetail_driver_page.dart';
 import 'package:par_mobile/widgets/costumFlatButton.dart';
 
@@ -73,6 +74,7 @@ class PreTripCheck extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 20.0),
                     child: CostumFlatButton(
+                        onTap: () => Get.to(() => KonfirmasiRangkumanPTC()),
                         padding:
                             EdgeInsets.symmetric(vertical: 5, horizontal: 30),
                         color: allColor.green,
