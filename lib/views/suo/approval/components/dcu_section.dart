@@ -10,6 +10,8 @@ class DCUSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BaseCard(
+      trailing: Container(),
+      leading: Container(),
       label: "DAILY CHECK UP (DCU)",
       child: Expanded(
         child: Padding(

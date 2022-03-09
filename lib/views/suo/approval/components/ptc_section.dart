@@ -10,6 +10,8 @@ class PTCSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BaseCard(
+      trailing: Container(),
+      leading: Container(),
       label: "Pre Trip Check (PTC)",
       child: Expanded(
         child: Column(

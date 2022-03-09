@@ -14,7 +14,7 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: GetBuilder<ApprovalSUOPageController>(
-        init: Get.find<ApprovalSUOPageController>(),
+        initState: (_) => controller.changeTab(0),
         builder: (con) => Padding(
           padding: const EdgeInsets.all(15),
           child: Column(

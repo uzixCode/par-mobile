@@ -18,15 +18,9 @@ class ApprovalSUOPageController extends GetxController {
   void changeTab(int indexi, {bool? isAnimateTo}) {
     index.value = indexi;
     if (isAnimateTo ?? false) {
-      tabController.animateToPage(index.value, duration: const Duration(milliseconds: 400), curve: Curves.linear);
+      tabController.animateToPage(index.value,
+          duration: const Duration(milliseconds: 400), curve: Curves.linear);
     }
     update();
-  }
-
-  @override
-  void onInit() {
-    index.value = 0;
-    tabController.initialPage;
-    super.onInit();
   }
 }

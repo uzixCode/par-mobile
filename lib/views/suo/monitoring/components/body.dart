@@ -5,17 +5,19 @@ import 'package:par_mobile/widgets/tabbar_item.dart';
 
 class Body extends StatelessWidget {
   Body({Key? key}) : super(key: key);
-  MonitoringSUOPageController controller = Get.put(MonitoringSUOPageController());
+  MonitoringSUOPageController controller =
+      Get.put(MonitoringSUOPageController());
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: EdgeInsets.all(15),
-        child: Column(
-          children: [
-            Obx(
-              () => Row(
+        padding: const EdgeInsets.all(15),
+        child: GetBuilder<MonitoringSUOPageController>(
+          initState: (_) => controller.changeTab(0),
+          builder: (con) => Column(
+            children: [
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Flexible(
@@ -69,20 +71,20 @@ class Body extends StatelessWidget {
                   ),
                 ],
               ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Expanded(
-              child: PageView(
-                controller: controller.tabController,
-                children: controller.tab,
-                onPageChanged: (index) {
-                  controller.changeTab(index);
-                },
+              const SizedBox(
+                height: 10,
               ),
-            ),
-          ],
+              Expanded(
+                child: PageView(
+                  controller: controller.tabController,
+                  children: controller.tab,
+                  onPageChanged: (index) {
+                    controller.changeTab(index);
+                  },
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

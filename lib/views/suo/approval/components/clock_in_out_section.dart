@@ -10,6 +10,8 @@ class ClockInOutSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BaseCard(
+      trailing: Container(),
+      leading: Container(),
       label: "CLOCK IN/CLOCK OUT",
       child: Expanded(
         child: Padding(
