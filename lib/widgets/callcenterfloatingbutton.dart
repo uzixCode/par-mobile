@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:par_mobile/constants/all_color.dart';
 
 class CallCenterFloatingButton extends StatelessWidget {
-  const CallCenterFloatingButton({Key? key}) : super(key: key);
+  final Function()? onPressed;
+  const CallCenterFloatingButton({Key? key, this.onPressed}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
-      onPressed: () {},
+      onPressed: onPressed,
       backgroundColor: allColor.primary,
       child: Padding(
         padding: const EdgeInsets.all(8.0),

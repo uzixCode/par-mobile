@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:par_mobile/constants/all_color.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../widgets/callcenterfloatingbutton.dart';
 import 'components/body.dart';
@@ -9,7 +10,16 @@ class BerandaSUOPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-        floatingActionButton: CallCenterFloatingButton(), body: Body());
+    return Scaffold(
+        floatingActionButton: CallCenterFloatingButton(
+          onPressed: () async {
+            final Uri launchUri = Uri(
+              scheme: 'tel',
+              path: "081220559855",
+            );
+            await launch(launchUri.toString());
+          },
+        ),
+        body: Body());
   }
 }
