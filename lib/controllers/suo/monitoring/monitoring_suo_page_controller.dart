@@ -21,9 +21,7 @@ class MonitoringSUOPageController extends GetxController {
     }
     update();
   }
-
-  var isDetailMenuDCU = false.obs;
-
+  
   @override
   void onInit() {
     // TODO: implement onInit

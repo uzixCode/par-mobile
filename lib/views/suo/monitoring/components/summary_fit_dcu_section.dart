@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:par_mobile/constants/all_color.dart';
+import 'package:par_mobile/controllers/suo/monitoring/monitoring_dcu_controller.dart';
 import 'package:par_mobile/controllers/suo/monitoring/monitoring_suo_page_controller.dart';
 import 'package:par_mobile/views/suo/monitoring_dcu_detail/monitoring_dcu_detail_page.dart';
 import 'package:par_mobile/widgets/basecard.dart';
@@ -15,12 +16,11 @@ class SummaryFitDCUSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    MonitoringSUOPageController controller =
-        Get.put(MonitoringSUOPageController());
+    MonitoringDCUController controller = Get.put(MonitoringDCUController());
 
     return Obx(
       () => (controller.isDetailMenuDCU.value)
-          ? MonitoringDCUDetailSection()
+          ? const MonitoringDCUDetailSection()
           : BaseCard(
               trailing: Container(),
               leading: Container(),
@@ -31,13 +31,17 @@ class SummaryFitDCUSection extends StatelessWidget {
                   child: Column(
                     children: [
                       TextFormField(
+                        controller: controller.txtDate.value,
                         onTap: () async {
                           await showDatePicker(
-                              context: context,
-                              initialDate: DateTime.now(),
-                              firstDate: DateTime(2000),
-                              lastDate: DateTime(2050));
+                                  context: context,
+                                  initialDate: DateTime.now(),
+                                  firstDate: DateTime(2000),
+                                  lastDate: DateTime(2050))
+                              .then((value) => controller.setDate(value!));
                         },
+                        showCursor: false,
+                        readOnly: true,
                         decoration: InputDecoration(
                           isDense: true,
                           hintText: "Cari Tanggal Monitoring",
@@ -48,7 +52,7 @@ class SummaryFitDCUSection extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Expanded(

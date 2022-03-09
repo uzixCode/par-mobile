@@ -91,9 +91,10 @@ class SummaryDriverScoreSection extends StatelessWidget {
                                               initialRating: 3,
                                               minRating: 1,
                                               direction: Axis.horizontal,
-                                              allowHalfRating: true,
+                                              allowHalfRating: false,
                                               itemCount: 5,
                                               itemSize: 25,
+                                              ignoreGestures: true,
                                               itemBuilder: (context, _) =>
                                                   const Icon(
                                                 Icons.star,

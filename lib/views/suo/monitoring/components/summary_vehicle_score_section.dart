@@ -70,7 +70,7 @@ class SummaryVehicleScoreSection extends StatelessWidget {
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
                                           children: [
-                                             Text(
+                                            Text(
                                               "AVANZA - B 1234 XY",
                                               maxLines: 2,
                                               style: TextStyle(
@@ -82,7 +82,8 @@ class SummaryVehicleScoreSection extends StatelessWidget {
                                             ),
                                             Text(
                                               "Bambang Wijaya",
-                                              style: TextStyle(fontSize: Get.width * 0.03),
+                                              style: TextStyle(
+                                                  fontSize: Get.width * 0.03),
                                             ),
                                             const SizedBox(
                                               height: 5,
@@ -91,8 +92,9 @@ class SummaryVehicleScoreSection extends StatelessWidget {
                                               initialRating: 3,
                                               minRating: 1,
                                               direction: Axis.horizontal,
-                                              allowHalfRating: true,
+                                              allowHalfRating: false,
                                               itemCount: 5,
+                                              ignoreGestures: true,
                                               itemSize: 25,
                                               itemBuilder: (context, _) =>
                                                   const Icon(

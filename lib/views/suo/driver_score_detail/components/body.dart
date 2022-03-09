@@ -13,7 +13,7 @@ class Body extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+              padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
               width: double.infinity,
               child: Stack(
                 alignment: Alignment.topCenter,
@@ -26,7 +26,9 @@ class Body extends StatelessWidget {
                     child: Container(
                       decoration: BoxDecoration(
                         color: allColor.secondary,
-                        borderRadius: BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
+                        borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(10),
+                            topRight: Radius.circular(10)),
                       ),
                     ),
                   ),
@@ -37,14 +39,16 @@ class Body extends StatelessWidget {
                         height: Get.width * 0.20,
                         decoration: BoxDecoration(
                             image: const DecorationImage(
-                                fit: BoxFit.cover, image: AssetImage("assets/images/background.png")),
+                                fit: BoxFit.cover,
+                                image:
+                                    AssetImage("assets/images/background.png")),
                             color: allColor.green,
                             shape: BoxShape.circle),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
-                      Text(
+                      const Text(
                         "Bambang Wijaya",
                         style: TextStyle(
                           fontSize: 18,
@@ -52,7 +56,7 @@ class Body extends StatelessWidget {
                           color: Colors.white,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                     ],
@@ -61,9 +65,9 @@ class Body extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: ListView.builder(
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   itemCount: 10,
                   itemBuilder: (context, index) {
@@ -71,19 +75,23 @@ class Body extends StatelessWidget {
                       children: [
                         Container(
                           color: Colors.white,
-                          padding: EdgeInsets.all(15),
+                          padding: const EdgeInsets.all(15),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
+                              const Text(
                                 "Penampilan",
-                                style: TextStyle(fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold),
+                                style: TextStyle(
+                                    fontSize: 14,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold),
                               ),
                               RatingBar.builder(
                                 initialRating: 3,
                                 minRating: 1,
                                 direction: Axis.horizontal,
-                                allowHalfRating: true,
+                                allowHalfRating: false,
+                                ignoreGestures: true,
                                 itemCount: 5,
                                 itemSize: 25,
                                 itemBuilder: (context, _) => const Icon(
@@ -94,9 +102,10 @@ class Body extends StatelessWidget {
                                   print(rating);
                                 },
                               ),
-                              Text(
+                              const Text(
                                 "3.0",
-                                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                                style: TextStyle(
+                                    fontSize: 24, fontWeight: FontWeight.bold),
                               )
                             ],
                           ),

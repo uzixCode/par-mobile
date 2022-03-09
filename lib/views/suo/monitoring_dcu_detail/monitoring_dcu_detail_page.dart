@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
-import 'package:par_mobile/controllers/suo/monitoring/monitoring_suo_page_controller.dart';
 import 'package:par_mobile/widgets/basecard.dart';
-import 'package:par_mobile/widgets/rectangle_button.dart';
+
+import '../../../controllers/suo/monitoring/monitoring_dcu_controller.dart';
 
 class MonitoringDCUDetailSection extends StatelessWidget {
   const MonitoringDCUDetailSection({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    MonitoringSUOPageController controller =
-        Get.put(MonitoringSUOPageController());
+    MonitoringDCUController controller =
+        Get.put(MonitoringDCUController());
     return BaseCard(
       label: "DETAIL MONITORING (01 DES 2021)",
       leading: InkWell(
