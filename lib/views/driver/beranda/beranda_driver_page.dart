@@ -45,8 +45,11 @@ class BerandaDriverPage extends StatelessWidget {
                           decoration: BoxDecoration(
                               image: DecorationImage(
                                   fit: BoxFit.cover,
-                                  image: AssetImage(
-                                      "assets/images/background.png")),
+                                  image: Image.asset(
+                                    "assets/images/background.png",
+                                    cacheHeight: 183,
+                                    cacheWidth: 183,
+                                  ).image),
                               color: allColor.green,
                               shape: BoxShape.circle),
                         ),
