@@ -2,30 +2,36 @@
     package="com.example.par_mobile">
 
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-<queries>
-  <!-- If your app opens https URLs -->
-  <intent>
-    <action android:name="android.intent.action.VIEW" />
-    <data android:scheme="https" />
-  </intent>
-  <!-- If your app makes calls -->
-  <intent>
-    <action android:name="android.intent.action.DIAL" />
-    <data android:scheme="tel" />
-  </intent>
-  <!-- If your sends SMS messages -->
-  <intent>
-    <action android:name="android.intent.action.SENDTO" />
-    <data android:scheme="smsto" />
-  </intent>
-  <!-- If your app sends emails -->
-  <intent>
-    <action android:name="android.intent.action.SEND" />
-    <data android:mimeType="*/*" />
-  </intent>
-</queries>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> 
+  <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.CAMERA"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+
+  <queries>
+    <!-- If your app opens https URLs -->
+    <intent>
+      <action android:name="android.intent.action.VIEW" />
+      <data android:scheme="https" />
+    </intent>
+    <!-- If your app makes calls -->
+    <intent>
+      <action android:name="android.intent.action.DIAL" />
+      <data android:scheme="tel" />
+    </intent>
+    <!-- If your sends SMS messages -->
+    <intent>
+      <action android:name="android.intent.action.SENDTO" />
+      <data android:scheme="smsto" />
+    </intent>
+    <!-- If your app sends emails -->
+    <intent>
+      <action android:name="android.intent.action.SEND" />
+      <data android:mimeType="*/*" />
+    </intent>
+  </queries>
    <application
         android:label="par_mobile"
+        android:requestLegacyExternalStorage="true"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

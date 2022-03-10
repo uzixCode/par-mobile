@@ -45,6 +45,10 @@
 	<array>
 	<string>fetch</string>
 	<string>remote-notification</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Privacy - Photo Library Usage Description</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Privacy - Camera Usage Description</string>
 </array>
 </dict>
 </plist>

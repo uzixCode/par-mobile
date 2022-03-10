@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:par_mobile/util/call_center.dart';
 import 'package:par_mobile/views/suo/profile/components/body.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -11,12 +12,8 @@ class ProfileSUOPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: CallCenterFloatingButton(
-        onPressed: () async {
-          final Uri launchUri = Uri(
-            scheme: 'tel',
-            path: "081220559855",
-          );
-          await launch(launchUri.toString());
+        onPressed: () {
+          CallCenter().launchDial(uriPhone: "081220559855");
         },
       ),
       appBar: AppBar(

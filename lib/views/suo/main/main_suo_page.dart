@@ -11,6 +11,7 @@ class MainSUOPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<MainSUOPageController>(
+      initState: (_) => controller.changePage(0),
       init: Get.find<MainSUOPageController>(),
       builder: (con) => Scaffold(
         body: SafeArea(
