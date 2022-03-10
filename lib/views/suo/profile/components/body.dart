@@ -5,6 +5,8 @@ import 'package:par_mobile/views/suo/profile/components/driver_profile_section.d
 import 'package:par_mobile/widgets/profile_avatar_name_section.dart';
 import 'package:par_mobile/views/suo/profile/components/general_profile_section.dart';
 
+import '../../../../util/image_picker.dart';
+
 class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);
 
@@ -39,7 +41,9 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
               imageUrl: "assets/images/background.png",
               fullname: 'Bambang Wijaya',
               position: 'MOR III - Kramat Jaya',
-              onTapEditProfile: () {},
+              onTapEditProfile: () async {
+                var imageFile = await ImagePickerService().dialogUploadPhoto(context);
+              },
             ),
             const SizedBox(
               height: 15,

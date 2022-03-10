@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:par_mobile/constants/all_color.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../util/call_center.dart';
 import '../../../widgets/callcenterfloatingbutton.dart';
 import 'components/body.dart';
 
@@ -13,11 +14,7 @@ class BerandaSUOPage extends StatelessWidget {
     return Scaffold(
         floatingActionButton: CallCenterFloatingButton(
           onPressed: () async {
-            final Uri launchUri = Uri(
-              scheme: 'tel',
-              path: "081220559855",
-            );
-            await launch(launchUri.toString());
+            CallCenter().launchDial(uriPhone: "081220559855");
           },
         ),
         body: Body());

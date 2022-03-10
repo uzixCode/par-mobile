@@ -29,13 +29,15 @@ environment:
 dependencies:
   cupertino_icons: ^1.0.2
   dio: ^4.0.4
+  file_picker: ^4.5.0
   flutter:
     sdk: flutter
-  fluttertoast: ^8.0.8
-  file_picker: ^4.5.0
   flutter_rating_bar: ^4.0.0
+  fluttertoast: ^8.0.8
   get: null
+  image_picker: ^0.8.4+10
   intl: null
+  permission_handler: ^9.2.0
   url_launcher: ^6.0.20
 
 dev_dependencies:
