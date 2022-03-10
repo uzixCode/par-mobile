@@ -10,7 +10,9 @@ class DocumentSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BaseCard(
-      label: "CLOCK IN/CLOCK OUT",
+      trailing: Container(),
+      leading: Container(),
+      label: "NOTIFIKASI DOKUMEN",
       child: Expanded(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),

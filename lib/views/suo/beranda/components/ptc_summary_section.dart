@@ -29,7 +29,13 @@ class PTCSummarySection extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text("AVANZA - B 6789 KIL", style: TextStyle(fontWeight: FontWeight.bold)),
+                    Expanded(
+                      child: Text("AVANZA - B 6789 KIL",
+                          maxLines: 2,
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: Get.width * 0.035)),
+                    ),
                     SizedBox(
                       width: Get.width * 0.27,
                       child: RectangleButton(
@@ -40,7 +46,10 @@ class PTCSummarySection extends StatelessWidget {
                         alignment: Alignment.center,
                         child: Text(
                           "Lihat",
-                          style: TextStyle(fontSize: Get.width * 0.04, color: Colors.white, fontWeight: FontWeight.bold),
+                          style: TextStyle(
+                              fontSize: Get.width * 0.04,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
                         ),
                       ),
                     ),

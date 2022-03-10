@@ -21,10 +21,10 @@ class SummaryVehicleScoreSection extends StatelessWidget {
             children: [
               TextFormField(
                 onTap: () {},
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   isDense: true,
                   hintText: "Periode Bulan Desember",
-                  hintStyle: const TextStyle(fontSize: 12),
+                  hintStyle: TextStyle(fontSize: Get.width * 0.035),
                 ),
               ),
               const SizedBox(
@@ -41,7 +41,8 @@ class SummaryVehicleScoreSection extends StatelessWidget {
                         child: Column(
                           children: [
                             Container(
-                              margin: const EdgeInsets.only(bottom: 15, top: 15),
+                              margin:
+                                  const EdgeInsets.only(bottom: 15, top: 15),
                               child: Row(
                                 children: [
                                   Container(
@@ -49,7 +50,9 @@ class SummaryVehicleScoreSection extends StatelessWidget {
                                     height: Get.width * 0.20,
                                     decoration: BoxDecoration(
                                         image: const DecorationImage(
-                                            fit: BoxFit.cover, image: AssetImage("assets/images/background.png")),
+                                            fit: BoxFit.cover,
+                                            image: AssetImage(
+                                                "assets/images/background.png")),
                                         color: allColor.green,
                                         shape: BoxShape.circle),
                                   ),
@@ -58,22 +61,29 @@ class SummaryVehicleScoreSection extends StatelessWidget {
                                   ),
                                   Expanded(
                                     child: Row(
-                                      crossAxisAlignment: CrossAxisAlignment.center,
-                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
                                       children: [
                                         Column(
-                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
                                           children: [
-                                            const Text(
+                                            Text(
                                               "AVANZA - B 1234 XY",
-                                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                                              maxLines: 2,
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: Get.width * 0.035),
                                             ),
                                             const SizedBox(
                                               height: 5,
                                             ),
-                                            const Text(
+                                            Text(
                                               "Bambang Wijaya",
-                                              style: TextStyle(fontSize: 12),
+                                              style: TextStyle(
+                                                  fontSize: Get.width * 0.03),
                                             ),
                                             const SizedBox(
                                               height: 5,
@@ -82,10 +92,12 @@ class SummaryVehicleScoreSection extends StatelessWidget {
                                               initialRating: 3,
                                               minRating: 1,
                                               direction: Axis.horizontal,
-                                              allowHalfRating: true,
+                                              allowHalfRating: false,
                                               itemCount: 5,
+                                              ignoreGestures: true,
                                               itemSize: 25,
-                                              itemBuilder: (context, _) => const Icon(
+                                              itemBuilder: (context, _) =>
+                                                  const Icon(
                                                 Icons.star,
                                                 color: Colors.amber,
                                               ),
@@ -97,7 +109,9 @@ class SummaryVehicleScoreSection extends StatelessWidget {
                                         ),
                                         Text(
                                           "3.0",
-                                          style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                                          style: TextStyle(
+                                              fontSize: Get.width * 0.07,
+                                              fontWeight: FontWeight.bold),
                                         )
                                       ],
                                     ),

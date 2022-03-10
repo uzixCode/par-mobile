@@ -13,10 +13,10 @@ class FormItemRequestPage extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         elevation: 0,
-        title: const Text(
+        title:  Text(
           "FORM PERMINTAAN BARANG",
           style: TextStyle(
-              color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+              color: Colors.white, fontSize: Get.width * 0.04, fontWeight: FontWeight.bold),
         ),
         actions: [
           Padding(

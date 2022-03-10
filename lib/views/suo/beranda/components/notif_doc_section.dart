@@ -6,7 +6,7 @@ import 'package:par_mobile/widgets/basecard.dart';
 import 'package:par_mobile/widgets/rectangle_button.dart';
 
 class NotifDocSection extends StatelessWidget {
-  const NotifDocSection({ Key? key }) : super(key: key);
+  const NotifDocSection({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class NotifDocSection extends StatelessWidget {
         Icons.chevron_right,
         color: Colors.white,
       ),
-      child:  Padding(
+      child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
         child: ListView.builder(
             physics: const NeverScrollableScrollPhysics(),
@@ -24,11 +24,12 @@ class NotifDocSection extends StatelessWidget {
             itemCount: 3,
             itemBuilder: (context, index) {
               return Padding(
-                padding: EdgeInsets.only(bottom: 5),
+                padding: const EdgeInsets.only(bottom: 5),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text("Document KEUR Driver", style: TextStyle(fontWeight: FontWeight.bold)),
+                    Text("Document KEUR Driver",
+                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: Get.width * 0.035)),
                     SizedBox(
                       width: Get.width * 0.27,
                       child: RectangleButton(
@@ -39,7 +40,10 @@ class NotifDocSection extends StatelessWidget {
                         alignment: Alignment.center,
                         child: Text(
                           "Lihat",
-                          style: TextStyle(fontSize: Get.width * 0.04, color: Colors.white, fontWeight: FontWeight.bold),
+                          style: TextStyle(
+                              fontSize: Get.width * 0.04,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
                         ),
                       ),
                     ),

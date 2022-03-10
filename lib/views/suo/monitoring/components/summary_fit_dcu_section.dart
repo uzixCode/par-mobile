@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:par_mobile/constants/all_color.dart';
+import 'package:par_mobile/controllers/suo/monitoring/monitoring_dcu_controller.dart';
 import 'package:par_mobile/controllers/suo/monitoring/monitoring_suo_page_controller.dart';
 import 'package:par_mobile/views/suo/monitoring_dcu_detail/monitoring_dcu_detail_page.dart';
 import 'package:par_mobile/widgets/basecard.dart';
@@ -15,12 +16,11 @@ class SummaryFitDCUSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    MonitoringSUOPageController controller =
-        Get.put(MonitoringSUOPageController());
+    MonitoringDCUController controller = Get.put(MonitoringDCUController());
 
     return Obx(
       () => (controller.isDetailMenuDCU.value)
-          ? MonitoringDCUDetailSection()
+          ? const MonitoringDCUDetailSection()
           : BaseCard(
               trailing: Container(),
               leading: Container(),
@@ -31,24 +31,28 @@ class SummaryFitDCUSection extends StatelessWidget {
                   child: Column(
                     children: [
                       TextFormField(
+                        controller: controller.txtDate.value,
                         onTap: () async {
                           await showDatePicker(
-                              context: context,
-                              initialDate: DateTime.now(),
-                              firstDate: DateTime(2000),
-                              lastDate: DateTime(2050));
+                                  context: context,
+                                  initialDate: DateTime.now(),
+                                  firstDate: DateTime(2000),
+                                  lastDate: DateTime(2050))
+                              .then((value) => controller.setDate(value!));
                         },
+                        showCursor: false,
+                        readOnly: true,
                         decoration: InputDecoration(
                           isDense: true,
                           hintText: "Cari Tanggal Monitoring",
-                          hintStyle: TextStyle(fontSize: 12),
+                          hintStyle: TextStyle(fontSize: Get.width * 0.035),
                           suffixIcon: Icon(
                             Icons.calendar_today,
                             color: allColor.primary,
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Expanded(
@@ -72,18 +76,20 @@ class SummaryFitDCUSection extends StatelessWidget {
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
-                                              const Text(
+                                              Text(
                                                 "01 Des 2021",
-                                                style: const TextStyle(
-                                                    fontWeight:
-                                                        FontWeight.bold),
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize:
+                                                        Get.width * 0.035),
                                               ),
                                               Text(
                                                 "1/8",
                                                 style: TextStyle(
                                                     color: allColor.primary,
-                                                    fontWeight:
-                                                        FontWeight.bold),
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize:
+                                                        Get.width * 0.035),
                                               )
                                             ],
                                           ),
@@ -106,11 +112,11 @@ class SummaryFitDCUSection extends StatelessWidget {
                                               SizedBox(
                                                 width: Get.width * 0.05,
                                               ),
-                                              const Text(
+                                              Text(
                                                 "13%",
                                                 maxLines: 4,
                                                 style: TextStyle(
-                                                    fontSize: 18,
+                                                    fontSize: Get.width * 0.05,
                                                     fontWeight:
                                                         FontWeight.bold),
                                               ),
@@ -119,9 +125,10 @@ class SummaryFitDCUSection extends StatelessWidget {
                                           const SizedBox(
                                             height: 5,
                                           ),
-                                          const Text(
+                                          Text(
                                             "FIT : 1 | UNFIT : 0",
-                                            style: TextStyle(fontSize: 12),
+                                            style: TextStyle(
+                                                fontSize: Get.width * 0.03),
                                           )
                                         ],
                                       ),

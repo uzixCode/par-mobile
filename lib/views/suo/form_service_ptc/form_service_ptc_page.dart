@@ -14,10 +14,12 @@ class FormServicePTCPage extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         elevation: 0,
-        title: const Text(
+        title: Text(
           "PENGAJUAN PERBAIKAN/SERVICE",
           style: TextStyle(
-              color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+              color: Colors.white,
+              fontSize: Get.width * 0.04,
+              fontWeight: FontWeight.bold),
         ),
         actions: [
           Padding(
@@ -47,17 +49,16 @@ class FormServicePTCPage extends StatelessWidget {
           width: double.infinity,
           height: Get.height * 0.07,
           alignment: Alignment.center,
-          padding:const  EdgeInsets.symmetric(vertical: 5),
+          padding: const EdgeInsets.symmetric(vertical: 5),
           child: RectangleButton(
-            onTap: () {
-              
-            },
+            onTap: () {},
             color: Colors.black,
-            child: const Padding(
-              padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
               child: Text(
                 "Submit",
-                style: TextStyle(color: Colors.white, fontSize: 14),
+                style:
+                    TextStyle(color: Colors.white, fontSize: Get.width * 0.035),
               ),
             ),
           ),

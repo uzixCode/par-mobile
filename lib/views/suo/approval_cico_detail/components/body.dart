@@ -22,7 +22,7 @@ class Body extends StatelessWidget {
                 "Lakukan Approval Terhadap Data Clock In dan Clock Out Driver Dengan Rincian Berikut",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    color: allColor.primary, fontWeight: FontWeight.bold),
+                    color: allColor.primary, fontWeight: FontWeight.bold, fontSize: Get.width * 0.035),
               ),
               const SizedBox(
                 height: 15,

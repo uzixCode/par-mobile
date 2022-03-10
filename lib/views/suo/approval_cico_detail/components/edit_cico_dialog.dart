@@ -13,10 +13,11 @@ class EditClockInOutDialog extends StatelessWidget {
     ApprovalCicoDetailController controller = ApprovalCicoDetailController();
 
     return AlertDialog(
-      title: const Text(
+      title: Text(
         'EDIT CLOCK IN CLOCK OUT',
         textAlign: TextAlign.center,
-        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+        style:
+            TextStyle(fontWeight: FontWeight.bold, fontSize: Get.width * 0.04),
       ),
       content: Obx(
         () => SingleChildScrollView(
@@ -24,18 +25,18 @@ class EditClockInOutDialog extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
+              Text(
                 "Masukkan jam clock in clock out driver yang sebenernya",
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 14, color: Colors.black),
+                style:
+                    TextStyle(fontSize: Get.width * 0.035, color: Colors.black),
               ),
               const SizedBox(
                 height: 15,
               ),
-              const Text(
-                "Bambang Wijaya",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-              ),
+              Text("Bambang Wijaya",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: Get.width * 0.04)),
               const SizedBox(
                 height: 10,
               ),
@@ -43,7 +44,7 @@ class EditClockInOutDialog extends StatelessWidget {
                 "Clock In",
                 style: TextStyle(
                     color: allColor.primary,
-                    fontSize: 14,
+                    fontSize: Get.width * 0.035,
                     fontWeight: FontWeight.bold),
               ),
               const SizedBox(
@@ -74,7 +75,7 @@ class EditClockInOutDialog extends StatelessWidget {
                 "Clock Out",
                 style: TextStyle(
                     color: allColor.primary,
-                    fontSize: 14,
+                    fontSize: Get.width * 0.035,
                     fontWeight: FontWeight.bold),
               ),
               const SizedBox(
@@ -111,11 +112,11 @@ class EditClockInOutDialog extends StatelessWidget {
                   Navigator.pop(context);
                 },
                 color: Colors.black,
-                child: const Text(
+                child: Text(
                   "Submit",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontSize: 14,
+                      fontSize: Get.width * 0.04,
                       color: Colors.white,
                       fontWeight: FontWeight.bold),
                 )),

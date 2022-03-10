@@ -24,11 +24,16 @@ class DCUSummarySection extends StatelessWidget {
             itemCount: 3,
             itemBuilder: (context, index) {
               return Padding(
-                padding: EdgeInsets.only(bottom: 5),
+                padding: const EdgeInsets.only(bottom: 5),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text("Ahmad Hasani", style: TextStyle(fontWeight: FontWeight.bold)),
+                    Expanded(
+                        child: Text("Ahmad Hasani",
+                            maxLines: 2,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: Get.width * 0.035))),
                     SizedBox(
                       width: Get.width * 0.27,
                       child: RectangleButton(
@@ -39,8 +44,10 @@ class DCUSummarySection extends StatelessWidget {
                         alignment: Alignment.center,
                         child: Text(
                           "Lihat",
-                          style:
-                              TextStyle(fontSize: Get.width * 0.04, color: Colors.white, fontWeight: FontWeight.bold),
+                          style: TextStyle(
+                              fontSize: Get.width * 0.04,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
                         ),
                       ),
                     ),

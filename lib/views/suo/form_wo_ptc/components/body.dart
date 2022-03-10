@@ -32,8 +32,7 @@ class Body extends StatelessWidget {
                       children: [
                         _tableRowContent("Nomor", "72367"),
                         _tableRowContent("Nomor Polisi", "D 1234 BD"),
-                        _tableRowContent(
-                            "Nomor Rangka", "3209268800423"),
+                        _tableRowContent("Nomor Rangka", "3209268800423"),
                         _tableRowContent("Nomor Mesin", "218317"),
                         _tableRowContent("Kilometer", "210 KM")
                       ],
@@ -58,14 +57,13 @@ class Body extends StatelessWidget {
                 ),
               ),
             ),
-           const SizedBox(
+            const SizedBox(
               height: 10,
             ),
             SizedBox(
               width: Get.width * 0.25,
               child: RectangleButton(
-                onTap: () {
-                },
+                onTap: () {},
                 color: Colors.black,
                 alignment: Alignment.center,
                 child: Text(
@@ -90,14 +88,14 @@ class Body extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 5),
           child: Text(
             label,
-            style: const TextStyle(color: Colors.black),
+            style: TextStyle(color: Colors.black, fontSize: Get.width * 0.035),
           ),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 5),
           child: Text(
             ": $value",
-            style: const TextStyle(color: Colors.black),
+            style: TextStyle(color: Colors.black, fontSize: Get.width * 0.035),
           ),
         ),
       ],

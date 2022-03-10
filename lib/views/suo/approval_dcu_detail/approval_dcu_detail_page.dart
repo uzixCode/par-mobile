@@ -4,16 +4,19 @@ import 'package:par_mobile/constants/all_color.dart';
 import 'package:par_mobile/views/suo/approval_dcu_detail/components/body.dart';
 
 class ApprovalDCUDetailPage extends StatelessWidget {
-  const ApprovalDCUDetailPage({ Key? key }) : super(key: key);
+  const ApprovalDCUDetailPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: const Text(
+        title: Text(
           "Assessment DCU Bermasalah",
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.black),
+          style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: Get.width * 0.04,
+              color: Colors.black),
         ),
         leading: IconButton(
             onPressed: () {

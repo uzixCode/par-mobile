@@ -23,7 +23,7 @@ class Body extends StatelessWidget {
               "Lakukan Update Dokumen Dengan Rincian Sebagai Berikut",
               textAlign: TextAlign.center,
               style: TextStyle(
-                  color: allColor.primary, fontWeight: FontWeight.bold),
+                  color: allColor.primary, fontWeight: FontWeight.bold, fontSize: Get.width * 0.035),
             ),
             const SizedBox(
               height: 15,
@@ -64,8 +64,10 @@ class Body extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(height: 10),
-                      const Text("Upload Dokumen Terbaru",
-                          style: TextStyle(color: Colors.white)),
+                      Text("Upload Dokumen Terbaru",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: Get.width * 0.035)),
                       const SizedBox(height: 10),
                       if (controller.fileDocument.value.path.isNotEmpty)
                         Row(
@@ -74,7 +76,7 @@ class Body extends StatelessWidget {
                                 controller.fileDocument.value.path
                                     .split('/')
                                     .last,
-                                style: const TextStyle(color: Colors.white)),
+                                style: TextStyle(color: Colors.white, fontSize: Get.width * 0.035)),
                             const SizedBox(
                               width: 20,
                             ),

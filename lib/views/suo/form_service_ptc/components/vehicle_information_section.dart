@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class VehicleInformationSection extends StatelessWidget {
   const VehicleInformationSection({Key? key}) : super(key: key);
@@ -28,14 +29,14 @@ class VehicleInformationSection extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 5),
           child: Text(
             label,
-            style: const TextStyle(color: Colors.black),
+            style: TextStyle(color: Colors.black, fontSize: Get.width * 0.035),
           ),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 5),
           child: Text(
             ": $value",
-            style: const TextStyle(color: Colors.black),
+            style: TextStyle(color: Colors.black, fontSize: Get.width * 0.035),
           ),
         ),
       ],

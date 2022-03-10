@@ -86,8 +86,8 @@ class ProfileAvatarNameSection extends StatelessWidget {
               ),
               Text(
                 fullname,
-                style: const TextStyle(
-                  fontSize: 24,
+                style: TextStyle(
+                  fontSize: Get.width * 0.05,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                 ),
@@ -97,8 +97,8 @@ class ProfileAvatarNameSection extends StatelessWidget {
               ),
               Text(
                 position,
-                style: const TextStyle(
-                  fontSize: 12,
+                style: TextStyle(
+                  fontSize: Get.width * 0.03,
                   color: Colors.white,
                 ),
               ),

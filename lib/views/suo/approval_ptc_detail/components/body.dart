@@ -95,8 +95,12 @@ class Body extends StatelessWidget {
                       widgetCustom: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text(": ",
-                              style: TextStyle(color: Colors.white)),
+                          Text(
+                            ": ",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: Get.width * 0.035),
+                          ),
                           Expanded(
                               child:
                                   Image.asset('assets/images/ban_sample.png')),
