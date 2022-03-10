@@ -4,8 +4,10 @@ import 'package:par_mobile/constants/all_color.dart';
 import 'package:par_mobile/views/driver/clockinout/clockinout.dart';
 import 'package:par_mobile/views/driver/dailycheckup/dailycheckup_driver_page.dart';
 import 'package:par_mobile/views/driver/pretripcheck/pretripcheck.dart';
+import 'package:par_mobile/views/driver/suratperintahkerjalembur/suratperintahkerjalembur.dart';
 import 'package:par_mobile/widgets/basecard.dart';
 import 'package:par_mobile/widgets/callcenterfloatingbutton.dart';
+import 'package:par_mobile/widgets/costumFlatButton.dart';
 
 class CheckDriverPage extends StatelessWidget {
   const CheckDriverPage({Key? key}) : super(key: key);
@@ -66,21 +68,72 @@ class CheckDriverPage extends StatelessWidget {
               ),
             ),
             BaseCard(
-              label: "DATA CLOCK IN CLOCK OUT",
-              trailing: InkWell(
-                onTap: () => Get.to(() => ClockInOut()),
-                child: Icon(
-                  Icons.chevron_right,
-                  color: Colors.white,
+                label: "DATA CLOCK IN CLOCK OUT",
+                trailing: InkWell(
+                  onTap: () => Get.to(() => ClockInOut()),
+                  child: Icon(
+                    Icons.chevron_right,
+                    color: Colors.white,
+                  ),
                 ),
-              ),
-              child: SizedBox(
-                height: 50,
-                child: Center(
-                  child: Text("No Data"),
-                ),
-              ),
-            ),
+                child: SizedBox(
+                  width: double.maxFinite,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Clock In",
+                              style: TextStyle(
+                                  color: allColor.primary,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            Text(
+                              "21 April 2021 07:32",
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Clock In",
+                              style: TextStyle(
+                                  color: allColor.primary,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            Text(
+                              "21 April 2021 07:32",
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Center(
+                          child: CostumFlatButton(
+                              onTap: () =>
+                                  Get.to(() => SuratPerintahKerjaLembur()),
+                              color: allColor.green,
+                              child: Text(
+                                "Ajukan Lembur",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: Get.width * 0.04),
+                              )),
+                        )
+                      ],
+                    ),
+                  ),
+                )),
           ],
         ),
       ),
