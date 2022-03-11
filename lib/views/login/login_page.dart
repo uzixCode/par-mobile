@@ -186,9 +186,12 @@ class LoginPage extends StatelessWidget {
             ),
           ),
         ),
-        bottomNavigationBar: !kDebugMode
-            ? null
-            : Container(
+        bottomNavigationBar: 
+        //TO-DO Comment for testing release
+        // !kDebugMode
+        //     ? null
+        //     : 
+            Container(
                 color: Colors.white,
                 height: kBottomNavigationBarHeight,
                 child: ListView.builder(
