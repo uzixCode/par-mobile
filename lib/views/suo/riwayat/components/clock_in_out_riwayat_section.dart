@@ -18,7 +18,13 @@ class ClockInOutRiwayatSection extends StatelessWidget {
           child: ListView.builder(
               itemCount: 5,
               itemBuilder: (context, index) {
-                return ClockInOutItemListSection(onTap: () {});
+                return ClockInOutItemListSection(
+                  onTap: () {},
+                  driverName: 'Bambang Wijaya',
+                  status: 'Out Of Area',
+                  clockIn: '21 April 2021 07:32',
+                  clockOut: '21 April 2021 17:00',
+                );
               }),
         ),
       ),

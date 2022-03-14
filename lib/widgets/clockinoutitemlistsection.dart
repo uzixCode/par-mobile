@@ -5,7 +5,11 @@ import '../constants/all_color.dart';
 
 class ClockInOutItemListSection extends StatelessWidget {
   final Function() onTap;
-  const ClockInOutItemListSection({Key? key, required this.onTap}) : super(key: key);
+  final String driverName;
+  final String status;
+  final String clockIn;
+  final String clockOut;
+  const ClockInOutItemListSection({Key? key, required this.onTap, required this.driverName, required this.status, required this.clockIn, required this.clockOut}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,13 +26,13 @@ class ClockInOutItemListSection extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Bambang Wijaya",
+                      driverName,
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: Get.width * 0.035),
                     ),
                     Text(
-                      "Out Of Area",
+                      status,
                       style: TextStyle(
                           color: allColor.light_red,
                           fontWeight: FontWeight.bold,
@@ -56,7 +60,7 @@ class ClockInOutItemListSection extends StatelessWidget {
                           height: 5,
                         ),
                         Text(
-                          "21 April 2021 07:32",
+                          clockIn,
                           style: TextStyle(fontSize: Get.width * 0.03),
                         )
                       ],
@@ -75,7 +79,7 @@ class ClockInOutItemListSection extends StatelessWidget {
                           height: 5,
                         ),
                         Text(
-                          "21 April 2021 07:32",
+                          clockOut,
                           style: TextStyle(fontSize: Get.width * 0.03),
                         )
                       ],
