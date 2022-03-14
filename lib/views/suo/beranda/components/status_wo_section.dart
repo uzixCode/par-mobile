@@ -15,38 +15,44 @@ class StatusWOSection extends StatelessWidget {
         Icons.chevron_right,
         color: Colors.white,
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          InkWell(
-            child: Icon(
-              Icons.chevron_left,
-              color: allColor.primary,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 10),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            InkWell(
+              child: Icon(
+                Icons.chevron_left,
+                color: allColor.primary,
+              ),
             ),
-          ),
-          Expanded(
-            //TO-DO Comment temporary
-            // child: SizedBox(
-            //   height: 100,
-            //   width: 250,
-            //   child: ListView.builder(
-            //       scrollDirection: Axis.horizontal,
-            //       shrinkWrap: true,
-            //       physics: const ClampingScrollPhysics(),
-            //       itemCount: 3,
-            //       itemBuilder: (context, index) {
-            //         return ItemStatusWO();
-            //       }),
-            // ),
-            child: ItemStatusWO(),
-          ),
-          InkWell(
-            child: Icon(
-              Icons.chevron_right,
-              color: allColor.primary,
+            Expanded(
+              child: LayoutBuilder(
+                builder: (context, _) => SizedBox(
+                  height: Get.height * 0.15,
+                  width: _.maxWidth,
+                  child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      shrinkWrap: true,
+                      physics: const ClampingScrollPhysics(),
+                      itemCount: 3,
+                      itemBuilder: (context, index) {
+                        return SizedBox(
+                            width: _.maxWidth, child: const ItemStatusWO());
+                        // return Text("TEST");
+                      }),
+                ),
+              ),
+              // child: ItemStatusWO(),
             ),
-          ),
-        ],
+            InkWell(
+              child: Icon(
+                Icons.chevron_right,
+                color: allColor.primary,
+              ),
+            ),
+          ],
+        ),
       ),
       // child: ItemStatusWO(),
     );
@@ -60,8 +66,8 @@ class ItemStatusWO extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 10),
+    return Padding(
+      padding: const EdgeInsets.only(right: 5),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -81,8 +87,7 @@ class ItemStatusWO extends StatelessWidget {
                 height: Get.height * 0.01,
               ),
               Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                 decoration: BoxDecoration(
                     color: allColor.green.withOpacity(0.2),
                     borderRadius: BorderRadius.circular(10)),
