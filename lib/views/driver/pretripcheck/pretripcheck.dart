@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
 import 'package:par_mobile/views/driver/konfirmasirangkumanptc/konfirmasirangkumanptc_driver_page.dart';
+import 'package:par_mobile/views/driver/pretripcheck/components/rangkumantile.dart';
 import 'package:par_mobile/views/driver/pretripcheckdetail/pretripcheckdetail_driver_page.dart';
 import 'package:par_mobile/widgets/costumFlatButton.dart';
 
@@ -10,6 +11,7 @@ class PreTripCheck extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isAllGood = false;
     return Scaffold(
       appBar: AppBar(
           title: Text(
@@ -24,16 +26,49 @@ class PreTripCheck extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Column(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 20),
-                    child: Text(
-                      "Kendaraan dalam keadaan 100% prima!",
-                      style: TextStyle(
-                          color: allColor.secondary,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
+                  isAllGood
+                      ? Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 20),
+                          child: Text(
+                            "Kendaraan dalam keadaan 100% prima!",
+                            style: TextStyle(
+                                color: allColor.secondary,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        )
+                      : Expanded(
+                          flex: 4,
+                          child: Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.circular(Get.width * 0.02)),
+                            elevation: 5,
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "Rangkuman PTC",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: Get.width * 0.045),
+                                  ).paddingSymmetric(vertical: 10),
+                                  Expanded(
+                                      child: ListView(
+                                    children: [
+                                      RangkumanTile(),
+                                      RangkumanTile(),
+                                      RangkumanTile(),
+                                      RangkumanTile(),
+                                      RangkumanTile(),
+                                    ],
+                                  ))
+                                ],
+                              ),
+                            ),
+                          )),
                   Expanded(
+                    flex: 6,
                     child: GridView.builder(
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 3,

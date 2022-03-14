@@ -10,6 +10,11 @@ class UnderlineTextTabbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<UnderlineTextTabbarController>(
+      initState: (con) {
+        //underlineTextTabbarController.changePage(0);
+        underlineTextTabbarController.pageController = PageController(
+            initialPage: underlineTextTabbarController.index, keepPage: true);
+      },
       init: Get.find<UnderlineTextTabbarController>(),
       builder: (con) => Column(
         children: [
