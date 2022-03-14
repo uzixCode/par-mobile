@@ -8,6 +8,7 @@ import 'package:par_mobile/views/suo/beranda/beranda_suo_page.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/views/suo/monitoring/monitoring_suo_page.dart';
 import 'package:par_mobile/views/suo/profile/profile_suo_page.dart';
+import 'package:par_mobile/views/suo/riwayat/riwayat_suo_page.dart';
 
 class MainSUOPageController extends GetxController {
   var dateTimeNow = DateTime.now().obs;
@@ -15,7 +16,7 @@ class MainSUOPageController extends GetxController {
   int index = 0;
   List<Widget> pages = [
     const BerandaSUOPage(),
-    const BerandaSUOPage(),
+    const RiwayatSUOPage(),
     const ApprovalSUOPage(),
     const MonitoringSUOPage(),
     ProfileSUOPage(),

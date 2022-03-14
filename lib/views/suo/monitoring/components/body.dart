@@ -25,6 +25,8 @@ class Body extends StatelessWidget {
                       label: "DCU",
                       currentIndex: controller.index.value,
                       compareIndex: 0,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 5),
                       onTap: () {
                         controller.changeTab(0, isAnimateTo: true);
                       },
@@ -38,6 +40,8 @@ class Body extends StatelessWidget {
                       label: "Vehicle Score",
                       currentIndex: controller.index.value,
                       compareIndex: 1,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 5),
                       onTap: () {
                         controller.changeTab(1, isAnimateTo: true);
                       },
@@ -51,6 +55,8 @@ class Body extends StatelessWidget {
                       label: "Driver Score",
                       currentIndex: controller.index.value,
                       compareIndex: 2,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 5),
                       onTap: () {
                         controller.changeTab(2, isAnimateTo: true);
                       },
@@ -64,6 +70,8 @@ class Body extends StatelessWidget {
                       label: "User Feedback",
                       currentIndex: controller.index.value,
                       compareIndex: 3,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 5),
                       onTap: () {
                         controller.changeTab(3, isAnimateTo: true);
                       },
