@@ -123,7 +123,7 @@ class PTCItemListSection extends StatelessWidget {
           Container(
             width: double.infinity,
             height: 5,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.grey,
             ),
           ),
