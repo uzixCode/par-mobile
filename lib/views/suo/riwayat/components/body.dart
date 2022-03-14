@@ -18,28 +18,40 @@ class Body extends StatelessWidget {
           child: Column(
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   TabBarItem(
                     label: "PTC",
                     currentIndex: con.index.value,
                     compareIndex: 0,
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                     onTap: () {
                       con.changeTab(0, isAnimateTo: true);
                     },
+                  ),
+                  SizedBox(
+                    width: Get.width * 0.05,
                   ),
                   TabBarItem(
                     label: "DCU",
                     currentIndex: con.index.value,
                     compareIndex: 1,
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                     onTap: () {
                       con.changeTab(1, isAnimateTo: true);
                     },
+                  ),
+                  SizedBox(
+                    width: Get.width * 0.05,
                   ),
                   TabBarItem(
                     label: "CLOCK IN/OUT",
                     currentIndex: con.index.value,
                     compareIndex: 2,
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                     onTap: () {
                       con.changeTab(2, isAnimateTo: true);
                     },

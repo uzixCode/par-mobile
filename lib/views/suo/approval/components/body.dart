@@ -22,37 +22,62 @@ class Body extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  TabBarItem(
-                    label: "PTC",
-                    currentIndex: con.index.value,
-                    compareIndex: 0,
-                    onTap: () {
-                      con.changeTab(0, isAnimateTo: true);
-                    },
+                  Flexible(
+                    child: TabBarItem(
+                      label: "PTC",
+                      currentIndex: con.index.value,
+                      compareIndex: 0,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 5),
+                      onTap: () {
+                        con.changeTab(0, isAnimateTo: true);
+                      },
+                    ),
                   ),
-                  TabBarItem(
-                    label: "DCU",
-                    currentIndex: con.index.value,
-                    compareIndex: 1,
-                    onTap: () {
-                      con.changeTab(1, isAnimateTo: true);
-                    },
+                  SizedBox(
+                    width: Get.width * 0.01,
                   ),
-                  TabBarItem(
-                    label: "CLOCK IN/OUT",
-                    currentIndex: con.index.value,
-                    compareIndex: 2,
-                    onTap: () {
-                      con.changeTab(2, isAnimateTo: true);
-                    },
+                  Flexible(
+                    child: TabBarItem(
+                      label: "DCU",
+                      currentIndex: con.index.value,
+                      compareIndex: 1,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 5),
+                      onTap: () {
+                        con.changeTab(1, isAnimateTo: true);
+                      },
+                    ),
                   ),
-                  TabBarItem(
-                    label: "DOC",
-                    currentIndex: con.index.value,
-                    compareIndex: 3,
-                    onTap: () {
-                      con.changeTab(3, isAnimateTo: true);
-                    },
+                  SizedBox(
+                    width: Get.width * 0.01,
+                  ),
+                  Flexible(
+                    child: TabBarItem(
+                      label: "CLOCK IN/OUT",
+                      currentIndex: con.index.value,
+                      compareIndex: 2,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 5),
+                      onTap: () {
+                        con.changeTab(2, isAnimateTo: true);
+                      },
+                    ),
+                  ),
+                  SizedBox(
+                    width: Get.width * 0.01,
+                  ),
+                  Flexible(
+                    child: TabBarItem(
+                      label: "DOC",
+                      currentIndex: con.index.value,
+                      compareIndex: 3,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 5),
+                      onTap: () {
+                        con.changeTab(3, isAnimateTo: true);
+                      },
+                    ),
                   ),
                 ],
               ),
