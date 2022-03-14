@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
 import 'package:par_mobile/controllers/suo/main/main_suo_page_controller.dart';
-import 'package:par_mobile/views/suo/main/components/header_section.dart';
 import 'package:par_mobile/widgets/bottombaritem.dart';
+import 'package:par_mobile/widgets/headermainsection.dart';
 
 class MainSUOPage extends StatelessWidget {
   MainSUOPage({Key? key}) : super(key: key);
@@ -17,7 +17,15 @@ class MainSUOPage extends StatelessWidget {
         body: SafeArea(
           child: Column(
             children: [
-              (con.index == 4) ? Container() : HeaderSection(),
+              (con.index == 4)
+                  ? Container()
+                  : HeaderMainSection(
+                      greeting: 'Selamat Pagi',
+                      name: 'DIAN SANJAYA',
+                      title: 'SUO/KORLAP',
+                      dateTime: controller.dateFormat
+                          .format(controller.dateTimeNow.value),
+                    ),
               Expanded(
                 child: PageView(
                   controller: controller.pageController,
@@ -38,15 +46,30 @@ class MainSUOPage extends StatelessWidget {
             selectedItemColor: allColor.primary,
             items: [
               bottomBarItem.bottomBarItem(
-                  currentIndex: con.index, compareIndex: 0, iconPath: "assets/images/beranda.png", label: "Beranda"),
+                  currentIndex: con.index,
+                  compareIndex: 0,
+                  iconPath: "assets/images/beranda.png",
+                  label: "Beranda"),
               bottomBarItem.bottomBarItem(
-                  currentIndex: con.index, compareIndex: 1, iconPath: "assets/images/riwayat.png", label: "Riwayat"),
+                  currentIndex: con.index,
+                  compareIndex: 1,
+                  iconPath: "assets/images/riwayat.png",
+                  label: "Riwayat"),
               bottomBarItem.bottomBarItem(
-                  currentIndex: con.index, compareIndex: 2, iconPath: "assets/images/check.png", label: "Approval"),
+                  currentIndex: con.index,
+                  compareIndex: 2,
+                  iconPath: "assets/images/check.png",
+                  label: "Approval"),
               bottomBarItem.bottomBarItem(
-                  currentIndex: con.index, compareIndex: 3, iconPath: "assets/images/izin.png", label: "Monitoring"),
+                  currentIndex: con.index,
+                  compareIndex: 3,
+                  iconPath: "assets/images/izin.png",
+                  label: "Monitoring"),
               bottomBarItem.bottomBarItem(
-                  currentIndex: con.index, compareIndex: 4, iconPath: "assets/images/Profile.png", label: "Profile"),
+                  currentIndex: con.index,
+                  compareIndex: 4,
+                  iconPath: "assets/images/Profile.png",
+                  label: "Profile"),
             ]),
       ),
     );

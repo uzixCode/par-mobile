@@ -1,17 +1,23 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:par_mobile/constants/all_color.dart';
-import 'package:par_mobile/controllers/suo/beranda/beranda_suo_page_controller.dart';
-import 'package:par_mobile/controllers/suo/main/main_suo_page_controller.dart';
 
-class HeaderSection extends StatelessWidget {
-  const HeaderSection({Key? key}) : super(key: key);
+import '../constants/all_color.dart';
+
+class HeaderMainSection extends StatelessWidget {
+  final String greeting;
+  final String name;
+  final String title;
+  final String dateTime;
+  const HeaderMainSection(
+      {Key? key,
+      required this.greeting,
+      required this.name,
+      required this.title,
+      required this.dateTime})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    MainSUOPageController controller = Get.put(MainSUOPageController());
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
@@ -33,7 +39,9 @@ class HeaderSection extends StatelessWidget {
                   width: Get.width * 0.17,
                   height: Get.width * 0.17,
                   decoration: BoxDecoration(
-                      image: DecorationImage(fit: BoxFit.cover, image: AssetImage("assets/images/background.png")),
+                      image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage("assets/images/background.png")),
                       color: allColor.green,
                       shape: BoxShape.circle),
                 ),
@@ -44,34 +52,35 @@ class HeaderSection extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Selamat Pagi,",
+                      "$greeting,",
                       style: TextStyle(color: Colors.white),
                     ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      name.toUpperCase(),
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: Get.width * 0.04),
+                    ),
                     SizedBox(
                       height: 5,
                     ),
                     Text(
-                      "DIAN SANJAYA",
-                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: Get.width * 0.04),
-                    ),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Text(
-                      "SUO/KORLAP",
+                      title,
                       style: TextStyle(color: Colors.white),
                     ),
                   ],
                 ),
               ],
             ),
-            Obx(
-              () => Text(
-                controller.dateFormat.format(controller.dateTimeNow.value),
-                textAlign: TextAlign.end,
-                style: TextStyle(color: Colors.white),
-              ),
-            )
+            Text(
+              dateTime,
+              textAlign: TextAlign.end,
+              style: const TextStyle(color: Colors.white),
+            ),
           ],
         ),
       ),
