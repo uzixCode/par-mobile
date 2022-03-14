@@ -5,7 +5,24 @@ import '../constants/all_color.dart';
 
 class DCUItemListSection extends StatelessWidget {
   final Function() onTap;
-  const DCUItemListSection({Key? key, required this.onTap}) : super(key: key);
+  final String driverName;
+  final String description;
+  final String platNomor;
+  final String statusTemperature;
+  final double valueTemperature;
+  final String statusBlood;
+  final String valueBlood;
+  const DCUItemListSection(
+      {Key? key,
+      required this.onTap,
+      required this.driverName,
+      required this.description,
+      required this.platNomor,
+      required this.statusTemperature,
+      required this.valueTemperature,
+      required this.statusBlood,
+      required this.valueBlood})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -37,12 +54,12 @@ class DCUItemListSection extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          const Text(
-                            "Bambang Wijaya",
+                          Text(
+                            driverName,
                             style: const TextStyle(fontWeight: FontWeight.bold),
                           ),
                           Text(
-                            "B 1234 BD",
+                            platNomor,
                             style: TextStyle(
                                 color: allColor.primary,
                                 fontWeight: FontWeight.bold),
@@ -53,7 +70,7 @@ class DCUItemListSection extends StatelessWidget {
                         height: 5,
                       ),
                       Text(
-                        "Kondisi driver tidak memungkinkan untuk melakukan perjalanan",
+                        description,
                         maxLines: 4,
                         style: TextStyle(fontSize: Get.width * 0.03),
                       ),
@@ -72,11 +89,11 @@ class DCUItemListSection extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Text("High Temperature",
+                                Text("$statusTemperature Temperature",
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontSize: Get.width * 0.025)),
-                                Text("39 C",
+                                Text("$valueTemperature C",
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontSize: Get.width * 0.04))
@@ -95,12 +112,12 @@ class DCUItemListSection extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Text("High Blood Pressure",
+                                Text("$statusBlood Blood Pressure",
                                     maxLines: 2,
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontSize: Get.width * 0.025)),
-                                Text("120/90",
+                                Text(valueBlood,
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontSize: Get.width * 0.04))

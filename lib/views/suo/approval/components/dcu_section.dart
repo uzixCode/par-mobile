@@ -20,9 +20,18 @@ class DCUSection extends StatelessWidget {
           child: ListView.builder(
               itemCount: 3,
               itemBuilder: (context, index) {
-                return DCUItemListSection(onTap: () {
-                  ApprovalDCUDetailPage();
-                });
+                return DCUItemListSection(
+                  onTap: () {
+                    ApprovalDCUDetailPage();
+                  },
+                  driverName: 'Bambang Wijaya',
+                  description: 'Kondisi driver tidak memungkinkan untuk melakukan perjalanan',
+                  platNomor: 'B 1234 BD',
+                  statusTemperature: 'High',
+                  valueTemperature: 39,
+                  statusBlood: 'High',
+                  valueBlood: '120/90',
+                );
               }),
         ),
       ),
