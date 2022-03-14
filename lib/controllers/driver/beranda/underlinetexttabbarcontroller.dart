@@ -12,12 +12,20 @@ class UnderlineTextTabbarController extends GetxController {
     DcuDriverPage(),
   ];
   PageController pageController =
-      PageController(initialPage: 0, keepPage: false);
+      PageController(initialPage: 0, keepPage: true);
+
   void changePage(int indexi, {bool? isAnimateTo}) {
     index = indexi;
     if (isAnimateTo ?? false)
       pageController.animateToPage(index,
           duration: Duration(milliseconds: 200), curve: Curves.linear);
     update();
+  }
+
+  @override
+  void onReady() {
+    // TODO: implement onReady
+    //changePage(index);
+    super.onReady();
   }
 }
