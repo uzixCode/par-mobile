@@ -49,6 +49,12 @@ class PTCSection extends StatelessWidget {
                           Get.to(ApprovalPTCDetailPage());
                         },
                         isShowStatus: true,
+                        driverName: 'Bambang Wijaya',
+                        platNomor: 'B 1234 BD',
+                        description: 'Keausan/Kondisi - Retak/Robek',
+                        craeteDate: '10 Oct 2021',
+                        status: "HIGH",
+                        duration: 108,
                       );
                     }),
               ),

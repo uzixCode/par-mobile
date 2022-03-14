@@ -6,7 +6,23 @@ import '../constants/all_color.dart';
 class PTCItemListSection extends StatelessWidget {
   final Function() onTap;
   final bool isShowStatus;
-  const PTCItemListSection({Key? key, required this.onTap, required this.isShowStatus}) : super(key: key);
+  final String driverName;
+  final String platNomor;
+  final String description;
+  final String craeteDate;
+  final String? status;
+  final int? duration;
+  const PTCItemListSection(
+      {Key? key,
+      required this.onTap,
+      required this.isShowStatus,
+      required this.driverName,
+      required this.platNomor,
+      required this.description,
+      required this.craeteDate,
+      this.status,
+      this.duration})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -38,12 +54,12 @@ class PTCItemListSection extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          const Text(
-                            "Bambang Wijaya",
+                          Text(
+                            driverName,
                             style: const TextStyle(fontWeight: FontWeight.bold),
                           ),
                           Text(
-                            "B 1234 BD",
+                            platNomor,
                             style: TextStyle(
                                 color: allColor.primary,
                                 fontWeight: FontWeight.bold),
@@ -53,67 +69,69 @@ class PTCItemListSection extends StatelessWidget {
                       const SizedBox(
                         height: 5,
                       ),
-                      const Text("Keausan/Kondisi - Retak/Robek"),
+                      Text(description),
                       const SizedBox(
                         height: 5,
                       ),
                       Text(
-                        "10 Oct 2021",
+                        craeteDate,
                         style: TextStyle(color: allColor.primary),
                       ),
                       const SizedBox(
                         height: 5,
                       ),
-                      isShowStatus ? Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Container(
-                            padding: const EdgeInsets.all(5),
-                            decoration: BoxDecoration(
-                              color: allColor.light_red,
-                              borderRadius: BorderRadius.circular(3),
-                            ),
-                            child: Row(
-                              children: const [
-                                Icon(
-                                  Icons.warning,
-                                  color: Colors.white,
-                                  size: 12,
+                      isShowStatus
+                          ? Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Container(
+                                  padding: const EdgeInsets.all(5),
+                                  decoration: BoxDecoration(
+                                    color: allColor.light_red,
+                                    borderRadius: BorderRadius.circular(3),
+                                  ),
+                                  child: Row(
+                                    children: [
+                                      const Icon(
+                                        Icons.warning,
+                                        color: Colors.white,
+                                        size: 12,
+                                      ),
+                                      const SizedBox(
+                                        width: 5,
+                                      ),
+                                      Text(status!,
+                                          style: TextStyle(color: Colors.white))
+                                    ],
+                                  ),
                                 ),
-                                SizedBox(
-                                  width: 5,
+                                const SizedBox(
+                                  width: 10,
                                 ),
-                                Text("HIGH",
-                                    style: TextStyle(color: Colors.white))
+                                Container(
+                                  padding: const EdgeInsets.all(5),
+                                  decoration: BoxDecoration(
+                                    color: allColor.light_red,
+                                    borderRadius: BorderRadius.circular(3),
+                                  ),
+                                  child: Row(
+                                    children: [
+                                      const Icon(
+                                        Icons.access_time,
+                                        color: Colors.white,
+                                        size: 12,
+                                      ),
+                                      const SizedBox(
+                                        width: 5,
+                                      ),
+                                      Text("$duration! HARI",
+                                          style: const TextStyle(color: Colors.white))
+                                    ],
+                                  ),
+                                ),
                               ],
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                            padding: const EdgeInsets.all(5),
-                            decoration: BoxDecoration(
-                              color: allColor.light_red,
-                              borderRadius: BorderRadius.circular(3),
-                            ),
-                            child: Row(
-                              children: const [
-                                Icon(
-                                  Icons.access_time,
-                                  color: Colors.white,
-                                  size: 12,
-                                ),
-                                SizedBox(
-                                  width: 5,
-                                ),
-                                Text("108 HARI",
-                                    style: TextStyle(color: Colors.white))
-                              ],
-                            ),
-                          ),
-                        ],
-                      ) : Container(),
+                            )
+                          : Container(),
                     ],
                   ),
                 ),

@@ -23,6 +23,10 @@ class PTCRiwayatSection extends StatelessWidget {
                 return PTCItemListSection(
                   onTap: () {},
                   isShowStatus: false,
+                  driverName: 'Bambang Wijaya',
+                  platNomor: 'B 1234 BD',
+                  description: 'Keausan/Kondisi - Retak/Robek',
+                  craeteDate: '10 Oct 2021',
                 );
               }),
         ),
