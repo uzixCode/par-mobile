@@ -18,13 +18,15 @@ class Body extends StatelessWidget {
     BerandaSUOPageController controller = Get.put(BerandaSUOPageController());
 
     return SafeArea(
-      child: ListView(
-        children: [
-          PTCSummarySection(),
-          DCUSummarySection(),
-          StatusWOSection(),
-          NotifDocSection(),
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            PTCSummarySection(),
+            DCUSummarySection(),
+            StatusWOSection(),
+            NotifDocSection(),
+          ],
+        ),
       ),
     );
   }
