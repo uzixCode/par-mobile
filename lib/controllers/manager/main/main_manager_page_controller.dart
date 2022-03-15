@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:par_mobile/views/manager/beranda/beranda_manager_page.dart';
+import 'package:par_mobile/views/manager/riwayat/riwayat_manager_page.dart';
 import 'package:par_mobile/views/suo/profile/profile_suo_page.dart';
 
 class MainManagerPageController extends GetxController {
@@ -12,7 +13,7 @@ class MainManagerPageController extends GetxController {
   int index = 0;
   List<Widget> pages = [
     const BerandaManagerPage(),
-    const BerandaManagerPage(),
+    const RiwayatManagerPage(),
     const BerandaManagerPage(),
     const BerandaManagerPage(),
     ProfileSUOPage(),
