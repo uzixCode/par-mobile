@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:par_mobile/views/manager/beranda/components/body.dart';
 
-import 'components/ptc_summary_manager_section.dart';
+import '../../../util/call_center.dart';
+import '../../../widgets/callcenterfloatingbutton.dart';
 
 class BerandaManagerPage extends StatelessWidget {
   const BerandaManagerPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            PTCSummaryManagerSection(),
-          ],
+    return Scaffold(
+        floatingActionButton: CallCenterFloatingButton(
+          onPressed: () async {
+            CallCenter().launchDial(uriPhone: "081220559855");
+          },
         ),
-      ),
-    );
+        body: Body());
   }
 }
