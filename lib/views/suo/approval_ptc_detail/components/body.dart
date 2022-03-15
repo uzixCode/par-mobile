@@ -46,6 +46,10 @@ class Body extends StatelessWidget {
                       valueContent: 'BD - BD',
                     ),
                     tableRowContent(
+                      title: 'Plat Nomor',
+                      valueContent: 'B 1234 KIL',
+                    ),
+                    tableRowContent(
                       title: 'Detail PTC',
                       valueContent: 'Keausan/Kondisi - Retak/Robek',
                     ),
