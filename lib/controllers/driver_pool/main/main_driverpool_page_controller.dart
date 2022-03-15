@@ -6,6 +6,7 @@ import 'package:par_mobile/views/driver/izin/izin_driver_page.dart';
 import 'package:par_mobile/views/driver/profile/profile_driver_page.dart';
 import 'package:par_mobile/views/driver/riwayat/riwayat_driver_page.dart';
 import 'package:par_mobile/views/driver_pool/beranda/beranda_driverpool_page.dart';
+import 'package:par_mobile/views/driver_pool/check/check_driverpool_page.dart';
 
 class MainDriverPoolPageController extends GetxController {
   final dateTimeNow = DateTime.now();
@@ -14,7 +15,7 @@ class MainDriverPoolPageController extends GetxController {
   List<Widget> pages = [
     BerandaDriverPoolPage(),
     RiwayatDriverPage(),
-    CheckDriverPage(),
+    CheckDriverPoolPage(),
     IzinDriverPage(),
     ProfileDriverPage(),
   ];
