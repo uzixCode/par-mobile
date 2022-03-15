@@ -10,13 +10,15 @@ class DataTileCard extends StatelessWidget {
       this.elevetion = 5,
       this.background = Colors.white,
       this.controller,
-      this.readonly = false})
+      this.readonly = false,
+      this.border = const BorderSide()})
       : super(key: key);
   String label;
   double elevetion;
   Color background;
   TextEditingController? controller;
   bool? readonly;
+  BorderSide border;
   @override
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -51,7 +53,7 @@ class DataTileCard extends StatelessWidget {
             child: RoundedTextField(
               readOnly: readonly,
               controller: controller,
-              borderSide: BorderSide.none,
+              borderSide: elevetion < 1 ? border : BorderSide.none,
             )),
       )
     ]);
