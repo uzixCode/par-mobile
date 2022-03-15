@@ -185,24 +185,22 @@ class LoginPage extends StatelessWidget {
             ),
           ),
         ),
-        bottomNavigationBar: 
-        //TO-DO Comment for testing release
-        // !kDebugMode
-        //     ? null
-        //     : 
+        bottomNavigationBar:
+            //TO-DO Comment for testing release
+            // !kDebugMode
+            //     ? null
+            //     :
             Container(
-                color: Colors.white,
-                height: kBottomNavigationBarHeight,
-                child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: loginPageController.pages.length,
-                    itemBuilder: (context, index) => RoundedButton(
-                          onTap: () =>
-                              loginPageController.toPage(context, index),
-                          child:
-                              Text(loginPageController.pages[index].toString()),
-                        )),
-              ),
+          color: Colors.white,
+          height: kBottomNavigationBarHeight,
+          child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: loginPageController.pages.length,
+              itemBuilder: (context, index) => RoundedButton(
+                    onTap: () => loginPageController.toPage(context, index),
+                    child: Text(loginPageController.pages[index].keys.first),
+                  )),
+        ),
       ),
     );
   }
