@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:par_mobile/constants/all_color.dart';
-import 'package:par_mobile/views/suo/approval_ptc_detail/approval_ptc_detail_page.dart';
-import 'package:par_mobile/widgets/basecard.dart';
-import 'package:par_mobile/widgets/ptcsummaryitemsection.dart';
-import 'package:par_mobile/widgets/rectangle_button.dart';
-import 'package:par_mobile/widgets/rounded_button.dart';
 
-class PTCSummarySection extends StatelessWidget {
-  const PTCSummarySection({Key? key}) : super(key: key);
+import '../../../../widgets/basecard.dart';
+import '../../../../widgets/ptcsummaryitemsection.dart';
+import '../../../suo/approval_ptc_detail/approval_ptc_detail_page.dart';
+
+class PTCSummaryManagerSection extends StatelessWidget {
+  const PTCSummaryManagerSection({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
