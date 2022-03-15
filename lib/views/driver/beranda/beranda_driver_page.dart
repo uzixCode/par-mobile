@@ -172,12 +172,6 @@ class BerandaDriverPage extends StatelessWidget {
                 ),
                 BaseCard(
                   label: "INFO KENDARAAN",
-                  trailing: CostumFlatButton(
-                      color: allColor.red,
-                      child: Text(
-                        "Ganti Mobil",
-                        style: TextStyle(color: Colors.white),
-                      )).paddingOnly(right: 18),
                   child: Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Column(
