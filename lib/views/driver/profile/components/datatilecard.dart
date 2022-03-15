@@ -10,13 +10,15 @@ class DataTileCard extends StatelessWidget {
       this.elevetion = 5,
       this.background = Colors.white,
       this.controller,
-      this.readonly = false})
+      this.readonly = false,
+      this.border})
       : super(key: key);
   String label;
   double elevetion;
   Color background;
   TextEditingController? controller;
   bool? readonly;
+  BoxBorder? border;
   @override
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -33,6 +35,7 @@ class DataTileCard extends StatelessWidget {
       Container(
         margin: EdgeInsets.all(2),
         decoration: new BoxDecoration(
+          border: border,
           borderRadius: BorderRadius.circular(Get.width * 0.015),
           color: Colors.white,
           boxShadow: [
