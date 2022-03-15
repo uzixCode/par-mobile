@@ -201,15 +201,14 @@ class BerandaDriverPoolPage extends StatelessWidget {
                                     child: Text(
                                       "GANTI MOBIL",
                                       style: TextStyle(
-                                          color: allColor.primary,
+                                          color: allColor.secondary,
                                           fontWeight: FontWeight.bold,
-                                          fontSize: Get.width * 0.04),
+                                          fontSize: Get.width * 0.05),
                                     ),
                                   ),
                                   DataTileCard(
                                     label: "Nomor Plat",
-                                    elevetion: 1,
-                                    border: Border.all(),
+                                    elevetion: 0,
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.symmetric(

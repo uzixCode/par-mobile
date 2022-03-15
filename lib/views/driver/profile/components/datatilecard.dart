@@ -11,14 +11,14 @@ class DataTileCard extends StatelessWidget {
       this.background = Colors.white,
       this.controller,
       this.readonly = false,
-      this.border})
+      this.border = const BorderSide()})
       : super(key: key);
   String label;
   double elevetion;
   Color background;
   TextEditingController? controller;
   bool? readonly;
-  BoxBorder? border;
+  BorderSide border;
   @override
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -35,7 +35,6 @@ class DataTileCard extends StatelessWidget {
       Container(
         margin: EdgeInsets.all(2),
         decoration: new BoxDecoration(
-          border: border,
           borderRadius: BorderRadius.circular(Get.width * 0.015),
           color: Colors.white,
           boxShadow: [
@@ -54,7 +53,7 @@ class DataTileCard extends StatelessWidget {
             child: RoundedTextField(
               readOnly: readonly,
               controller: controller,
-              borderSide: BorderSide.none,
+              borderSide: elevetion < 1 ? border : BorderSide.none,
             )),
       )
     ]);
