@@ -2,11 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/views/driver/main/main_driver_page.dart';
+import 'package:par_mobile/views/manager/main/main_manager_page.dart';
 import 'package:par_mobile/views/suo/main/main_suo_page.dart';
 
 class LoginPageController extends GetxController {
   //List Page Per Role For testing
-  List<Widget> pages = [MainDriverPage(), MainSUOPage()];
+  List<Widget> pages = [MainDriverPage(), MainSUOPage(), MainManagerPage()];
   @override
   void onInit() {
     print("Init Login Page Controller");

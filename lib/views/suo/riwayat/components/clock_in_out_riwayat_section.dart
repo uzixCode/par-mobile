@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:par_mobile/constants/all_color.dart';
-import 'package:par_mobile/views/suo/approval_cico_detail/approval_cico_detail_page.dart';
-import 'package:par_mobile/widgets/basecard.dart';
-import 'package:par_mobile/widgets/clockinoutitemlistsection.dart';
 
-class ClockInOutSection extends StatelessWidget {
-  const ClockInOutSection({Key? key}) : super(key: key);
+import '../../../../widgets/basecard.dart';
+import '../../../../widgets/clockinoutitemlistsection.dart';
+
+class ClockInOutRiwayatSection extends StatelessWidget {
+  const ClockInOutRiwayatSection({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +19,7 @@ class ClockInOutSection extends StatelessWidget {
               itemCount: 5,
               itemBuilder: (context, index) {
                 return ClockInOutItemListSection(
-                  onTap: () {
-                    Get.to(ApprovalCicoDetailPage());
-                  },
+                  onTap: () {},
                   driverName: 'Bambang Wijaya',
                   status: 'Out Of Area',
                   clockIn: '21 April 2021 07:32',

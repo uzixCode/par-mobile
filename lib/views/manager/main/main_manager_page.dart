@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:par_mobile/constants/all_color.dart';
-import 'package:par_mobile/controllers/suo/main/main_suo_page_controller.dart';
-import 'package:par_mobile/widgets/bottombaritem.dart';
-import 'package:par_mobile/widgets/headermainsection.dart';
+import 'package:par_mobile/controllers/manager/main/main_manager_page_controller.dart';
 
-class MainSUOPage extends StatelessWidget {
-  MainSUOPage({Key? key}) : super(key: key);
-  MainSUOPageController controller = Get.put(MainSUOPageController());
+import '../../../constants/all_color.dart';
+import '../../../widgets/bottombaritem.dart';
+import '../../../widgets/headermainsection.dart';
+
+class MainManagerPage extends StatelessWidget {
+  MainManagerPage({Key? key}) : super(key: key);
+  MainManagerPageController controller = Get.put(MainManagerPageController());
+
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<MainSUOPageController>(
+    return GetBuilder<MainManagerPageController>(
       initState: (_) => controller.changePage(0),
-      init: Get.find<MainSUOPageController>(),
+      init: Get.find<MainManagerPageController>(),
       builder: (con) => Scaffold(
         body: SafeArea(
           child: Column(
@@ -21,8 +23,8 @@ class MainSUOPage extends StatelessWidget {
                   ? Container()
                   : HeaderMainSection(
                       greeting: 'Selamat Pagi',
-                      name: 'DIAN SANJAYA',
-                      title: 'SUO/KORLAP',
+                      name: 'SUNARYO',
+                      title: 'Manager',
                       dateTime: controller.dateFormat
                           .format(controller.dateTimeNow.value),
                     ),

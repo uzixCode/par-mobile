@@ -1,24 +1,20 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
-import 'package:intl/intl.dart';
-import 'package:par_mobile/views/suo/approval/approval_suo_page.dart';
-import 'package:par_mobile/views/suo/beranda/beranda_suo_page.dart';
 import 'package:get/get.dart';
-import 'package:par_mobile/views/suo/monitoring/monitoring_suo_page.dart';
+import 'package:intl/intl.dart';
+import 'package:par_mobile/views/manager/beranda/beranda_manager_page.dart';
 import 'package:par_mobile/views/suo/profile/profile_suo_page.dart';
-import 'package:par_mobile/views/suo/riwayat/riwayat_suo_page.dart';
 
-class MainSUOPageController extends GetxController {
+class MainManagerPageController extends GetxController {
   var dateTimeNow = DateTime.now().obs;
   final dateFormat = DateFormat("dd MMMM yyyy\nHH:mm");
   int index = 0;
   List<Widget> pages = [
-    const BerandaSUOPage(),
-    const RiwayatSUOPage(),
-    const ApprovalSUOPage(),
-    const MonitoringSUOPage(),
+    const BerandaManagerPage(),
+    const BerandaManagerPage(),
+    const BerandaManagerPage(),
+    const BerandaManagerPage(),
     ProfileSUOPage(),
   ];
   PageController pageController = PageController(initialPage: 0, keepPage: false);
@@ -36,7 +32,7 @@ class MainSUOPageController extends GetxController {
 
   @override
   void onInit() {
-    print("Init Main Driver Page Controller");
+    print("Init Main Manager Page Controller");
     pageController = PageController(initialPage: 0, keepPage: false);
     Timer.periodic(Duration(seconds: 1), (Timer t) => getDateTimeNow());
 
