@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
 import 'package:par_mobile/controllers/login/login_page_controller.dart';
-import 'package:par_mobile/views/beranda/beranda_page.dart';
 import 'package:par_mobile/widgets/background.dart';
 import 'package:par_mobile/widgets/rounded_button.dart';
 
@@ -186,24 +185,22 @@ class LoginPage extends StatelessWidget {
             ),
           ),
         ),
-        bottomNavigationBar: 
-        //TO-DO Comment for testing release
-        // !kDebugMode
-        //     ? null
-        //     : 
+        bottomNavigationBar:
+            //TO-DO Comment for testing release
+            // !kDebugMode
+            //     ? null
+            //     :
             Container(
-                color: Colors.white,
-                height: kBottomNavigationBarHeight,
-                child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: loginPageController.pages.length,
-                    itemBuilder: (context, index) => RoundedButton(
-                          onTap: () =>
-                              loginPageController.toPage(context, index),
-                          child:
-                              Text(loginPageController.pages[index].toString()),
-                        )),
-              ),
+          color: Colors.white,
+          height: kBottomNavigationBarHeight,
+          child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: loginPageController.pages.length,
+              itemBuilder: (context, index) => RoundedButton(
+                    onTap: () => loginPageController.toPage(context, index),
+                    child: Text(loginPageController.pages[index].keys.first),
+                  )),
+        ),
       ),
     );
   }

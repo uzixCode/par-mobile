@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
 import 'package:par_mobile/controllers/driver/beranda/beranda_driver_page_controller.dart';
+import 'package:par_mobile/controllers/driver_pool/beranda/beranda_driver_page_controller.dart';
 import 'package:par_mobile/views/driver/beranda/components/stattile.dart';
 import 'package:par_mobile/widgets/basecard.dart';
 import 'package:par_mobile/widgets/callcenterfloatingbutton.dart';
@@ -9,10 +10,10 @@ import 'package:par_mobile/widgets/costumFlatButton.dart';
 import 'package:par_mobile/widgets/costumTable.dart';
 import 'package:par_mobile/widgets/costumstatbar.dart';
 
-class BerandaDriverPage extends StatelessWidget {
-  BerandaDriverPage({Key? key}) : super(key: key);
-  BerandaDriverPageController berandaDriverPageController =
-      Get.put(BerandaDriverPageController());
+class BerandaDriverPoolPage extends StatelessWidget {
+  BerandaDriverPoolPage({Key? key}) : super(key: key);
+  BerandaDriverPoolPageController berandaDriverPageController =
+      Get.put(BerandaDriverPoolPageController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
