@@ -7,6 +7,8 @@ import 'package:par_mobile/views/manager/beranda/beranda_manager_page.dart';
 import 'package:par_mobile/views/manager/riwayat/riwayat_manager_page.dart';
 import 'package:par_mobile/views/suo/profile/profile_suo_page.dart';
 
+import '../../../views/manager/approval/approval_manager_page.dart';
+
 class MainManagerPageController extends GetxController {
   var dateTimeNow = DateTime.now().obs;
   final dateFormat = DateFormat("dd MMMM yyyy\nHH:mm");
@@ -14,7 +16,7 @@ class MainManagerPageController extends GetxController {
   List<Widget> pages = [
     const BerandaManagerPage(),
     const RiwayatManagerPage(),
-    const BerandaManagerPage(),
+    const ApprovalManagerPage(),
     const BerandaManagerPage(),
     ProfileSUOPage(),
   ];
