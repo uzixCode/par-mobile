@@ -30,9 +30,11 @@ class DocumentSection extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text(
+                            Text(
                               "Bambang Wijaya",
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: Get.width * 0.035),
                             ),
                             const SizedBox(
                               height: 10,
@@ -40,14 +42,19 @@ class DocumentSection extends StatelessWidget {
                             RichText(
                               text: TextSpan(
                                 text: 'Dokumen KEUR Driver',
-                                style: TextStyle(color: allColor.light_red, fontSize: 12),
-                                children: const [
+                                style: TextStyle(
+                                    color: allColor.light_red,
+                                    fontSize: Get.width * 0.030),
+                                children: [
                                   TextSpan(
-                                      text: ' akan segera habis. Mohon untuk segera diperpanjang.',
-                                      style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black, fontSize: 12)),
+                                      text:
+                                          ' akan segera habis. Mohon untuk segera diperpanjang.',
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: Get.width * 0.030)),
                                 ],
                               ),
-                            ),  
+                            ),
                             SizedBox(
                               height: 10,
                             ),
@@ -61,16 +68,19 @@ class DocumentSection extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(3),
                                   ),
                                   child: Row(
-                                    children: const [
+                                    children: [
                                       Icon(
                                         Icons.warning,
                                         color: Colors.white,
-                                        size: 12,
+                                        size: Get.width * 0.030,
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 5,
                                       ),
-                                      Text("EXP: 22 Oct 2021", style: TextStyle(color: Colors.white, fontSize: 12))
+                                      Text("EXP: 22 Oct 2021",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: Get.width * 0.030))
                                     ],
                                   ),
                                 ),
@@ -84,16 +94,19 @@ class DocumentSection extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(3),
                                   ),
                                   child: Row(
-                                    children: const [
+                                    children: [
                                       Icon(
                                         Icons.access_time,
                                         color: Colors.white,
-                                        size: 12,
+                                        size: Get.width * 0.030,
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 5,
                                       ),
-                                      Text("12 HARI LAGI", style: TextStyle(color: Colors.white, fontSize: 12))
+                                      Text("12 HARI LAGI",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: Get.width * 0.030))
                                     ],
                                   ),
                                 ),

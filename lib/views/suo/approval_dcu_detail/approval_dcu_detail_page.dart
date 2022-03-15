@@ -12,7 +12,7 @@ class ApprovalDCUDetailPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: Text(
-          "Assessment DCU Bermasalah",
+          "Approval DCU Bermasalah",
           style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: Get.width * 0.04,
