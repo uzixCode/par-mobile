@@ -4,6 +4,7 @@ import 'package:par_mobile/constants/all_color.dart';
 import 'package:par_mobile/controllers/driver/beranda/beranda_driver_page_controller.dart';
 import 'package:par_mobile/controllers/driver_pool/beranda/beranda_driver_page_controller.dart';
 import 'package:par_mobile/views/driver/beranda/components/stattile.dart';
+import 'package:par_mobile/views/driver/profile/components/datatilecard.dart';
 import 'package:par_mobile/widgets/basecard.dart';
 import 'package:par_mobile/widgets/callcenterfloatingbutton.dart';
 import 'package:par_mobile/widgets/costumFlatButton.dart';
@@ -173,6 +174,65 @@ class BerandaDriverPoolPage extends StatelessWidget {
                 ),
                 BaseCard(
                   label: "INFO KENDARAAN",
+                  trailing: CostumFlatButton(
+                    color: allColor.red,
+                    child: Text(
+                      "Ganti Mobil",
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                    onTap: () => Get.dialog(UnconstrainedBox(
+                        child: SizedBox(
+                      width: Get.width * 0.90,
+                      child: Material(
+                        child: Container(
+                          child: Center(
+                            child: SizedBox(
+                              width: Get.width * 0.80,
+                              child: Column(
+                                children: [
+                                  Align(
+                                    alignment: Alignment.topRight,
+                                    child: IconButton(
+                                        onPressed: () => Get.back(),
+                                        icon: Icon(Icons.close)),
+                                  ),
+                                  Align(
+                                    child: Text(
+                                      "GANTI MOBIL",
+                                      style: TextStyle(
+                                          color: allColor.secondary,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: Get.width * 0.05),
+                                    ),
+                                  ),
+                                  DataTileCard(
+                                    label: "Nomor Plat",
+                                    elevetion: 0,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 20.0),
+                                    child: CostumFlatButton(
+                                        padding: EdgeInsets.symmetric(
+                                            vertical: 5, horizontal: 25),
+                                        color: allColor.green,
+                                        child: Text(
+                                          "Submit",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: Get.width * 0.035,
+                                              fontWeight: FontWeight.bold),
+                                        )),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ))),
+                  ),
                   child: Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Column(
