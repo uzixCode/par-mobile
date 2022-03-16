@@ -3,11 +3,13 @@ import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
 import 'package:par_mobile/controllers/driver/beranda/beranda_driver_page_controller.dart';
 import 'package:par_mobile/views/driver/beranda/components/stattile.dart';
+import 'package:par_mobile/views/driver/profile/components/datatilecard.dart';
 import 'package:par_mobile/widgets/basecard.dart';
 import 'package:par_mobile/widgets/callcenterfloatingbutton.dart';
 import 'package:par_mobile/widgets/costumFlatButton.dart';
 import 'package:par_mobile/widgets/costumTable.dart';
 import 'package:par_mobile/widgets/costumstatbar.dart';
+import 'package:par_mobile/widgets/roundedtextfield.dart';
 
 import '../../../controllers/passanger/beranda/beranda_passanger_page_controller.dart';
 
@@ -341,6 +343,59 @@ class BerandaPassangerPage extends StatelessWidget {
                         ],
                       ),
                     )),
+                BaseCard(
+                  label: "SUARA PELANGGAN",
+                  trailing: Icon(
+                    Icons.chevron_right,
+                    color: Colors.white,
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Column(
+                      children: [
+                        Card(
+                          elevation: 5,
+                          child: RoundedTextField(
+                            hintText: "Kategori",
+                            borderSide: BorderSide.none,
+                            suffixIcon: Icon(
+                              Icons.arrow_drop_down,
+                              size: 40,
+                            ),
+                            padding: EdgeInsets.symmetric(
+                                vertical: 10, horizontal: 10),
+                          ),
+                        ),
+                        Card(
+                          elevation: 5,
+                          child: SizedBox(
+                            height: 16 * 5,
+                            child: RoundedTextField(
+                              padding: EdgeInsets.all(10),
+                              maxLines: 1000,
+                              hintText: "Rincian Keluhan",
+                              keyboardType: TextInputType.multiline,
+                              borderSide: BorderSide.none,
+                              // style: TextStyle(fontSize: Get.width * 0.035),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        CostumFlatButton(
+                            padding: EdgeInsets.all(10),
+                            color: allColor.secondary,
+                            child: Text(
+                              "SUBMIT",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ))
+                      ],
+                    ),
+                  ),
+                )
               ],
             ))
           ],

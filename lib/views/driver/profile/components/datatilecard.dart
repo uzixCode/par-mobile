@@ -6,32 +6,39 @@ import 'package:par_mobile/widgets/roundedtextfield.dart';
 class DataTileCard extends StatelessWidget {
   DataTileCard(
       {Key? key,
-      required this.label,
+      this.label,
       this.elevetion = 5,
       this.background = Colors.white,
       this.controller,
       this.readonly = false,
-      this.border = const BorderSide()})
+      this.border = const BorderSide(),
+      this.padding,
+      this.suffixIcon})
       : super(key: key);
-  String label;
+  String? label;
   double elevetion;
   Color background;
   TextEditingController? controller;
   bool? readonly;
   BorderSide border;
+  EdgeInsetsGeometry? padding;
+  Widget? suffixIcon;
   @override
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      SizedBox(
-        height: 15,
-      ),
-      Text(
-        label,
-        style: TextStyle(fontWeight: FontWeight.bold),
-      ).paddingOnly(left: 2),
-      SizedBox(
-        height: 5,
-      ),
+      if (label != null)
+        SizedBox(
+          height: 15,
+        ),
+      if (label != null)
+        Text(
+          label!,
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ).paddingOnly(left: 2),
+      if (label != null)
+        SizedBox(
+          height: 5,
+        ),
       Container(
         margin: EdgeInsets.all(2),
         decoration: new BoxDecoration(
@@ -51,6 +58,8 @@ class DataTileCard extends StatelessWidget {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(Get.width * 0.015)),
             child: RoundedTextField(
+              suffixIcon: suffixIcon,
+              padding: padding,
               readOnly: readonly,
               controller: controller,
               borderSide: elevetion < 1 ? border : BorderSide.none,
