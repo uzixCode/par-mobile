@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../widgets/basecard.dart';
-import '../../../../widgets/vehicle_score_item_section.dart';
+import '../../../../widgets/vehiclescoreitemsection.dart';
 import '../../../suo/vehicle_score_detail/vehicle_score_detail_page.dart';
 
 class SummaryVehicleScoreManagerSection extends StatelessWidget {

@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
 import 'package:par_mobile/views/suo/vehicle_score_detail/vehicle_score_detail_page.dart';
 import 'package:par_mobile/widgets/basecard.dart';
-import 'package:par_mobile/widgets/vehicle_score_item_section.dart';
+import 'package:par_mobile/widgets/vehiclescoreitemsection.dart';
 
 class SummaryVehicleScoreSection extends StatelessWidget {
   const SummaryVehicleScoreSection({Key? key}) : super(key: key);
