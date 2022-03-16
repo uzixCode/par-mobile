@@ -98,32 +98,35 @@ class CheckDriverPoolPage extends StatelessWidget {
                             children: [
                               Align(
                                 alignment: Alignment.topRight,
-                                child: IconButton(
-                                    onPressed: () => Get.back(),
-                                    icon: Icon(Icons.close)),
+                                child: InkWell(
+                                    onTap: () => Get.back(),
+                                    child:
+                                        Icon(Icons.close).paddingOnly(top: 20)),
                               ),
                               Align(
                                 child: Text(
-                                  "UBAH PROFIL",
+                                  "Drive In",
                                   style: TextStyle(
                                       color: allColor.primary,
                                       fontWeight: FontWeight.bold,
-                                      fontSize: Get.width * 0.04),
+                                      fontSize: Get.width * 0.05),
                                 ),
                               ),
                               Text(
                                 "Konfirmasi drive in hanya jika Anda sudah siap untuk memulai perjalanan",
                                 textAlign: TextAlign.center,
+                                style: TextStyle(fontSize: Get.width * 0.035),
+                              ).paddingSymmetric(
+                                vertical: 20,
                               ),
                               Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(vertical: 20.0),
+                                padding: const EdgeInsets.only(bottom: 20.0),
                                 child: CostumFlatButton(
                                     padding: EdgeInsets.symmetric(
                                         vertical: 5, horizontal: 25),
                                     color: allColor.green,
                                     child: Text(
-                                      "Simpan",
+                                      "Submit",
                                       style: TextStyle(
                                           color: Colors.white,
                                           fontSize: Get.width * 0.035,
