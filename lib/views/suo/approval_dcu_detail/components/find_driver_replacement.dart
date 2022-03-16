@@ -40,6 +40,9 @@ class FindDriverReplacement extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                SizedBox(
+                  height: Get.height * 0.05,
+                ),
                 Text(
                   "Pilih Pool Driver Yang Tersedia Untuk Menggantikan Driver Dengan Rincian Sebagai Berikut",
                   textAlign: TextAlign.center,
