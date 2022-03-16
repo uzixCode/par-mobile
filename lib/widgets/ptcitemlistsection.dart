@@ -56,12 +56,15 @@ class PTCItemListSection extends StatelessWidget {
                         children: [
                           Text(
                             driverName,
-                            style: const TextStyle(fontWeight: FontWeight.bold),
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: Get.width * 0.035),
                           ),
                           Text(
                             platNomor,
                             style: TextStyle(
                                 color: allColor.primary,
+                                fontSize: Get.width * 0.035,
                                 fontWeight: FontWeight.bold),
                           )
                         ],
@@ -69,69 +72,89 @@ class PTCItemListSection extends StatelessWidget {
                       const SizedBox(
                         height: 5,
                       ),
-                      Text(description),
-                      const SizedBox(
-                        height: 5,
-                      ),
                       Text(
-                        craeteDate,
-                        style: TextStyle(color: allColor.primary),
+                        description,
+                        style: TextStyle(fontSize: Get.width * 0.030),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            craeteDate,
+                            style: TextStyle(
+                                color: allColor.primary,
+                                fontSize: Get.width * 0.030),
+                          ),
+                          SizedBox(
+                            width: Get.width * 0.01,
+                          ),
+                          Expanded(
+                            child: isShowStatus
+                                ? Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      Container(
+                                        padding: const EdgeInsets.all(5),
+                                        decoration: BoxDecoration(
+                                          color: allColor.light_red,
+                                          borderRadius:
+                                              BorderRadius.circular(3),
+                                        ),
+                                        child: Row(
+                                          children: [
+                                            Icon(
+                                              Icons.warning,
+                                              color: Colors.white,
+                                              size: Get.width * 0.03,
+                                            ),
+                                            const SizedBox(
+                                              width: 5,
+                                            ),
+                                            Text(status!,
+                                                style: TextStyle(
+                                                    fontSize: Get.width * 0.030,
+                                                    color: Colors.white))
+                                          ],
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      Container(
+                                        padding: const EdgeInsets.all(5),
+                                        decoration: BoxDecoration(
+                                          color: allColor.light_red,
+                                          borderRadius:
+                                              BorderRadius.circular(3),
+                                        ),
+                                        child: Row(
+                                          children: [
+                                            Icon(
+                                              Icons.access_time,
+                                              color: Colors.white,
+                                              size: Get.width * 0.03,
+                                            ),
+                                            const SizedBox(
+                                              width: 2,
+                                            ),
+                                            Text("$duration HARI",
+                                                style: TextStyle(
+                                                    fontSize: Get.width * 0.030,
+                                                    color: Colors.white))
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  )
+                                : Container(),
+                          ),
+                        ],
                       ),
                       const SizedBox(
                         height: 5,
                       ),
-                      isShowStatus
-                          ? Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                Container(
-                                  padding: const EdgeInsets.all(5),
-                                  decoration: BoxDecoration(
-                                    color: allColor.light_red,
-                                    borderRadius: BorderRadius.circular(3),
-                                  ),
-                                  child: Row(
-                                    children: [
-                                      const Icon(
-                                        Icons.warning,
-                                        color: Colors.white,
-                                        size: 12,
-                                      ),
-                                      const SizedBox(
-                                        width: 5,
-                                      ),
-                                      Text(status!,
-                                          style: TextStyle(color: Colors.white))
-                                    ],
-                                  ),
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                Container(
-                                  padding: const EdgeInsets.all(5),
-                                  decoration: BoxDecoration(
-                                    color: allColor.light_red,
-                                    borderRadius: BorderRadius.circular(3),
-                                  ),
-                                  child: Row(
-                                    children: [
-                                      const Icon(
-                                        Icons.access_time,
-                                        color: Colors.white,
-                                        size: 12,
-                                      ),
-                                      const SizedBox(
-                                        width: 5,
-                                      ),
-                                      Text("$duration! HARI",
-                                          style: const TextStyle(color: Colors.white))
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            )
-                          : Container(),
                     ],
                   ),
                 ),

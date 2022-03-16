@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
-import 'package:par_mobile/constants/all_color.dart';
-import 'package:par_mobile/views/suo/driver_score_detail/driver_score_detail_page.dart';
-import 'package:par_mobile/widgets/basecard.dart';
-import 'package:par_mobile/widgets/driverscoreitemsection.dart';
 
-class SummaryDriverScoreSection extends StatelessWidget {
-  const SummaryDriverScoreSection({Key? key}) : super(key: key);
+import '../../../../widgets/basecard.dart';
+import '../../../../widgets/vehiclescoreitemsection.dart';
+import '../../../suo/vehicle_score_detail/vehicle_score_detail_page.dart';
+
+class SummaryVehicleScoreManagerSection extends StatelessWidget {
+  const SummaryVehicleScoreManagerSection({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return BaseCard(
-      label: "RANGKUMAN PENILAIAN DRIVER",
+      label: "RANGKUMAN PENILAIAN KENDARAAN",
       trailing: Container(),
       leading: Container(),
       child: Expanded(
@@ -35,14 +34,14 @@ class SummaryDriverScoreSection extends StatelessWidget {
                 child: ListView.builder(
                     itemCount: 5,
                     itemBuilder: (context, index) {
-                      return DriverScoreItemSection(
+                      return VehicleScoreItemSection(
                           onTap: () {
-                            Get.to(const DriverScoreDetailPage());
+                            Get.to(const VehicleScoreDetailPage());
                           },
-                          driverName: "Bambang Wijaya",
                           modelCar: "AVANZA",
                           platNomor: "B 1234 XY",
-                          rating: 3);
+                          driverName: "Bambang Wijaya",
+                          rating: 3.0);
                     }),
               ),
             ],

@@ -42,8 +42,8 @@ class RoundedTextField extends StatelessWidget {
           border: OutlineInputBorder(
               borderSide: borderSide,
               borderRadius: BorderRadius.circular(borderRadius ?? 4.0)),
-          suffixIconConstraints:
-              const BoxConstraints(minWidth: 23, maxHeight: 20),
+          // suffixIconConstraints:
+          //     const BoxConstraints(minWidth: 23, maxHeight: 20),
           hintText: hintText,
           suffixIcon: suffixIcon,
           prefixIcon: prefixIcon,

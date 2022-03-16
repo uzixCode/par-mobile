@@ -37,14 +37,14 @@ class Body extends StatelessWidget {
                       children: [
                         _tableRowContent("Nomor", "72367",
                             isCustomWidget: false),
-                        _tableRowContent("Nomor Polisi", "",
+                        _tableRowContent("Jenis Barang", "",
                             isCustomWidget: true,
                             widgetCustom: TextFormField(
                               decoration: const InputDecoration(
                                   contentPadding: EdgeInsets.all(5),
                                   isDense: true),
                             )),
-                        _tableRowContent("Nomor Rangka", "",
+                        _tableRowContent("Jumlah", "",
                             isCustomWidget: true,
                             widgetCustom: Obx(
                               () => Container(

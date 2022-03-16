@@ -22,7 +22,7 @@ class DCUSection extends StatelessWidget {
               itemBuilder: (context, index) {
                 return DCUItemListSection(
                   onTap: () {
-                    ApprovalDCUDetailPage();
+                    Get.to(ApprovalDCUDetailPage());
                   },
                   driverName: 'Bambang Wijaya',
                   description: 'Kondisi driver tidak memungkinkan untuk melakukan perjalanan',
