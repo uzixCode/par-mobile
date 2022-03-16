@@ -86,7 +86,60 @@ class CheckDriverPoolPage extends StatelessWidget {
             BaseCard(
               label: "DATA DRIVE IN DRIVE OUT",
               trailing: InkWell(
-                // onTap: () => Get.to(() => ClockInOut()),
+                onTap: () => Get.dialog(UnconstrainedBox(
+                    child: SizedBox(
+                  width: Get.width * 0.90,
+                  child: Material(
+                    child: Container(
+                      child: Center(
+                        child: SizedBox(
+                          width: Get.width * 0.80,
+                          child: Column(
+                            children: [
+                              Align(
+                                alignment: Alignment.topRight,
+                                child: InkWell(
+                                    onTap: () => Get.back(),
+                                    child:
+                                        Icon(Icons.close).paddingOnly(top: 20)),
+                              ),
+                              Align(
+                                child: Text(
+                                  "Drive In",
+                                  style: TextStyle(
+                                      color: allColor.primary,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: Get.width * 0.05),
+                                ),
+                              ),
+                              Text(
+                                "Konfirmasi drive in hanya jika Anda sudah siap untuk memulai perjalanan",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(fontSize: Get.width * 0.035),
+                              ).paddingSymmetric(
+                                vertical: 20,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(bottom: 20.0),
+                                child: CostumFlatButton(
+                                    padding: EdgeInsets.symmetric(
+                                        vertical: 5, horizontal: 25),
+                                    color: allColor.green,
+                                    child: Text(
+                                      "Submit",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: Get.width * 0.035,
+                                          fontWeight: FontWeight.bold),
+                                    )),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ))),
                 child: Icon(
                   Icons.chevron_right,
                   color: Colors.white,
