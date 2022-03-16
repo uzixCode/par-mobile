@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:par_mobile/views/manager/beranda/beranda_manager_page.dart';
+import 'package:par_mobile/views/manager/monitoring/monitoring_manager_page.dart';
 import 'package:par_mobile/views/manager/riwayat/riwayat_manager_page.dart';
 import 'package:par_mobile/views/suo/profile/profile_suo_page.dart';
 
@@ -17,7 +18,7 @@ class MainManagerPageController extends GetxController {
     const BerandaManagerPage(),
     const RiwayatManagerPage(),
     const ApprovalManagerPage(),
-    const BerandaManagerPage(),
+    const MonitoringManagerPage(),
     ProfileSUOPage(),
   ];
   PageController pageController = PageController(initialPage: 0, keepPage: false);
