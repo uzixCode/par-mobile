@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class AllColor {
   final primary = Color(0xFF00497E);
   final secondary = Color(0xFF3D6481);
+  final blue_1 = Color(0xFF1C68AE);
   final grey = Color(0xFF6B6B6B);
   final light_grey = Color(0xFF9DA0A4).withOpacity(0.5);
   final red = Color(0xFFB64646);
@@ -10,6 +11,7 @@ class AllColor {
   final libur_red = Color(0xFFD95450);
   final izin_yellow = Color(0xFFBF8F31);
   final green = Color(0xFF91C14F);
+  final green_1 = Color(0xFF36A176);
   final orange = Color(0xFFFC6241);
   final faded_blue = Color(0xFFF0F1FE);
   final light_blue = Color(0xFF7D86E4);
