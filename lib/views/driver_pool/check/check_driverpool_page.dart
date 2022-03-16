@@ -5,6 +5,7 @@ import 'package:par_mobile/views/driver/clockinout/clockinout.dart';
 import 'package:par_mobile/views/driver/dailycheckup/dailycheckup_driver_page.dart';
 import 'package:par_mobile/views/driver/pretripcheck/pretripcheck.dart';
 import 'package:par_mobile/views/driver/suratperintahkerjalembur/suratperintahkerjalembur.dart';
+import 'package:par_mobile/views/driver_pool/clockinout/clockinout_driverpool_page.dart';
 import 'package:par_mobile/widgets/basecard.dart';
 import 'package:par_mobile/widgets/callcenterfloatingbutton.dart';
 import 'package:par_mobile/widgets/costumFlatButton.dart';
@@ -70,7 +71,7 @@ class CheckDriverPoolPage extends StatelessWidget {
             BaseCard(
               label: "DATA CLOCK IN CLOCK OUT",
               trailing: InkWell(
-                onTap: () => Get.to(() => ClockInOut()),
+                onTap: () => Get.to(() => ClockInOutDriverPoolPage()),
                 child: Icon(
                   Icons.chevron_right,
                   color: Colors.white,

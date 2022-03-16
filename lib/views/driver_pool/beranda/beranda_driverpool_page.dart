@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
 import 'package:par_mobile/controllers/driver/beranda/beranda_driver_page_controller.dart';
-import 'package:par_mobile/controllers/driver_pool/beranda/beranda_driver_page_controller.dart';
+import 'package:par_mobile/controllers/driver_pool/beranda/beranda_driverpool_page_controller.dart';
 import 'package:par_mobile/views/driver/beranda/components/stattile.dart';
 import 'package:par_mobile/views/driver/profile/components/datatilecard.dart';
 import 'package:par_mobile/widgets/basecard.dart';
