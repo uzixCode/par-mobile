@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:par_mobile/constants/all_color.dart';
 import 'package:par_mobile/widgets/basecard.dart';
+import 'package:par_mobile/widgets/userfeedbackitemsection.dart';
 
 class UserFeedbackSection extends StatelessWidget {
   const UserFeedbackSection({Key? key}) : super(key: key);
@@ -32,98 +33,12 @@ class UserFeedbackSection extends StatelessWidget {
                 child: ListView.builder(
                     itemCount: 5,
                     itemBuilder: (context, index) {
-                      return InkWell(
-                        onTap: () {},
-                        child: Column(
-                          children: [
-                            Container(
-                              margin:
-                                  const EdgeInsets.only(bottom: 15, top: 15),
-                              child: Column(
-                                children: [
-                                  Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        "Dani Bramantyo",
-                                        style: TextStyle(
-                                            fontSize: Get.width * 0.035),
-                                      ),
-                                      Text(
-                                        "04 Des 2021",
-                                        style: TextStyle(
-                                            fontSize: Get.width * 0.035),
-                                      ),
-                                    ],
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  Container(
-                                    width: double.infinity,
-                                    padding: EdgeInsets.symmetric(
-                                        vertical: 5, horizontal: 15),
-                                    decoration: BoxDecoration(
-                                        color: allColor.primary,
-                                        borderRadius:
-                                            BorderRadius.circular(15)),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text("Keluhan Driver",
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: Get.width * 0.035)),
-                                        SizedBox(
-                                          height: 10,
-                                        ),
-                                        Text(
-                                          "Driver kurang disiplin datang terlambat",
-                                          maxLines: 10,
-                                          overflow: TextOverflow.ellipsis,
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: Get.width * 0.03),
-                                        ),
-                                        SizedBox(
-                                          height: 5,
-                                        ),
-                                        RichText(
-                                          text: TextSpan(
-                                            text: 'Kategori: ',
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontSize: Get.width * 0.03),
-                                            children: <TextSpan>[
-                                              TextSpan(
-                                                  text: 'Kedisiplinan',
-                                                  style: TextStyle(
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      color: Colors.white,
-                                                      fontSize: Get.width * 0.03)),
-                                            ],
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Container(
-                              width: double.infinity,
-                              height: 5,
-                              decoration: BoxDecoration(
-                                color: Colors.grey,
-                              ),
-                            ),
-                          ],
-                        ),
-                      );
+                      return UserFeedbackItemSection(
+                          userName: "Dany Bramantyo",
+                          createDate: "04 Mar 2022",
+                          descriptionFeedback: "Driver kurang disiplin",
+                          categoryFeedback: "Kedisiplinan",
+                          onTap: () {});
                     }),
               ),
             ],
