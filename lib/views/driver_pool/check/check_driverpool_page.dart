@@ -86,7 +86,7 @@ class CheckDriverPoolPage extends StatelessWidget {
             BaseCard(
               label: "DATA DRIVE IN DRIVE OUT",
               trailing: InkWell(
-                onTap: () => Get.to(() => ClockInOut()),
+                // onTap: () => Get.to(() => ClockInOut()),
                 child: Icon(
                   Icons.chevron_right,
                   color: Colors.white,
