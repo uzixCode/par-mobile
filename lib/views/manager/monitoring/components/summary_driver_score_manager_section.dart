@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:par_mobile/constants/all_color.dart';
-import 'package:par_mobile/widgets/basecard.dart';
-import 'package:par_mobile/widgets/userfeedbackitemsection.dart';
 
-class UserFeedbackSection extends StatelessWidget {
-  const UserFeedbackSection({Key? key}) : super(key: key);
+import '../../../../widgets/basecard.dart';
+import '../../../../widgets/driverscoreitemsection.dart';
+import '../../../suo/driver_score_detail/driver_score_detail_page.dart';
+
+class SummaryDriverScoreManagerSection extends StatelessWidget {
+  const SummaryDriverScoreManagerSection({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return BaseCard(
-      label: "KELUHAN/SARAN PELANGGAN",
+      label: "RANGKUMAN PENILAIAN DRIVER",
       trailing: Container(),
       leading: Container(),
       child: Expanded(
@@ -22,8 +23,8 @@ class UserFeedbackSection extends StatelessWidget {
                 onTap: () {},
                 decoration: InputDecoration(
                   isDense: true,
-                  hintText: "Cari Driver",
-                  hintStyle: TextStyle(fontSize: Get.width * 0.03),
+                  hintText: "Periode Bulan Desember",
+                  hintStyle: TextStyle(fontSize: Get.width * 0.035),
                 ),
               ),
               const SizedBox(
@@ -33,12 +34,14 @@ class UserFeedbackSection extends StatelessWidget {
                 child: ListView.builder(
                     itemCount: 5,
                     itemBuilder: (context, index) {
-                      return UserFeedbackItemSection(
-                          userName: "Dany Bramantyo",
-                          createDate: "04 Mar 2022",
-                          descriptionFeedback: "Driver kurang disiplin",
-                          categoryFeedback: "Kedisiplinan",
-                          onTap: () {});
+                      return DriverScoreItemSection(
+                          onTap: () {
+                            Get.to(const DriverScoreDetailPage());
+                          },
+                          driverName: "Bambang Wijaya",
+                          modelCar: "AVANZA",
+                          platNomor: "B 1234 XY",
+                          rating: 3);
                     }),
               ),
             ],
