@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:par_mobile/constants/all_color.dart';
+import 'package:par_mobile/widgets/basecard.dart';
 
-import '../../../../constants/all_color.dart';
-import '../../../../widgets/basecard.dart';
-import '../../../../widgets/ptcitemlistsection.dart';
+import '../../../widgets/ptcitemlistsection.dart';
 
-class PTCRiwayatSection extends StatelessWidget {
-  const PTCRiwayatSection({Key? key}) : super(key: key);
+class PtcPassangerTab extends StatelessWidget {
+  const PtcPassangerTab({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

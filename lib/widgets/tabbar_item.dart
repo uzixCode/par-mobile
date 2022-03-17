@@ -9,21 +9,24 @@ class TabBarItem extends StatelessWidget {
   final int compareIndex;
   final EdgeInsets padding;
   final Color? color;
-  const TabBarItem(
-      {Key? key,
-      required this.label,
-      required this.currentIndex,
-      required this.compareIndex,
-      required this.onTap,
-      required this.padding,
-      this.color})
-      : super(key: key);
+  EdgeInsetsGeometry? margin;
+  TabBarItem({
+    Key? key,
+    required this.label,
+    required this.currentIndex,
+    required this.compareIndex,
+    required this.onTap,
+    required this.padding,
+    this.color,
+    this.margin,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
       child: Container(
+        margin: margin,
         //height: Get.height * 0.06,
         alignment: Alignment.center,
         decoration: BoxDecoration(

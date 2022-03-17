@@ -98,37 +98,47 @@ class RiwayatPassangerPage extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
-              Row(
-                // scrollDirection: Axis.horizontal,
-                children: [
-                  TabBarItem(
-                    label: "PTC",
-                    currentIndex: 1,
-                    compareIndex: 1,
-                    onTap: () {},
-                    color: allColor.secondary,
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: SizedBox(
+                  width: double.maxFinite,
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    // scrollDirection: Axis.horizontal,
+                    children: [
+                      TabBarItem(
+                        label: "PTC",
+                        currentIndex: con.index,
+                        compareIndex: 0,
+                        onTap: () => con.changePage(0, isAnimateTo: true),
+                        color: allColor.secondary,
+                        margin: EdgeInsets.only(right: 20),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 20, vertical: 5),
+                      ),
+                      TabBarItem(
+                        label: "DCU",
+                        currentIndex: con.index,
+                        compareIndex: 1,
+                        onTap: () => con.changePage(1, isAnimateTo: true),
+                        color: allColor.secondary,
+                        margin: EdgeInsets.only(right: 20),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 20, vertical: 5),
+                      ),
+                      TabBarItem(
+                        label: "CLOCK IN/OUT",
+                        currentIndex: con.index,
+                        compareIndex: 2,
+                        onTap: () => con.changePage(2, isAnimateTo: true),
+                        color: allColor.secondary,
+                        margin: EdgeInsets.only(right: 20),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 20, vertical: 5),
+                      ),
+                    ],
                   ),
-                  TabBarItem(
-                    label: "DCU",
-                    currentIndex: 1,
-                    compareIndex: 1,
-                    onTap: () {},
-                    color: allColor.secondary,
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-                  ),
-                  TabBarItem(
-                    label: "CLOCK IN/OUT",
-                    currentIndex: 1,
-                    compareIndex: 1,
-                    onTap: () {},
-                    color: allColor.secondary,
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-                  ),
-                ],
+                ),
               ),
               Expanded(
                 child: PageView(
