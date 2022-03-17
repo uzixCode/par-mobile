@@ -7,6 +7,7 @@ import 'package:par_mobile/views/driver/izin/izin_driver_page.dart';
 import 'package:par_mobile/views/driver/profile/profile_driver_page.dart';
 import 'package:par_mobile/views/driver/riwayat/riwayat_driver_page.dart';
 import 'package:par_mobile/views/passanger/beranda/beranda_passanger_page.dart';
+import 'package:par_mobile/views/passanger/riwayat/riwayat_passsanger_page.dart';
 
 class MainPassangerPageController extends GetxController {
   final dateTimeNow = DateTime.now();
@@ -14,7 +15,7 @@ class MainPassangerPageController extends GetxController {
   int index = 0;
   List<Widget> pages = [
     BerandaPassangerPage(),
-    RiwayatDriverPage(),
+    RiwayatPassangerPage(),
     CheckDriverPage(),
     IzinDriverPage(),
     ProfileDriverPage(),
