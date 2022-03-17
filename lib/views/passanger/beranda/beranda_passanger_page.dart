@@ -15,7 +15,7 @@ import '../../../controllers/passanger/beranda/beranda_passanger_page_controller
 
 class BerandaPassangerPage extends StatelessWidget {
   BerandaPassangerPage({Key? key}) : super(key: key);
-  BerandaPassangerPageController berandaDriverPageController =
+  BerandaPassangerPageController berandaPassangerPageController =
       Get.put(BerandaPassangerPageController());
   @override
   Widget build(BuildContext context) {
@@ -86,8 +86,8 @@ class BerandaPassangerPage extends StatelessWidget {
                       ],
                     ),
                     Text(
-                      berandaDriverPageController.dateFormat
-                          .format(berandaDriverPageController.dateTimeNow),
+                      berandaPassangerPageController.dateFormat
+                          .format(berandaPassangerPageController.dateTimeNow),
                       textAlign: TextAlign.right,
                       style: const TextStyle(color: Colors.white),
                     )
