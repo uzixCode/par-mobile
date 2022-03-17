@@ -8,8 +8,15 @@ class TabBarItem extends StatelessWidget {
   final int currentIndex;
   final int compareIndex;
   final EdgeInsets padding;
+  final Color? color;
   const TabBarItem(
-      {Key? key, required this.label, required this.currentIndex, required this.compareIndex, required this.onTap, required this.padding})
+      {Key? key,
+      required this.label,
+      required this.currentIndex,
+      required this.compareIndex,
+      required this.onTap,
+      required this.padding,
+      this.color})
       : super(key: key);
 
   @override
@@ -17,17 +24,24 @@ class TabBarItem extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        height: Get.height * 0.06,
+        //height: Get.height * 0.06,
         alignment: Alignment.center,
         decoration: BoxDecoration(
-            color: currentIndex == compareIndex ? allColor.primary : allColor.grey,
+            color: currentIndex == compareIndex
+                ? color != null
+                    ? color
+                    : allColor.primary
+                : allColor.grey,
             borderRadius: BorderRadius.circular(5)),
         padding: padding,
         child: Text(
           label,
           maxLines: 2,
           textAlign: TextAlign.center,
-          style: TextStyle(color: Colors.white, fontSize: Get.width * 0.03),
+          style: TextStyle(
+              color: Colors.white,
+              fontSize: Get.width * 0.03,
+              fontWeight: FontWeight.bold),
         ),
       ),
     );
