@@ -5,16 +5,28 @@ import 'package:par_mobile/views/suo/approval_update_document/approval_update_do
 import 'package:par_mobile/widgets/basecard.dart';
 import 'package:par_mobile/widgets/rectangle_button.dart';
 
+import '../../../../controllers/suo/approval/approval_suo_page_controller.dart';
+import '../../../../controllers/suo/main/main_suo_page_controller.dart';
+
 class NotifDocSection extends StatelessWidget {
   const NotifDocSection({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    MainSUOPageController mainController = Get.put(MainSUOPageController());
+    ApprovalSUOPageController approvalController =
+        Get.put(ApprovalSUOPageController());
     return BaseCard(
       label: "RANGKUMAN NOTIFIKASI DOC",
-      trailing: const Icon(
-        Icons.chevron_right,
-        color: Colors.white,
+      trailing: InkWell(
+        onTap: () {
+          mainController.changePage(2, isAnimateTo: true);
+          approvalController.changeTab(3, isAnimateTo: false);
+        },
+        child: const Icon(
+          Icons.chevron_right,
+          color: Colors.white,
+        ),
       ),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
@@ -29,7 +41,9 @@ class NotifDocSection extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text("Document KEUR Driver",
-                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: Get.width * 0.035)),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: Get.width * 0.035)),
                     SizedBox(
                       width: Get.width * 0.27,
                       child: RectangleButton(

@@ -14,7 +14,10 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: GetBuilder<ApprovalSUOPageController>(
-        initState: (_) => controller.changeTab(0),
+        initState: (_) {
+          controller.tabController = PageController(
+              initialPage: controller.index.value, keepPage: true);
+        },
         builder: (con) => Padding(
           padding: const EdgeInsets.all(15),
           child: Column(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:par_mobile/controllers/manager/main/main_manager_page_controller.dart';
 
 import '../../../../widgets/basecard.dart';
 import '../../../../widgets/ptcsummaryitemsection.dart';
@@ -10,11 +11,19 @@ class PTCSummaryManagerSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    MainManagerPageController mainController =
+        Get.put(MainManagerPageController());
+
     return BaseCard(
       label: "RANGKUMAN PTC BERMASALAH",
-      trailing: const Icon(
-        Icons.chevron_right,
-        color: Colors.white,
+      trailing: InkWell(
+        onTap: () {
+          mainController.changePage(2, isAnimateTo: true);
+        },
+        child: const Icon(
+          Icons.chevron_right,
+          color: Colors.white,
+        ),
       ),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
