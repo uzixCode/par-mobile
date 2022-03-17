@@ -8,26 +8,43 @@ class TabBarItem extends StatelessWidget {
   final int currentIndex;
   final int compareIndex;
   final EdgeInsets padding;
-  const TabBarItem(
-      {Key? key, required this.label, required this.currentIndex, required this.compareIndex, required this.onTap, required this.padding})
-      : super(key: key);
+  final Color? color;
+  EdgeInsetsGeometry? margin;
+  TabBarItem({
+    Key? key,
+    required this.label,
+    required this.currentIndex,
+    required this.compareIndex,
+    required this.onTap,
+    required this.padding,
+    this.color,
+    this.margin,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
       child: Container(
-        height: Get.height * 0.06,
+        margin: margin,
+        //height: Get.height * 0.06,
         alignment: Alignment.center,
         decoration: BoxDecoration(
-            color: currentIndex == compareIndex ? allColor.primary : allColor.grey,
+            color: currentIndex == compareIndex
+                ? color != null
+                    ? color
+                    : allColor.primary
+                : allColor.grey,
             borderRadius: BorderRadius.circular(5)),
         padding: padding,
         child: Text(
           label,
           maxLines: 2,
           textAlign: TextAlign.center,
-          style: TextStyle(color: Colors.white, fontSize: Get.width * 0.03),
+          style: TextStyle(
+              color: Colors.white,
+              fontSize: Get.width * 0.03,
+              fontWeight: FontWeight.bold),
         ),
       ),
     );

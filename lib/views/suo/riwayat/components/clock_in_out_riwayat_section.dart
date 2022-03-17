@@ -16,6 +16,7 @@ class ClockInOutRiwayatSection extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
           child: ListView.builder(
+              padding: EdgeInsets.zero,
               itemCount: 5,
               itemBuilder: (context, index) {
                 return ClockInOutItemListSection(

@@ -16,6 +16,7 @@ class DCURiwayatSection extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.fromLTRB(5, 0, 5, 10),
           child: ListView.builder(
+              padding: EdgeInsets.zero,
               itemCount: 3,
               itemBuilder: (context, index) {
                 return DCUItemListSection(
