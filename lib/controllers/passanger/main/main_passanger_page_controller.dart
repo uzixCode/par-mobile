@@ -7,6 +7,7 @@ import 'package:par_mobile/views/driver/izin/izin_driver_page.dart';
 import 'package:par_mobile/views/driver/profile/profile_driver_page.dart';
 import 'package:par_mobile/views/driver/riwayat/riwayat_driver_page.dart';
 import 'package:par_mobile/views/passanger/beranda/beranda_passanger_page.dart';
+import 'package:par_mobile/views/passanger/profile/profile_passanger_page.dart';
 import 'package:par_mobile/views/passanger/riwayat/riwayat_passsanger_page.dart';
 
 class MainPassangerPageController extends GetxController {
@@ -18,7 +19,7 @@ class MainPassangerPageController extends GetxController {
     RiwayatPassangerPage(),
     CheckDriverPage(),
     IzinDriverPage(),
-    ProfileDriverPage(),
+    ProfilePassangerPage()
   ];
   PageController pageController =
       PageController(initialPage: 0, keepPage: false);
