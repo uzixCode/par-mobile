@@ -7,8 +7,10 @@ import 'package:par_mobile/views/driver/izin/izin_driver_page.dart';
 import 'package:par_mobile/views/driver/profile/profile_driver_page.dart';
 import 'package:par_mobile/views/driver/riwayat/riwayat_driver_page.dart';
 import 'package:par_mobile/views/passanger/beranda/beranda_passanger_page.dart';
+import 'package:par_mobile/views/passanger/monitoring/monitoring_passanger_page.dart';
 import 'package:par_mobile/views/passanger/profile/profile_passanger_page.dart';
 import 'package:par_mobile/views/passanger/riwayat/riwayat_passsanger_page.dart';
+import 'package:par_mobile/views/suo/monitoring/monitoring_suo_page.dart';
 
 class MainPassangerPageController extends GetxController {
   final dateTimeNow = DateTime.now();
@@ -18,7 +20,7 @@ class MainPassangerPageController extends GetxController {
     BerandaPassangerPage(),
     RiwayatPassangerPage(),
     CheckDriverPage(),
-    IzinDriverPage(),
+    MonitoringPassangerPage(),
     ProfilePassangerPage()
   ];
   PageController pageController =

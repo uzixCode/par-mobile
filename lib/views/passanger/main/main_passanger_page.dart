@@ -58,7 +58,7 @@ class MainPassangerPage extends StatelessWidget {
                         currentIndex: con.index,
                         compareIndex: 3,
                         iconPath: "assets/images/izin.png",
-                        label: "Izin"),
+                        label: "Monitoring"),
                     bottomBarItem.bottomBarItem(
                         currentIndex: con.index,
                         compareIndex: 4,
