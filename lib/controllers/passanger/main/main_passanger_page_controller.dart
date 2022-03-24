@@ -6,10 +6,12 @@ import 'package:par_mobile/views/driver/check/check_driver_page.dart';
 import 'package:par_mobile/views/driver/izin/izin_driver_page.dart';
 import 'package:par_mobile/views/driver/profile/profile_driver_page.dart';
 import 'package:par_mobile/views/driver/riwayat/riwayat_driver_page.dart';
+import 'package:par_mobile/views/passanger/approval/approval_passanger_page.dart';
 import 'package:par_mobile/views/passanger/beranda/beranda_passanger_page.dart';
 import 'package:par_mobile/views/passanger/monitoring/monitoring_passanger_page.dart';
 import 'package:par_mobile/views/passanger/profile/profile_passanger_page.dart';
 import 'package:par_mobile/views/passanger/riwayat/riwayat_passsanger_page.dart';
+import 'package:par_mobile/views/suo/approval/approval_suo_page.dart';
 import 'package:par_mobile/views/suo/monitoring/monitoring_suo_page.dart';
 
 class MainPassangerPageController extends GetxController {
@@ -19,7 +21,7 @@ class MainPassangerPageController extends GetxController {
   List<Widget> pages = [
     BerandaPassangerPage(),
     RiwayatPassangerPage(),
-    CheckDriverPage(),
+    ApprovalPassangerPage(),
     MonitoringPassangerPage(),
     ProfilePassangerPage()
   ];

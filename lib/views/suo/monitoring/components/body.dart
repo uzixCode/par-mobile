@@ -17,67 +17,53 @@ class Body extends StatelessWidget {
           initState: (_) => controller.changeTab(0),
           builder: (con) => Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Flexible(
-                    child: TabBarItem(
+              SizedBox(
+                width: Get.width * 0.85,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    TabBarItem(
                       label: "DCU",
                       currentIndex: controller.index.value,
                       compareIndex: 0,
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 10, vertical: 5),
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
                       onTap: () {
                         controller.changeTab(0, isAnimateTo: true);
                       },
+                      maxLines: 3,
                     ),
-                  ),
-                  SizedBox(
-                    width: Get.width * 0.01,
-                  ),
-                  Flexible(
-                    child: TabBarItem(
-                      label: "Vehicle Score",
+                    TabBarItem(
+                      label: "Vehicle\nScore",
                       currentIndex: controller.index.value,
                       compareIndex: 1,
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 10, vertical: 5),
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
                       onTap: () {
                         controller.changeTab(1, isAnimateTo: true);
                       },
+                      maxLines: 3,
                     ),
-                  ),
-                  SizedBox(
-                    width: Get.width * 0.01,
-                  ),
-                  Flexible(
-                    child: TabBarItem(
-                      label: "Driver Score",
+                    TabBarItem(
+                      label: "Driver\nScore",
                       currentIndex: controller.index.value,
                       compareIndex: 2,
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 10, vertical: 5),
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
                       onTap: () {
                         controller.changeTab(2, isAnimateTo: true);
                       },
+                      maxLines: 3,
                     ),
-                  ),
-                  SizedBox(
-                    width: Get.width * 0.01,
-                  ),
-                  Flexible(
-                    child: TabBarItem(
-                      label: "User Feedback",
+                    TabBarItem(
+                      label: "User\nFeedback",
                       currentIndex: controller.index.value,
                       compareIndex: 3,
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 10, vertical: 5),
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
                       onTap: () {
                         controller.changeTab(3, isAnimateTo: true);
                       },
+                      maxLines: 3,
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               const SizedBox(
                 height: 10,

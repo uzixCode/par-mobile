@@ -43,7 +43,7 @@ class MainPassangerPage extends StatelessWidget {
                         currentIndex: con.index,
                         compareIndex: 0,
                         iconPath: "assets/images/beranda.png",
-                        label: "Riwayat"),
+                        label: "Beranda"),
                     bottomBarItem.bottomBarItem(
                         currentIndex: con.index,
                         compareIndex: 1,
@@ -52,12 +52,12 @@ class MainPassangerPage extends StatelessWidget {
                     bottomBarItem.bottomBarItem(
                         currentIndex: con.index,
                         compareIndex: 2,
-                        iconPath: "assets/images/check.png",
-                        label: "Check"),
+                        iconPath: "assets/images/approval.png",
+                        label: "Approval"),
                     bottomBarItem.bottomBarItem(
                         currentIndex: con.index,
                         compareIndex: 3,
-                        iconPath: "assets/images/izin.png",
+                        iconPath: "assets/images/monitoring.png",
                         label: "Monitoring"),
                     bottomBarItem.bottomBarItem(
                         currentIndex: con.index,

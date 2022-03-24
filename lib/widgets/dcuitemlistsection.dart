@@ -78,7 +78,7 @@ class DCUItemListSection extends StatelessWidget {
                         height: 5,
                       ),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Container(
                             padding: const EdgeInsets.all(5),

@@ -8,18 +8,21 @@ class TabBarItem extends StatelessWidget {
   final int currentIndex;
   final int compareIndex;
   final EdgeInsets padding;
+  int? maxLines;
   final Color? color;
   EdgeInsetsGeometry? margin;
-  TabBarItem({
-    Key? key,
-    required this.label,
-    required this.currentIndex,
-    required this.compareIndex,
-    required this.onTap,
-    required this.padding,
-    this.color,
-    this.margin,
-  }) : super(key: key);
+  double size = Get.width * 0.03;
+  TabBarItem(
+      {Key? key,
+      required this.label,
+      required this.currentIndex,
+      required this.compareIndex,
+      required this.onTap,
+      required this.padding,
+      this.color,
+      this.margin,
+      this.maxLines = 1})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +30,7 @@ class TabBarItem extends StatelessWidget {
       onTap: onTap,
       child: Container(
         margin: margin,
-        //height: Get.height * 0.06,
+        height: maxLines! < 2 ? null : size * maxLines!.toDouble(),
         alignment: Alignment.center,
         decoration: BoxDecoration(
             color: currentIndex == compareIndex
@@ -39,12 +42,10 @@ class TabBarItem extends StatelessWidget {
         padding: padding,
         child: Text(
           label,
-          maxLines: 2,
+          maxLines: maxLines,
           textAlign: TextAlign.center,
           style: TextStyle(
-              color: Colors.white,
-              fontSize: Get.width * 0.03,
-              fontWeight: FontWeight.bold),
+              color: Colors.white, fontSize: size, fontWeight: FontWeight.bold),
         ),
       ),
     );
